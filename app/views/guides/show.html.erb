@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @guide.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @guide.description %>
+</p>
+
+<p>
+  <strong>Display in navbar:</strong>
+  <%= @guide.display_in_navbar %>
+</p>
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>

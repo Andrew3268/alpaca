@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= link_to "Posts", posts_path %> | <%= link_to "Shop", posts_shop_path %> | <%= link_to "Guide", posts_guide_path %></h1>
+
+<p><%= link_to "New Guide", new_guide_path %></p>
+All Category:<br>
+<% Guide.all.each do |guide| %>
+  <%= link_to guide.name, posts_guide_path(guide: guide.name) %><br>
+<% end %>
+<br><br>
+Only in display:<br>
+<% Guide.where(display_in_navbar: true).each do |guide| %>
+  <%= link_to guide.name, posts_guide_path(guide: guide.name) %><br>
+<% end %>
+<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Category</th>
+      <th>Shop</th>
+      <th>Guide</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= post.guide.name %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
