@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @relative = Post.where(category_id: @post.category_id)
   end
 
   # GET /posts/new
@@ -95,6 +96,10 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :body, :category_id, :shop_id, :guide_id)
+      params.require(:post).permit(:title, :link, :category_id, :shop_id, :guide_id, :post_image, :source, :video, :image_toggle,
+                                   :description, :is_price, :was_price, :pct, :p_spare_01)
     end
 end
+
+      
+  

@@ -1,31 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="wrap">
 
-<h1>Shops</h1>
+  <h1>Shops</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Display in navbar</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @shops.each do |shop| %>
-      <tr>
-        <td><%= shop.name %></td>
-        <td><%= shop.description %></td>
-        <td><%= shop.display_in_navbar %></td>
-        <td><%= link_to 'Show', shop %></td>
-        <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
-        <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <div class="shop-wrap clearfix">
+    <% Shop.where(display_in_navbar: true).each do |shop | %>
+      <div class="shop_card">
+        <div class="image-box">
+          <a href="/posts/shop?shop=<%= shop.name %>"><%= image_tag(shop.shop_image, alt:"", title:"") if shop.shop_image.attached? %></a>
+        </div>
+        <div class="inner">
+          <%= link_to shop.name, posts_shop_path(shop: shop.name) %>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+  <div class="admin">
+    <p><%= link_to 'New Shop', new_shop_path %></p>
+  </div>
 
-<%= link_to 'New Shop', new_shop_path %>
+
+
+  <div class="admin-panner-category clearfix">
+    <p>Admin Panner</p>
+      <table>
+        <tr>
+          <th>Category</th>
+          <th>display_in_navbar</th>
+          <th colspan="3">Controller</th>
+        </tr>
+        <% Shop.all.each do |shop| %>
+          <tr>
+            <td><%= shop.name %></td>
+            <td><%= shop.display_in_navbar %></td>
+            <td><%= link_to 'Show', shop %></td>
+            <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
+            <td><%= link_to 'Destroy', shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </table>
+  </div>
+
+</div>  
+
+

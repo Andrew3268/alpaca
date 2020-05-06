@@ -1,29 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="wrap">
+  <div class="show-container clearfix">
+    <div class="show-image-box">
+      <%= image_tag(@post.post_image) if @post.post_image.attached? %>
+    </div>
+    <div class="inner">
+      <p><%= @post.title %></p>
+      <div class="pricing">
+        <span class="is"><%= number_to_currency(@post.is_price, locale: :kr) %>원</span>
+        <% if @post.was_price.present? %>
+          <span class="was"><%= number_to_currency(@post.was_price, locale: :kr) %>원</span>
+          <% final_pct = 0 %>
+          <% final_pct =  (@post.was_price - @post.is_price) / @post.was_price * 100 %>
+          <span class="pct">( <%= number_to_percentage(final_pct, precision: 0) %> OFF )</span>
+        <% end %>
+      </div>
+      <!-- <span><%= @post.category.name %></span> -->
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+      <div class="show-btn"><a href="#n">Buy Now On Coupang</a></div>
+    </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+    <div class="admin">
+      <%= link_to 'Back', posts_path %> | 
+      <%= link_to 'Edit', edit_post_path(@post) %> |
+      <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
 
-<p>
-  <strong>Category:</strong>
-  <%= @post.category.name %>
-</p>
+  </div>
 
-<p>
-  <strong>Shop:</strong>
-  <%= @post.shop.name %>
-</p>
+  <div class="relative-box">
+    <span>You might like this...</span>
+    <div class="relative-items clearfix">
+      <% @relative.shuffle.take(8).each do |more| %>
+        <% if more.category_id == @post.category_id %>
+          <div class="relative-image-box">
+            <%= image_tag(more.post_image) if more.post_image.attached? %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
-<p>
-  <strong>Guide:</strong>
-  <%= @post.guide.name %>
-</p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>
+
+

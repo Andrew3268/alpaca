@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag(@guide.guide_image) if @guide.guide_image.attached? %>
+
 <p>
   <strong>Name:</strong>
   <%= @guide.name %>

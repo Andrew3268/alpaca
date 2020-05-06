@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag(@shop.shop_image) if @shop.shop_image.attached? %>
 <p>
   <strong>Name:</strong>
   <%= @shop.name %>
