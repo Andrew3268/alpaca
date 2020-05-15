@@ -2,21 +2,40 @@
   
   <div class="visual clearfix">
     <div class="main-title">
-      <h2>Discover The Best Items</h2>
+      <h2>Discover The AWESOME Items</h2>
       <span>Curated by thinking defferently.</span>
-    </div>
-    <ul class="clearfix">
-      <li><a class="btn" href="/">Everything</a></li>
-      <% Category.all.each do |cat| %> 
-        <li><%= link_to cat.name, posts_path(category: cat.name), class: "btn" %></li>
+      <% if current_user %>
+        <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign In', new_user_registration_path %>
+        <%= link_to "Sign Up", new_user_session_path %>
       <% end %>
-    </ul>
+    </div>
+    <div class="category-pc">
+      <ul class="clearfix">
+        <li><a class="btn" href="/">Everything</a></li>
+        <% Category.where(display_in_navbar: true).each do |cat | %>
+          <li><%= link_to cat.name, posts_path(category: cat.name), class: "btn" %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="category-mobile">
+      <ul class="clearfix">
+        <li><a class="btn-m" href="/"><img src="<%=asset_path 'star.png' %>" alt="뒤로가기" />Everything</a></li>
+        <li><a class="btn-m" href="/posts?category=Electronic">Electronic</a></li>
+        <li><a class="btn-m" href="/posts?category=Home">Home</a></li>
+        <li><a class="btn-m" href="/posts?category=Kitchen">Kitchen</a></li>
+        <li><a class="btn-m" href="/posts?category=Beauty">Beauty</a></li>
+        <li><a class="btn-m" href="/posts?category=Sports+%26+Outdoors">Sports & Outdoor</a></li>
+      </ul>
+    </div>
   </div>
-
-  <div class="admin">
-    <%= link_to 'New Post', new_post_path %> | 
-    <%= link_to "New Category", new_category_path %>
-  </div>
+  <% if current_user && current_user.admin %>
+    <div class="admin">
+      <%= link_to 'New Post', new_post_path %> | 
+      <%= link_to "New Category", new_category_path %>
+    </div>
+  <% end %>
 
   <div class="where">
     <% if params[:category].present? %>
@@ -47,18 +66,13 @@
             <%= link_to image_tag(post.post_image, alt:"", title:""), post if post.post_image.attached? %>
           <% end %>
         </div>
+        <hr>
         <div class="inner">
           <p><%= post.title %></p>
         </div>
       </div>
     <% end %>
   </div>
-
-  <!-- Only in display:<br>
-  <% Category.where(display_in_navbar: true).each do |cat | %>
-    <span><%= link_to cat.name, posts_path(category: cat.name) %> | </span>
-  <% end %>
-  <br><br> -->
 
 
 </div>

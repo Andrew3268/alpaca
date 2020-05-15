@@ -1,5 +1,6 @@
 class ShopsController < ApplicationController
   before_action :set_shop, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /shops
   # GET /shops.json
@@ -14,7 +15,7 @@ class ShopsController < ApplicationController
 
   # GET /shops/new
   def new
-    @shop = Shop.new
+    @shop = current_user.shops.build
   end
 
   # GET /shops/1/edit
@@ -24,7 +25,7 @@ class ShopsController < ApplicationController
   # POST /shops
   # POST /shops.json
   def create
-    @shop = Shop.new(shop_params)
+    @shop = current_user.shops.build(shop_params)
 
     respond_to do |format|
       if @shop.save

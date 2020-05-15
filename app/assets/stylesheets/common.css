@@ -38,6 +38,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .container{margin:0 auto;padding:0 40px;/*max-width:90vw;*/max-width:1200px;}
 .arrow{display:block;width:24px;height:24px;transform:rotate(-90deg);}
 .box-left, .box-center, .box-right{display:flex;flex-wrap:wrap;align-items:center;margin-top:-20px;}
+.box-left{margin-top:-15px;}
 .box-right{margin-left:auto;}
 .site-overlay{position:fixed;top:0;right:0;bottom:0;left:0;padding-bottom:40px;background:rgba(0, 0, 0, 0.9);width:100%;height:100%;transition:all 200ms linear;z-index:9000;opacity:0;visibility:hidden;}
 .overlay-active .site-overlay{opacity:1;visibility:visible;}
@@ -96,7 +97,10 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
   0%{opacity:0;transform:translateY(5%);}100%{opacity:1;transform:translateX(0%);}}){.container{padding-right:20px;}
   .site-navbar .nav_logo{padding-left:0;color:#ffc51a;}
   .navbar-nav >li.search form{display:none;}
+}
 
+@media screen and (max-width:640px){
+  .container{padding:0 20px;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .container{padding-right:40px;}
@@ -119,36 +123,6 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .admin-panner-category th, .admin-panner-category td{text-align:left;padding:8px;text-align:center;}
 .admin-panner-category tr:nth-child(even){background-color:#f2f2f2}
 .admin-panner-category th{background-color:#4CAF50;color:white;}
-
-
-/* index category */
-/* $Button */
-a.btn{display: inline-block;margin:5px;padding:5px 10px;font-size:17px;text-decoration:none;outline:none;color:#fff;background-color:#FE4365;border-radius:3px;box-shadow:0 0 0 -2px #CFF09E, 0 0 0 -1px #FE4365;border:none;-webkit-transition:-webkit-box-shadow .3s;-webkit-transition:box-shadow .3s;transition:box-shadow .3s;}
-a.btn:hover, a.btn:focus{box-shadow:0 0 0 2px #CFF09E, 0 0 0 4px #ff0464;-webkit-transition-timing-function:cubic-bezier(0.6, 4, 0.3, 0.8);transition-timing-function:cubic-bezier(0.6, 4, 0.3, 0.8);-webkit-animation:gelatine 0.5s 1;animation:gelatine 0.5s 1;}
-a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duration:0;box-shadow:0 0 0 2px #CFF09E, 0 0 0 4px #3ac7bd;}
-
-/** $keyframes \ gelatine**/
-@keyframes gelatine {
-  from,to{-webkit-transform:scale(1, 1);transform:scale(1, 1);}
-  25%{-webkit-transform:scale(0.9, 1.1);transform:scale(0.9, 1.1);}
-  50%{-webkit-transform: scale(1.1, 0.9);transform: scale(1.1, 0.9);}
-  75%{-webkit-transform:scale(0.95, 1.05);transform:scale(0.95, 1.05);}
-  from,to{-webkit-transform:scale(1, 1);transform:scale(1, 1);}
-  25%{-webkit-transform:scale(0.9, 1.1);transform:scale(0.9, 1.1);}
-  50%{-webkit-transform: scale(1.1, 0.9);transform: scale(1.1, 0.9);}
-  75%{-webkit-transform:scale(0.95, 1.05);transform:scale(0.95, 1.05);}
-}
-@-webkit-keyframes gelatine {
-  from,to{-webkit-transform:scale(1, 1);transform:scale(1, 1);}
-  25%{-webkit-transform:scale(0.9, 1.1);transform:scale(0.9, 1.1);}
-  50%{-webkit-transform: scale(1.1, 0.9);transform: scale(1.1, 0.9);}
-  75%{-webkit-transform:scale(0.95, 1.05);transform:scale(0.95, 1.05);}
-  from,to{-webkit-transform:scale(1, 1);transform:scale(1, 1);}
-  25%{-webkit-transform:scale(0.9, 1.1);transform:scale(0.9, 1.1);}
-  50%{-webkit-transform: scale(1.1, 0.9);transform: scale(1.1, 0.9);}
-  75%{-webkit-transform:scale(0.95, 1.05);transform:scale(0.95, 1.05);}
-}
-
 
 
 

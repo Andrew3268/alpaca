@@ -1,9 +1,18 @@
 <div class="wrap">
+  <a href="/"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="뒤로가기" /></a>
   <div class="show-container clearfix">
     <div class="show-image-box">
-      <%= image_tag(@post.post_image) if @post.post_image.attached? %>
+      <% if @post.p_spare_01.present? %>
+        <% @post.p_spare_01 %>
+        <div class="no-background">
+          <%= link_to image_tag(@post.post_image, alt:"", title:""), @post if @post.post_image.attached? %>
+        </div>
+      <% else %>
+        <%= link_to image_tag(@post.post_image, alt:"", title:""), @post if @post.post_image.attached? %>
+      <% end %>
     </div>
     <div class="inner">
+      <span>by <%= @post.source %></span>
       <p><%= @post.title %></p>
       <div class="pricing">
         <span class="is"><%= number_to_currency(@post.is_price, locale: :kr) %>원</span>
@@ -16,8 +25,9 @@
       </div>
       <!-- <span><%= @post.category.name %></span> -->
 
-      <div class="show-btn"><a href="#n">Buy Now On Coupang</a></div>
+      <div class="show-btn pc-ver"><a target="_blank" href="#n">Buy Now On Coupang</a></div>
     </div>
+    <div class="show-btn mobile"><a href="#n">Buy Now On Coupang</a></div> 
 
     <div class="admin">
       <%= link_to 'Back', posts_path %> | 
@@ -31,7 +41,7 @@
     <span>You might like this...</span>
     <div class="relative-items clearfix">
       <% @relative.shuffle.take(8).each do |more| %>
-        <% if more.category_id == @post.category_id %>
+        <% if more.shop_id == @post.shop_id %>
           <div class="relative-image-box">
             <%= image_tag(more.post_image) if more.post_image.attached? %>
           </div>
