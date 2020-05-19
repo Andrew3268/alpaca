@@ -7,9 +7,9 @@ class PostsController < ApplicationController
   def index
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @posts = Post.where(category: @category).order("created_at DESC")
+      @pagy, @posts = pagy(Post.where(category: @category).order("created_at DESC"), items: 30)
     else
-      @posts = Post.all.order("created_at DESC")
+      @pagy, @posts = pagy(Post.all.order("created_at DESC"), items: 30)
     end
   end
 
@@ -71,18 +71,18 @@ class PostsController < ApplicationController
   def guide
     if params.has_key?(:guide)
       @guide = Guide.find_by_name(params[:guide])
-      @posts = Post.where(guide: @guide).order("created_at DESC")
+      @pagy, @posts = pagy(Post.where(guide: @guide).order("created_at DESC"), items: 30)
     else
-      @posts = Post.all.order("created_at DESC")
+      @pagy, @posts = pagy(Post.all.order("created_at DESC"), items: 30)
     end
   end
 
   def shop
     if params.has_key?(:shop)
       @shop = Shop.find_by_name(params[:shop])
-      @posts = Post.where(shop: @shop).order("created_at DESC")
+      @pagy, @posts = pagy(Post.where(shop: @shop).order("created_at DESC"), items: 30)
     else
-      @posts = Post.all.order("created_at DESC")
+      @pagy, @posts = pagy(Post.all.order("created_at DESC"), items: 30)
     end
   end
 

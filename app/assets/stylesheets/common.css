@@ -113,8 +113,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 
 
 /* main-admin */
-.admin{position:absolute;top:65px;right:40px;z-index:9999;}
-
+/*.admin{position:absolute;top:65px;right:40px;z-index:9999;}*/
 
 /* Table for Categories */
 .admin-panner-category{margin-top:50px;}

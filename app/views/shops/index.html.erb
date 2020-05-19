@@ -15,14 +15,11 @@
     <% end %>
   </div>
 
-  <div class="admin">
-    <p><%= link_to 'New Shop', new_shop_path %></p>
-  </div>
+  
 
-
-
-  <div class="admin-panner-category clearfix">
-    <p>Admin Panner</p>
+  <% if current_user && current_user.admin %>
+    <div class="admin-panner-category clearfix">
+      <p>Admin Panner <% if current_user && current_user.admin %> | <%= link_to 'New Shop', new_shop_path %><% end %></p>
       <table>
         <tr>
           <th>Category</th>
@@ -39,8 +36,6 @@
           </tr>
         <% end %>
       </table>
-  </div>
-
+    </div>
+  <% end %>
 </div>  
-
-

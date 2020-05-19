@@ -1,21 +1,21 @@
-<p id="notice"><%= notice %></p>
+<% if current_user && current_user.admin %>
+  <%= image_tag(@guide.guide_image) if @guide.guide_image.attached? %>
 
-<%= image_tag(@guide.guide_image) if @guide.guide_image.attached? %>
+  <p>
+    <strong>Name:</strong>
+    <%= @guide.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @guide.name %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @guide.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @guide.description %>
-</p>
+  <p>
+    <strong>Display in navbar:</strong>
+    <%= @guide.display_in_navbar %>
+  </p>
 
-<p>
-  <strong>Display in navbar:</strong>
-  <%= @guide.display_in_navbar %>
-</p>
-
-<%= link_to 'Edit', edit_guide_path(@guide) %> |
-<%= link_to 'Back', guides_path %>
+  <%= link_to 'Edit', edit_guide_path(@guide) %> |
+  <%= link_to 'Back', guides_path %>
+<% end %>

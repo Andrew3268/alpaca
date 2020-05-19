@@ -1,20 +1,20 @@
-<p id="notice"><%= notice %></p>
+<% if current_user && current_user.admin %>
+  <%= image_tag(@shop.shop_image) if @shop.shop_image.attached? %>
+  <p>
+    <strong>Name:</strong>
+    <%= @shop.name %>
+  </p>
 
-<%= image_tag(@shop.shop_image) if @shop.shop_image.attached? %>
-<p>
-  <strong>Name:</strong>
-  <%= @shop.name %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @shop.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @shop.description %>
-</p>
+  <p>
+    <strong>Display in navbar:</strong>
+    <%= @shop.display_in_navbar %>
+  </p>
 
-<p>
-  <strong>Display in navbar:</strong>
-  <%= @shop.display_in_navbar %>
-</p>
-
-<%= link_to 'Edit', edit_shop_path(@shop) %> |
-<%= link_to 'Back', shops_path %>
+  <%= link_to 'Edit', edit_shop_path(@shop) %> |
+  <%= link_to 'Back', shops_path %>
+<% end %>

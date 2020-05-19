@@ -3,3 +3,14 @@
 .shop_card .image-box{height:200px;position:relative;}
 .shop_card .image-box img{width:85%;height:85%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;}
 .shop_card .inner a{font-size:17px;text-align:center;display:block;padding-bottom:15px;}
+
+@media screen and (max-width:640px){
+  .shop_card{width:32.9%;}
+  .shop_card .image-box{height:130px;}
+}
+
+@media screen and (min-width:641px) and (max-width:1199px){
+  .shop_card{width:24.8%;}
+  .shop_card .image-box{height:130px;}
+}
+

@@ -12,6 +12,7 @@ gem 'acts_as_votable', '~> 0.12.1'
 gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 gem 'figaro'
 gem 'jquery-rails'
+gem 'pagy'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'

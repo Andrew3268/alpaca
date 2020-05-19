@@ -1,16 +1,17 @@
+<% if current_user && current_user.admin %>
+  <%= simple_form_for(@shop) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@shop) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="form-inputs">
+      <%= f.file_field :shop_image %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :display_in_navbar %>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.file_field :shop_image %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :display_in_navbar %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
 <% end %>
