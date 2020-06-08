@@ -10,8 +10,8 @@
         <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
       </div>
     <% end %>
-
   </div>
+
   <div class="category-pc">
     <ul class="clearfix">
       <li><a class="btn" href="/">Everything</a></li>
@@ -61,6 +61,7 @@
           <%= link_to image_tag(post.post_image, alt:"", title:""), post if post.post_image.attached? %>
         <% end %>
       </div>
+      <!-- <div class="source"><p>By <%= post.source %></p></div> -->
       <hr>
       <div class="inner">
         <p><%= post.title %></p>
@@ -69,4 +70,6 @@
   <% end %>
 </div>
 
-<%= raw pagy_nav(@pagy) %>
+<div class="card-wrap clearfix">
+  <%= raw pagy_nav(@pagy) %>
+</div>

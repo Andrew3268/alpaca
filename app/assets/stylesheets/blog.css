@@ -1,0 +1,20 @@
+.blog-wrapping{width:1000px;margin:0 auto;}
+.blog-box{}
+.blog-box a{display:block;}
+.blog-box .blog-card{float:left;width:31.33%;height:450px;margin:1%;background:rgba(242, 242, 242, 0.6);border-radius:10px;}
+.blog-box .blog-card .blog-image{position:relative;height:300px;}
+.blog-box .blog-card .blog-image img{width:80%;height:80%;object-fit:cover;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
+.blog-box .blog-card .inner{padding:10px 30px;}
+.blog-box .blog-card .inner p{font-size:30px;font-weight:bold;text-decoration:underline;letter-spacing:5px;}
+
+@media screen and (max-width:640px){
+  .blog-wrapping{width:100%;}
+  .blog-box .blog-card{float:none;width:100%;margin-bottom:50px;}
+  .blog-box .blog-card .blog-image img{width:85%;height:85%;border-radius:0;}
+}
+
+@media screen and (min-width:641px) and (max-width:1199px){
+  .blog-wrapping{width:100%;}
+  .blog-box .blog-card{float:left;width:48%;margin:0 1% 30px 1%;}
+  .blog-box .blog-card .blog-image img{width:85%;height:85%;border-radius:0;}
+}

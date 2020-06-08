@@ -1,15 +1,11 @@
 
-<%= simple_form_for(@guide) do |f| %>
+<%= simple_form_for(@blog) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <div class="input-box">
-      <%= f.file_field :guide_image %>
-      <%= f.input :name %>
-      <!-- <%= f.input :description %> -->
-      <%= f.input :display_in_navbar %>
-    </div>
+    <%= f.input :title %>
+    <%= f.input :link %>
   </div>
 
   <div class="form-actions">

@@ -1,7 +1,11 @@
-<% if current_user && current_user.admin %>
-  <h1>New Post</h1>
-  <%= render 'form', post: @post %>
-  <%= link_to 'Back', posts_path %>
-<% end %>
+<div class="wrap">
+  <div class="form-box">  
+    <% if current_user && current_user.admin %>
+      <h1>New Post</h1>
+      <%= render 'form', post: @post %>
+      <div class="new-form-back"><%= link_to 'Back', posts_path %></div>
+    <% end %>
+  </div>
+</div>
 
   

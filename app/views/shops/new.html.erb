@@ -1,5 +1,7 @@
-<% if current_user && current_user.admin %>
-  <h1>New Shop</h1>
-  <%= render 'form', shop: @shop %>
-  <%= link_to 'Back', shops_path %>
-<% end %>
+<div class="wrap">
+  <% if current_user && current_user.admin %>
+    <h1>New Shop</h1>
+    <%= render 'form', shop: @shop %>
+    <%= link_to 'Back', shops_path %>
+  <% end %>
+</div>

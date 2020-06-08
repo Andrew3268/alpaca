@@ -1,39 +1,38 @@
-<% if current_user && current_user.admin %>
-  <h1>Editing Post</h1>
+<div class="wrap">  
+  <% if current_user && current_user.admin %>
+    <h1>Editing Post</h1>
 
 
-  <%= simple_form_for(@post) do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-    <%= f.select :p_spare_01, ([["No Background?", ""], "YES"])%>
+    <%= simple_form_for(@post) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.select :p_spare_01, ([["No Background?", ""], "YES"])%>
 
-    <div class="form-inputs">
-      <%= f.association :category %>
-      <%= f.association :shop %>
-      <%= f.association :guide %>
-
-      <%= f.file_field :post_image %>
-      <%= f.input :title %>
-      <%= f.input :link %>
-      <%= f.input :source %>
-      <%= f.input :video %>
-      <%= f.input :image_toggle %>
-      <%= f.input :description %>
-      <%= f.input :is_price %>
-      <%= f.input :was_price %>
-      <%= f.input :pct %>
-
-    </div>
-
-    <div class="form-actions">
-      <%= f.button :submit %>
-    </div>
-  <% end %>
-
-
-
+      <div class="form-inputs">
+        <div class="select-box clearfix">
+        <%= f.association :category %>
+        <%= f.association :shop %>
+        </div>
         
+        <div class="input-box">
+          <%= f.file_field :post_image %>
+          <%= f.input :title %>
+          <%= f.input :link %>
+          <%= f.input :source %>
+          <!-- <%= f.input :video %> -->
+          <!-- <%= f.input :image_toggle %> -->
+          <!-- <%= f.input :description %> -->
+          <%= f.input :is_price %>
+          <%= f.input :was_price %>
+          <!-- <%= f.input :pct %> -->
+        </div>
+      </div>
 
-  <%= link_to 'Show', @post %> |
-  <%= link_to 'Back', posts_path %>
-<% end %>
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
+
+    <%= link_to 'Back', posts_path %>
+  <% end %>
+</div>
