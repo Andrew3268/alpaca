@@ -7,9 +7,9 @@ class PostsController < ApplicationController
   def index
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @pagy, @posts = pagy(Post.where(category: @category).order("created_at DESC"), items: 30)
+      @pagy, @posts = pagy(Post.where(category: @category).order('RANDOM()'), items: 30)
     else
-      @pagy, @posts = pagy(Post.all.order("created_at DESC"), items: 30)
+      @pagy, @posts = pagy(Post.all.order('RANDOM()'), items: 30)
     end
   end
 
