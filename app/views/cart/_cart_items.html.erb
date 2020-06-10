@@ -1,0 +1,31 @@
+<div class="layout">
+  <div class="wrap">
+
+    <div class="card-wrap clearfix">
+      <div class="cart-title"><p>Your Favorite</p></div>
+      <% @order_items.each do |item| %>
+        <div class="card">
+          <div class="image-box">
+            <% if item.post.p_spare_01.present? %>
+              <% item.post.p_spare_01 %>
+              <div class="no-background">
+                <%= link_to image_tag(item.post.post_image, alt:"", title:""), item.post if item.post.post_image.attached? %>
+              </div>
+            <% else %>
+              <%= link_to image_tag(item.post.post_image, alt:"", title:""), item.post if item.post.post_image.attached? %>
+            <% end %>
+          </div>
+          <!-- <div class="source"><p>By <%= item.post.source %></p></div> -->
+          <hr>
+          <div class="inner">
+            <p><%= item.post.title %></p>
+            <%= link_to "Delete", item, method: :delete, remote: true %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

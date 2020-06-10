@@ -11,6 +11,8 @@ class PostsController < ApplicationController
     else
       @pagy, @posts = pagy(Post.all.order('RANDOM()'), items: 30)
     end
+    @order_item = current_order.order_items.new
+    @order_items = current_order.order_items
   end
 
   # GET /posts/1

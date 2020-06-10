@@ -65,6 +65,10 @@
       <hr>
       <div class="inner">
         <p><%= post.title %></p>
+        <%= form_with model: @order_item do |f| %>
+          <%= f.hidden_field :post_id, value: post.id %>
+          <%= f.submit "Add To Cart", onclick: 'add_to_cart()', id: 'myCart' %>
+        <% end %> 
       </div>
     </div>
   <% end %>
@@ -73,3 +77,14 @@
 <div class="card-wrap clearfix">
   <%= raw pagy_nav(@pagy) %>
 </div>
+
+
+<script>
+  function add_to_cart()
+  {
+    alert('카트에 담았습니다.');
+  }
+</script>
+
+
+
