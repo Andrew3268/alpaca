@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'posts#index'
   get '/posts/guide', to:'posts#guide'
   get '/posts/shop', to:'posts#shop'
+  get '/posts/hashtag/:name', to: 'posts#hashtags'
 
   resources :guides
   resources :shops

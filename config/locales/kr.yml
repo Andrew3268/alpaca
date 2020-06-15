@@ -7,3 +7,4 @@ kr:
           separator: '.'
           precision: 0
           format: '%u%n'
+          name: ''

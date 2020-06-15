@@ -21,6 +21,11 @@ class PostsController < ApplicationController
     @relative = Post.where(shop_id: @post.shop_id)
   end
 
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @pagy, @posts = pagy(tag.posts, items: 30)
+  end
+
   # GET /posts/new
   def new
     @post = current_user.posts.build
@@ -89,8 +94,6 @@ class PostsController < ApplicationController
   end
 
 
-
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -100,7 +103,7 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:title, :link, :category_id, :shop_id, :guide_id, :post_image, :source, :video, :image_toggle,
-                                   :description, :is_price, :was_price, :pct, :p_spare_01)
+                                   :description, :is_price, :was_price, :pct, :p_spare_01, :p_spare_02)
     end
 end
 
