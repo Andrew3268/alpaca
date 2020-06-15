@@ -7,7 +7,6 @@ class Post < ApplicationRecord
   has_and_belongs_to_many :tags
   has_one_attached :post_image
 
-
   after_create do
       post = Post.find_by(id: self.id)
       hashtags = self.p_spare_02.scan(/[#＃][a-z|A-Z|가-힣|0-9|\w]+/)
@@ -25,6 +24,11 @@ class Post < ApplicationRecord
           tag = Tag.find_or_create_by(name: hashtag.downcase.delete('#'))
           post.tags << tag
       end
+  end
+
+  def self.search_by(search_term)
+    where("LOWER(title) LIKE :search_term", 
+    search_term: "%#{search_term.downcase}%")
   end
 
 end

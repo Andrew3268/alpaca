@@ -30,6 +30,10 @@
       <li><a class="btn-m" href="/posts?category=Sports+%26+Outdoors">Sports & Outdoor</a></li>
     </ul>
   </div>
+
+  <%= form_for "",url: posts_path, role: "search", method: :get do %>
+    <%= text_field_tag :search, @search_term, placeholder: "Search....." %>
+  <% end %>
 </div>
 
 <div class="where">

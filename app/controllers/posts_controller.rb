@@ -13,6 +13,11 @@ class PostsController < ApplicationController
     end
     @order_item = current_order.order_items.new
     @order_items = current_order.order_items
+
+    if params[:search]
+      @search_term = params[:search]
+      @posts = @posts.search_by(@search_term)
+    end
   end
 
   # GET /posts/1
