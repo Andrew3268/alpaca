@@ -13,13 +13,20 @@
 .visual .category-mobile ul li a img{position:absolute;top:30%;left:50%;width:50px;transform:translate(-50%, -30%);}
 .where{width:1000px;margin:0 auto;text-align:left;}
 .where p{font-size:17px;font-weight:500;}
+.where-hashtag{}
+.where-hashtag p{font-size:50px;font-weight:600;}
 .card-wrap{width:1000px;margin:10px auto 0 auto;}
-.card{float:left;width:30.7%;height:405px;margin:1%;border:3px solid;border-radius:20px;}
+.card-wrap .cart-title p{font-size:30px;font-weight:600;}
+.card{float:left;width:30.7%;height:405px;margin:1%;border:3px solid;border-radius:20px;position:relative;}
 .card .image-box{height:300px;position:relative;}
 .card .image-box img{width:95%;height:95%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:cover;border-radius:20px;}
 .card .image-box .no-background img{width:80%;height:80%;object-fit:contain;}
 .card .inner{padding:2% 5%;text-align:center;}
 .card .inner p{font-size:17px;font-weight:700;word-break:keep-all;text-decoration:underline;}
+.card .inner form{position:absolute;top:10px;right:10px;}
+.card .inner form input{font-size:30px;width:40px;height:40px;color:#FE4365;background:#fff;border-radius:50%;border:none;cursor:pointer;}
+.card .inner .cart-delete{position:absolute;top:10px;right:10px;}
+.card .inner .cart-delete a{font-size:27px;font-weight:700;color:#FE4365;background:#fff;width:40px;height:40px;border-radius:50px;padding:5px 13px;}
 .card .source p{text-align:center;font-weight:500;}
 .card hr{width:30%;height:3px;background:#FE4365;border:none;margin-top:5px;text-align:left;}
 
@@ -60,6 +67,8 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .visual .category-mobile{display:block;}
   .where{width:100%;margin:0;}
   .where p{margin:30px 0 -20px 0;}
+  .where-hashtag{margin-bottom:20px;}
+  .where-hashtag p{font-size:40px;}
   .card-wrap{width:100%;margin:30px 0 0 0;}
   .card{float:none;width:100%;margin:0 0 20px 0;border:1px solid #ccc;}
   a.btn{padding:5px 15px;}
@@ -92,6 +101,8 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .inner .pricing .is{}
 .show-container .inner .pricing .was{font-size:15px;color:#616161;text-decoration:line-through;margin-left:3px;}
 .show-container .inner .pricing .pct{font-size:15px;}
+.show-container .inner .hashtag{margin-top:20px;}
+.show-container .inner .hashtag p{font-size:15px;font-weight:600;text-decoration:none;}
 .show-container .show-btn{margin-top:50px;background:#FE4365;padding:10px 20px;border-radius:10px;text-align:center;border:3px solid;}
 .show-container .show-btn a{color:#fff;font-size:17px;display:block;}
 .show-container .mobile{display:none;}
@@ -108,6 +119,8 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .notice_m span{font-size:11px;color:#333;}
 
 .go_back{width:50px;opacity:0.4;}
+
+
 
 
 @media screen and (max-width:640px){

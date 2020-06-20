@@ -2,7 +2,7 @@
   <div class="wrap">
 
     <div class="card-wrap clearfix">
-      <div class="cart-title"><p>Your Favorite</p></div>
+      <div class="cart-title"><p>이거 맘에 드니까 잠깐만 담아둘께</p></div>
       <% @order_items.each do |item| %>
         <div class="card">
           <div class="image-box">
@@ -19,7 +19,7 @@
           <hr>
           <div class="inner">
             <p><%= item.post.title %></p>
-            <%= link_to "Delete", item, method: :delete, remote: true %>
+            <div class="cart-delete"><%= link_to "X", item, method: :delete, remote: true %></div>
           </div>
         </div>
       <% end %>
