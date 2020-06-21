@@ -37,7 +37,7 @@
 .card .source p{text-align:center;font-weight:500;}
 .card .locker-mobile{text-align:center;}
 .card .locker-mobile form{}
-.card .locker-mobile form input{background:#FE4365;color:#fff;padding:3px 7px;border-radius:5px;border:none;cursor:pointer;}
+.card .locker-mobile form input{background:#FE4365;color:#fff;padding:3px 7px;border-radius:5px;border:none;cursor:pointer;-webkit-appearance: none;-moz-appearance: none;appearance: none;border-radius: 0px;}
 .card hr{width:30%;height:3px;background:#FE4365;border:none;margin-top:5px;text-align:left;}
 
 a.btn{display:inline-block;margin:5px;padding:5px 15px;font-size:17px;text-decoration:none;outline:none;color:#fff;background-color:#FE4365;border-radius:3px;box-shadow:0 0 0 -2px #CFF09E, 0 0 0 -1px #FE4365;border:none;-webkit-transition:-webkit-box-shadow .3s;-webkit-transition:box-shadow .3s;transition:box-shadow .3s;border-radius:20px;}
