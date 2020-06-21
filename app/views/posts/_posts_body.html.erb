@@ -32,6 +32,13 @@
         <% end %>
       </div>
       <!-- <div class="source"><p>By <%= post.source %></p></div> -->
+      <div class="locker-mobile">
+        <%= form_with model: @order_item do |f| %>
+          <%= f.hidden_field :post_id, value: post.id %>
+          <%= f.submit "잠시 보관하기", onclick: 'add_to_cart()'  %>
+        <% end %> 
+      </div>
+
       <hr>
       <div class="inner">
         <p><%= link_to post.title, post %></p>
