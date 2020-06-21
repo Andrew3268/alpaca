@@ -1,3 +1,4 @@
+/* Blog Main Page */
 .blog-wrapping{width:1000px;margin:0 auto;}
 .blog-box{}
 .blog-box a{display:block;}
@@ -18,3 +19,45 @@
   .blog-box .blog-card{float:left;width:48%;margin:0 1% 30px 1%;}
   .blog-box .blog-card .blog-image img{width:85%;height:85%;border-radius:0;}
 }
+
+
+
+/* Blogging Page*/
+.blgging-wrap{width:1000px;margin:0 auto;}
+.blogging-title{margin:10px 0 50px 0;}
+.blogging-title h2{font-size:50px;}
+.blogging-box{margin-bottom:50px;border-bottom:3px solid #000;padding-bottom:30px}
+.blogging-box .image-box{float:left;width:43%;height:400px;margin-right:2%;position:relative;}
+.blogging-box .image{width:365px;height:350px;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
+.blogging-box .image img{width:100%;height:100%;object-fit:contain;} 
+.blogging-box .inner{float:left;width:50%;padding:2.5%;}
+.blogging-box .inner h3{font-size:25px;text-decoration:underline;letter-spacing:1.2px;}
+.blogging-box .inner p{font-size:15px;margin:15px 0;}
+.blogging-box .pricing{margin:10px 0 0 0;}
+.blogging-box .pricing span{font-size:20px;color:#3d3d3d;margin-right:7px;}
+.blogging-box .pricing span:nth-child(1){font-size:25px;}
+.blogging-box .pricing span:nth-child(2){color:#616161;text-decoration:line-through;}
+.blogging-box .pricing span:nth-child(3){}
+.blogging-box .spec{margin:15px 0;}
+.blogging-box .btn{margin:15px 0;}
+.blogging-box .btn a{background:#08f;padding:10px;color:#fff;border-radius:10px;display:block;text-align:center;font-weight:600;}
+
+@media screen and (max-width:640px){
+  .blgging-wrap{width:100%;margin:0}
+  .blogging-title{margin:10px 0 30px 0;}
+  .blogging-title h2{font-size:40px;}
+  .blogging-box .image-box{float:none;width:100%;margin:0;}
+  .blogging-box .image{width:100%;height:100%;}
+  .blogging-box .image img{width:100%;height:100%;} 
+  .blogging-box .inner{float:none;width:100%;padding:0;margin:0;}
+}
+
+@media screen and (min-width:641px) and (max-width:1199px){
+  .blogging-title h2{font-size:40px;}
+  .blgging-wrap{width:100%;margin:0;}
+  .blogging-box .image{width:330px;height:350px;}
+}
+
+
+
+

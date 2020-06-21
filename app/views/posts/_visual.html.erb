@@ -12,6 +12,10 @@
     <% end %>
   </div>
 
+  <%= form_for "",url: posts_path, role: "search", method: :get do %>
+    <%= text_field_tag :search, @search_term, placeholder: "Search....." %>
+  <% end %>
+
   <div class="category-pc">
     <ul class="clearfix">
       <li><a class="btn" href="/">Everything</a></li>
@@ -31,7 +35,4 @@
     </ul>
   </div>
 
-  <%= form_for "",url: posts_path, role: "search", method: :get do %>
-    <%= text_field_tag :search, @search_term, placeholder: "Search....." %>
-  <% end %>
 </div>

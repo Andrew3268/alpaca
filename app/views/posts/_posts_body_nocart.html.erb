@@ -15,7 +15,7 @@
 
   <div class="where-hashtag">
     <% if params[:name].present? %>
-      <p>#<%= params[:name] %></p>
+      <p><span>#<%= params[:name] %></span></p>
     <% end %>
   </div>  
   
@@ -33,14 +33,7 @@
       </div>
       <!-- <div class="source"><p>By <%= post.source %></p></div> -->
       <hr>
-      <div class="inner">
-        <p><%= link_to post.title, post %></p>
-        
-        <%= form_with model: @order_item do |f| %>
-          <%= f.hidden_field :post_id, value: post.id %>
-          <%= f.submit "♥", onclick: 'add_to_cart()'  %>
-        <% end %> 
-      </div>
+      <div class="inner"><p><%= link_to post.title, post %></p></div>
     </div>
   <% end %>
 </div>
@@ -50,12 +43,7 @@
 </div>
 
 
-<script>
-  function add_to_cart()
-  {
-    alert('Locker에 잠시 보관했습니다.');
-  }
-</script>
+
 
 
 

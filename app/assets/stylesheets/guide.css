@@ -1,0 +1,13 @@
+.guide-wrap{}
+.guide-wrap .guide-com{margin-bottom:50px;}
+.guide-wrap .guide-box-color{margin-top:20px;}
+.guide-wrap .guide-box-color ul{}
+.guide-wrap .guide-box-color ul li{float:left;width:8%;height:80px;margin:1%;border-radius:20px;}
+.guide-wrap .guide-box-color ul li a{color:#fff;text-align:center;display:block;}
+.guide-wrap .guide-box-color ul li.red{background:red;}
+.guide-wrap .guide-box-color ul li.blue{background:blue;}
+
+.guide-wrap .guide-box-gift{}
+.guide-wrap .guide-box-gift ul{}
+.guide-wrap .guide-box-gift ul li{float:left;width:18%;margin:1%;}
+.guide-wrap .guide-box-gift ul li a{}

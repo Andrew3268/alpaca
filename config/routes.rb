@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   resources :shops
   resources :categories
   resources :posts
+
+  # Blogging Controller Routes
+  get 'blogging/first_blog'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

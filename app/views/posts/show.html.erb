@@ -23,19 +23,23 @@
           <span class="pct">( <%= number_to_percentage(final_pct, precision: 0) %> OFF )</span>
         <% end %>
       </div>
-      <div class="hashtag">
-        <p><%= render_with_hashtags(@post.p_spare_02.to_s) %></p>
-      </div>
+      <% if current_user && current_user.admin %>
+        <div class="hashtag">
+          <p><%= render_with_hashtags(@post.p_spare_02.to_s) %></p>
+        </div>
+      <% end %>
       <!-- <span><%= @post.category.name %></span> -->
 
       <div class="show-btn pc-ver"><a target="_blank" href="#n">Buy Now On Coupang</a></div>
     </div>
     <div class="show-btn mobile"><a href="#n">Buy Now On Coupang</a></div> 
-    <div class="admin">
-      <%= link_to 'Back', posts_path %> | 
-      <%= link_to 'Edit', edit_post_path(@post) %> |
-      <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
+    <% if current_user && current_user.admin %>
+      <div class="admin">
+        <%= link_to 'Back', posts_path %> | 
+        <%= link_to 'Edit', edit_post_path(@post) %> |
+        <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
 
   </div>
 
@@ -45,7 +49,7 @@
 
 <div class="wrap">
   <div class="relative-box">
-    <span>You might like this...</span>
+    <em>난 알아. 넌 이것도 좋아 한다는 걸.</em>
     <div class="relative-items clearfix">
       <% @relative.shuffle.take(8).each do |more| %>
         <% if more.shop_id == @post.shop_id %>

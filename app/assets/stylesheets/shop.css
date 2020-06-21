@@ -1,3 +1,5 @@
+.shop-title{margin:0 0 70px 0;text-align:center;}
+.shop-title h1{font-size:50px;letter-spacing:1.3px;}
 .shop-wrap{border-left:1px solid #ccc;}
 .shop_card{float:left;width:19.9%;display:inline-block;margin-bottom:-1px;border:1px solid #ccc;border-left:none;}
 .shop_card .image-box{height:200px;position:relative;}
@@ -5,6 +7,8 @@
 .shop_card .inner a{font-size:17px;text-align:center;display:block;padding-bottom:15px;}
 
 @media screen and (max-width:640px){
+  .shop-title{margin:0 0 40px 0;}
+  .shop-title h1{font-size:40px;}
   .shop_card{width:32.9%;}
   .shop_card .image-box{height:130px;}
   .shop_card .inner a{font-size:13px;}

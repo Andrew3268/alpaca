@@ -1,16 +1,41 @@
 <div class="layout">
   <div class="wrap">
-    <img src="<%=asset_path 'gift-guide.png' %>">
-    <h1>Guides</h1>
 
-    <p><a href="/posts/hashtag/생일선물">#생일선물</a></p>
-    <p><a href="/posts/hashtag/생일선물">#생일선물</a></p>
+    <div class="guide-wrap">
+      <img src="<%=asset_path 'gift-guide.png' %>">
+      <h1>Guides</h1>
+
+      <div class="guide-com guide-box-color clearfix">
+        <p>좋아하는 색깔이이 뭐에요?</p>
+        <ul>
+          <a href="/posts/hashtag/생일선물"><li class="red"></li></a>
+          <a href="/posts/hashtag/#"><li class="blue"></li></a>
+          <a href="/posts/hashtag/#"><li></li></a>
+          <a href="/posts/hashtag/#"><li></li></a>
+          <a href="/posts/hashtag/#"><li></li></a>
+          <a href="/posts/hashtag/#"><li></li></a>
+          <a href="/posts/hashtag/#"><li></li></a>
+          <a href="/posts/hashtag/#"><li></li></a>
+          <a href="/posts/hashtag/#"><li></li></a>
+        </ul>
+      </div>
+
+      <div class="guide-com guide-box-gift clearfix">
+        <ul>
+          <a href="/posts/hashtag/생일선물"><li>#생일선물</li></a>
+          <a href="/posts/hashtag/생일선물"><li>#생일선물</li></a>
+          <a href="/posts/hashtag/생일선물"><li>#생일선물</li></a>
+          <a href="/posts/hashtag/생일선물"><li>#생일선물</li></a> 
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
 
 
-
-
-
-    <!-- <table>
+<!-- <table>
       <thead>
         <tr>
           <th>Name</th>
@@ -38,5 +63,3 @@
     <br>
 
     <%= link_to 'New Guide', new_guide_path %> -->
-  </div>
-</div>

@@ -1,6 +1,6 @@
 /* Index Page */
 .visual{text-align:center;}
-.visual .main-title{margin-bottom:30px;}
+.visual .main-title{margin-bottom:10px;}
 .visual h2{font-size:4rem;line-height:1;}
 .visual span{font-size:2rem;}
 .visual ul{display:table;margin:0 auto;}
@@ -11,18 +11,25 @@
 .visual .category-mobile ul li{border:3px solid;width:100px;height:100px;border-radius:50%;text-align:center;line-height:150px;margin-left:10px;position:relative;}
 .visual .category-mobile ul li a{font-size:10px;font-weight:700;display:block;}
 .visual .category-mobile ul li a img{position:absolute;top:30%;left:50%;width:50px;transform:translate(-50%, -30%);}
+.visual form{margin-bottom:15px;}
+.visual input{padding:10px;width:50%;border-radius:10px;}
 .where{width:1000px;margin:0 auto;text-align:left;}
-.where p{font-size:17px;font-weight:500;}
+.where p{font-size:50px;font-weight:500;}
+.where p a, .where p span,.where p em,.where-hashtag p span,.card-wrap .cart-title span{border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -13px 0 #b4e7f8;}
 .where-hashtag{}
 .where-hashtag p{font-size:50px;font-weight:600;}
 .card-wrap{width:1000px;margin:10px auto 0 auto;}
-.card-wrap .cart-title p{font-size:30px;font-weight:600;}
+.card-wrap .cart-title span{font-size:30px;font-weight:600;}
 .card{float:left;width:30.7%;height:405px;margin:1%;border:3px solid;border-radius:20px;position:relative;}
 .card .image-box{height:300px;position:relative;}
 .card .image-box img{width:95%;height:95%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:cover;border-radius:20px;}
 .card .image-box .no-background img{width:80%;height:80%;object-fit:contain;}
 .card .inner{padding:2% 5%;text-align:center;}
 .card .inner p{font-size:17px;font-weight:700;word-break:keep-all;text-decoration:underline;}
+/*.card .inner .pricing{margin-top:7px;font-weight:500;}
+.card .inner .pricing .is{font-size:17px;color:#87c442;}
+.card .inner .pricing .was{color:#ccc;text-decoration:line-through;}
+.card .inner .pricing .pct{}*/
 .card .inner form{position:absolute;top:10px;right:10px;}
 .card .inner form input{font-size:30px;width:40px;height:40px;color:#FE4365;background:#fff;border-radius:50%;border:none;cursor:pointer;}
 .card .inner .cart-delete{position:absolute;top:10px;right:10px;}
@@ -58,15 +65,15 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 
 
 @media screen and (max-width:640px){
-  .visual .main-title{margin-bottom:30px;}
   .visual h2{font-size:3rem;}
   .visual span{font-size:1.5rem;}
   .visual ul{display:block;margin:0 auto;overflow-x:scroll;white-space:nowrap;overflow-y:hidden;}
   .visual ul li{float:none;display:inline-block;}
   .visual .category-pc{display:none;}
   .visual .category-mobile{display:block;}
+  .visual input{width:90%;}
   .where{width:100%;margin:0;}
-  .where p{margin:30px 0 -20px 0;}
+  .where p{font-size:30px;margin:30px 0 0 0;}
   .where-hashtag{margin-bottom:20px;}
   .where-hashtag p{font-size:40px;}
   .card-wrap{width:100%;margin:30px 0 0 0;}
@@ -83,6 +90,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .visual ul li{float:none;display:inline-block;}
   .visual .category-pc{display:none;}
   .visual .category-mobile{display:block;}
+  .visual input{width:90%;}
   .where{width:100%;margin:0;}
   .card-wrap{width:100%;margin:30px 0 0 0;}
   .card{float:left;width:47.7%;margin:1%;border:1px solid #ccc;}
@@ -96,9 +104,9 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .show-image-box img{width:100%;height:100%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;}
 .show-container .show-image-box .no-background img{width:80%;height:80%;object-fit:contain;}
 .show-container .inner{float:left;width:50%;margin-left:5%;padding:2.5%;}
-.show-container .inner p{font-size:1.7rem;/*font-weight:700;*/margin-bottom:15px;word-break:keep-all;text-decoration:underline;letter-spacing:0.08em;}
+.show-container .inner p{font-size:1.7rem;/*font-weight:700;*/margin-bottom:15px;word-break:keep-all;text-decoration:underline;letter-spacing:0.08em;width:70%;}
 .show-container .inner .pricing{font-size:2rem;font-weight:500;line-height:1;}
-.show-container .inner .pricing .is{}
+.show-container .inner .pricing .is{color:#57caef;}
 .show-container .inner .pricing .was{font-size:15px;color:#616161;text-decoration:line-through;margin-left:3px;}
 .show-container .inner .pricing .pct{font-size:15px;}
 .show-container .inner .hashtag{margin-top:20px;}
@@ -109,9 +117,10 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .admin{position:absolute;top:5px;right:10px;}
 
 .relative-box{width:800px;margin:50px auto;}
+.relative-box em{background:#fe8fa3;padding:5px 10px;color:#fff;border-radius:10px;font-weight:500;}
 .relative-items{}
-.relative-items .relative-image-box{float:left;width:18%;height:150px;margin:1%;border:1px solid #ccc;position:relative;}
-.relative-items .relative-image-box img{width:85%;height:85%;object-fit:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.relative-items .relative-image-box{float:left;width:23%;height:180px;margin:1%;border:1px solid #ccc;position:relative;}
+.relative-items .relative-image-box img{width:95%;height:95%;object-fit:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
 
 .notice_pc{width:800px;margin:0 auto;}
 .notice_pc span{font-size:11px;color:#333;}
@@ -121,15 +130,13 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .go_back{width:50px;opacity:0.4;}
 
 
-
-
 @media screen and (max-width:640px){
   .show-container{width:100%;margin:0;padding:0;border:none;}
   .show-container .show-image-box{float:none;width:100%;}
   .show-container .show-image-box img{object-fit:cover;}
   .show-container .show-image-box .no-background img{width:80%;height:80%;}
-  .show-container .inner{float:none;width:80%;margin:15px auto 0 auto;text-align:center;padding:0;}
-  .show-container .inner p{font-size:1.5rem;}
+  .show-container .inner{float:none;width:100%;margin:15px auto 0 auto;text-align:center;padding:0;}
+  .show-container .inner p{font-size:1.5rem;width:100%;}
   .show-container .show-btn{margin-top:30px;}
   .show-container .mobile{display:block;width:75%;margin:30px auto 0 auto;}
   .show-container .pc-ver{display:none;}
