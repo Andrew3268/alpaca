@@ -9,7 +9,7 @@ fieldset{border:0;}/*테두리삭제*/
 legend{display:none;}/* 숨김 */
 button{border:0;background:none;cursor:pointer;}
 table caption{display:none;}
-input, textarea, select{border:1px solid #ccc;}
+input, textarea, select{border:1px solid #ccc;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 
 .clearfix:after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
