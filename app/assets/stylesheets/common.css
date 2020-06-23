@@ -42,7 +42,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .box-right{margin-left:auto;}
 .site-overlay{position:fixed;top:0;right:0;bottom:0;left:0;padding-bottom:40px;background:rgba(0, 0, 0, 0.9);width:100%;height:100%;transition:all 200ms linear;z-index:9000;opacity:0;visibility:hidden;}
 .overlay-active .site-overlay{opacity:1;visibility:visible;}
-.site-logo{display:block;font-family:"Poppins", sans-serif;font-size:1.5rem;font-weight:900;line-height:1;}
+.site-logo{display:block;font-family:"Poppins", sans-serif;font-size:20px;font-weight:900;line-height:1;}
 .site-logo em{background:#000;color:#FE4365;padding:2px 7px 0px 7px;border-radius:7px;margin-right:3px;}
 .overlay-active .site-logo{color:#FE4365;}
 .overlay-active .site-logo em{background:#FE4365;color:#000;}
