@@ -1,5 +1,9 @@
-<h1>New Blog</h1>
-
-<%= render 'form', blog: @blog %>
-
-<%= link_to 'Back', blogs_path %>
+<div class="layout">
+  <div class="wrap">  
+    <% if current_user && current_user.admin %>
+      <h1>New Blog</h1>
+      <%= render 'form', blog: @blog %>
+      <%= link_to 'Back', blogs_path %>
+    <% end %>
+  </div>
+</div>

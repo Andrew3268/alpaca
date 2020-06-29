@@ -1,6 +1,10 @@
-<% if current_user && current_user.admin %>
-  <h1>Editing Shop</h1>
-  <%= render 'form', shop: @shop %>
-  <%= link_to 'Show', @shop %> |
-  <%= link_to 'Back', shops_path %>
-<% end %>
+<div class="layout">
+  <div class="wrap"> 
+    <% if current_user && current_user.admin %>
+      <h1>Editing Shop</h1>
+      <%= render 'form', shop: @shop %>
+      <%= link_to 'Show', @shop %> |
+      <%= link_to 'Back', shops_path %>
+    <% end %>
+  </div>
+</div>
