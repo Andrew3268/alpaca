@@ -15,7 +15,7 @@
 .visual input{padding:10px;width:50%;border-radius:10px;}
 .where{width:1000px;margin:0 auto;text-align:left;text-transform:uppercase;}
 .where p{font-size:50px;font-weight:500;}
-.where p a, .where p span,.where p em,.where-hashtag p span,.card-wrap .cart-title span{border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -13px 0 #b4e7f8;}
+.where p a, .where p span, .where p em, .where-hashtag p span, .card-wrap .cart-title span{border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -13px 0 #b4e7f8;}
 .where-hashtag{}
 .where-hashtag p{font-size:50px;font-weight:600;}
 .card-wrap{width:1000px;margin:10px auto 0 auto;}
@@ -170,7 +170,3 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .form-actions input{background:#000;color:#fff;padding:15px 20px;border-radius:10px;width:500px;}
 
 
-
-
-
-\
