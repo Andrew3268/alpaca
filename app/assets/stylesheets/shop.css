@@ -1,5 +1,5 @@
-.shop-title{margin:0 0 70px 0;text-align:center;}
-.shop-title h1{font-size:50px;letter-spacing:1.3px;}
+.shop-title{margin:0 0 70px 0;text-align:center;font-family:"Vibur";}
+.shop-title h1{font-size:80px;letter-spacing:1.3px;color:#F25F5C;text-shadow:1px 1px 0 #70C1B3, 2px 2px 0 #b4e7f8, 3px 3px 0 #70C1B3, 4px 4px 0 #b4e7f8, 5px 5px 0 #70C1B3, 6px 6px 0 #b4e7f8, 7px 7px 0 #70C1B3, 8px 8px 0 #b4e7f8, 9px 9px 0 #70C1B3, 10px 10px 0 #b4e7f8, 11px 11px 0 #70C1B3, 12px 12px 0 #b4e7f8;}
 .shop-wrap{border-left:1px solid #ccc;}
 .shop_card{float:left;width:19.9%;display:inline-block;margin-bottom:-1px;border:1px solid #ccc;border-left:none;}
 .shop_card .image-box{height:200px;position:relative;}
@@ -8,7 +8,7 @@
 
 @media screen and (max-width:640px){
   .shop-title{margin:0 0 40px 0;}
-  .shop-title h1{font-size:40px;}
+  .shop-title h1{font-size:61px;letter-spacing:1px;padding:0;}
   .shop_card{width:32.9%;}
   .shop_card .image-box{height:130px;}
   .shop_card .inner a{font-size:13px;}
