@@ -35,12 +35,18 @@
 .blogging-box .inner p{font-size:15px;margin:15px 0;}
 .blogging-box .pricing{margin:10px 0 0 0;}
 .blogging-box .pricing span{font-size:20px;color:#3d3d3d;margin-right:7px;}
-.blogging-box .pricing span:nth-child(1){font-size:25px;}
+.blogging-box .pricing span:nth-child(1){font-size:30px;color:#57caef;font-weight:600;}
 .blogging-box .pricing span:nth-child(2){color:#616161;text-decoration:line-through;}
 .blogging-box .pricing span:nth-child(3){}
-.blogging-box .spec{margin:15px 0;}
-.blogging-box .btn{margin:15px 0;}
-.blogging-box .btn a{background:#08f;padding:10px;color:#fff;border-radius:10px;display:block;text-align:center;font-weight:600;}
+
+.blogging-box .spec{}
+.blogging-box .spec .boxes{text-align:center;}
+.blogging-box .spec .boxes .box{float:left;width:32%;margin:0.5%;padding:10px 0;box-shadow:0 0 20px 0 rgba(0,0,0,0.06);}
+.blogging-box .spec .boxes .box p{margin:0 0 7px 0;font-size:20px;font-weight:600;}
+.blogging-box .spec .boxes .box span{font-size:15px;}
+
+.blogging-box .btn{margin:15px 0;border:2px solid black;border-radius:100px;padding:10px 20px;font-size:14px;background:#fe4365;box-shadow:inset 7px 2px 0 white, inset -0.5px 0.5px 0 white, inset -5px -3px 0 #D53D35;color:#fff;position:relative;}
+.blogging-box .btn a{display:block;font-weight:600;color:#fff;text-align:center;}
 
 @media screen and (max-width:640px){
   .blgging-wrap{width:100%;margin:0}
