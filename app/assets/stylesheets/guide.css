@@ -20,7 +20,7 @@
 .transition, .guide-wrap .event p, .guide-wrap .event ul li i:before, .guide-wrap .event ul li i:after{transition:all 0.25s ease-in-out;}
 .flipIn, .guide-wrap .event ul li{animation:flipdown 0.5s ease both;}
 .no-select, .guide-wrap .event h3{-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-.guide-wrap .event h2, h3{color:#ff6873;}
+.guide-wrap .event h2, .guide-wrap .event h3{color:#ff6873;}
 .guide-wrap .event h2{text-transform: uppercase;font-size:36px;line-height:42px;letter-spacing:3px;font-weight:100;box-shadow:0 10px 0 0 #F25F5C inset;padding-top:20px;}
 .guide-wrap .event h3{font-size:26px;line-height:34px;font-weight:300;letter-spacing:1px;display:block;background-color:#fefffa;margin:0;cursor:pointer;}
 .guide-wrap .event p{color:rgba(48, 69, 92, 0.8);font-size:17px;line-height:26px;letter-spacing:1px;position:relative;overflow:hidden;max-height:800px;opacity:1;transform:translate(0, 0);margin-top:14px;z-index:2;}

@@ -59,9 +59,9 @@
       <% end %>
       <!-- <span><%= @post.category.name %></span> -->
 
-      <div class="show-btn pc-ver"><a target="_blank" href="#n">BUY NOW ON COUPANG</a></div>
+      <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">BUY NOW ON COUPANG</a></div>
     </div>
-    <div class="show-btn mobile"><a href="#n">BUY NOW ON COUPANG</a></div> 
+    <div class="show-btn mobile"><a href="<%= @post.link %>">BUY NOW ON COUPANG</a></div> 
     <% if current_user && current_user.admin %>
       <div class="admin">
         <%= link_to 'Back', posts_path %> | 

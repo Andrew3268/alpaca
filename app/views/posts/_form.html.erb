@@ -1,36 +1,71 @@
 <% if current_user && current_user.admin %>
-  <%= simple_form_for(@post) do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="form-left">
+    <%= simple_form_for(@post) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-    <%= f.select :p_spare_01, options_for_select([["No Background?", ""], "YES"])%>
+      <%= f.select :p_spare_01, options_for_select([["No Background?", ""], "YES"])%>
 
-    <div class="form-inputs">
-      <div class="select-box clearfix">
-        <%= f.association :category %>
-        <%= f.association :shop %>
+      <div class="form-inputs">
+        <div class="select-box clearfix">
+          <%= f.association :category %>
+          <%= f.association :shop %>
+        </div>
+        
+        <div class="input-box">
+          <%= f.file_field :post_image %>
+          <%= f.input :title %>
+          <%= f.input :link %>
+          <%= f.input :source %>
+          <!-- <%= f.input :video %> -->
+          <!-- <%= f.input :image_toggle %> -->
+          <!-- <%= f.input :description %> -->
+          <%= f.input :is_price %>
+          <%= f.input :was_price %>
+          <%= f.input :p_spare_02, label: 'HashTag' %>
+          <!-- <%= f.input :pct %> -->
+        </div>
+
       </div>
-      
-      <div class="input-box">
-        <%= f.file_field :post_image %>
-        <%= f.input :title %>
-        <%= f.input :link %>
-        <%= f.input :source %>
-        <!-- <%= f.input :video %> -->
-        <!-- <%= f.input :image_toggle %> -->
-        <!-- <%= f.input :description %> -->
-        <%= f.input :is_price %>
-        <%= f.input :was_price %>
-        <%= f.input :p_spare_02, label: 'HashTag' %>
-        <!-- <%= f.input :pct %> -->
+
+      <div class="form-actions">
+        <%= f.button :submit %>
       </div>
+    <% end %>
+  </div>
 
-    </div>
+  <div class="form-right">
+    <em>필수 HashTag'S</em>
+    <p>
+      <span>좋아하는 색깔은?</span><br/>
+      #빨강 #파랑, #초록
+    </p>
 
-    <div class="form-actions">
-      <%= f.button :submit %>
-    </div>
-  <% end %>
+    <p>
+      <span>얼마면되?</span><br/>
+      #1만원대, #2만원대
+    </p>
+
+    <p>
+      <span>무슨 선물을 원해?</span><br/>
+      #생일선물, #집들이선물
+    </p>
+
+    <p>
+      <span>누구를 위한 선물이야?</span><br/>
+      #엄마, #아빠, #친구
+    </p>
+
+    <p>
+      <span>그 사람은 어떤 사람이야?</span><br/>
+      #이상한놈, #차분한놈
+    </p>
+
+    <p>
+      <span>어떤 브랜드 좋아해?</span><br/>
+      #아디다스, #나이키
+    </p>
+  </div>
 <% end %>
 
 
