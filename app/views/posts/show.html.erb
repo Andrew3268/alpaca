@@ -12,7 +12,7 @@
       <% end %>
     </div>
     <div class="inner">
-      <span>by <%= @post.source %></span>
+      <% if @post.source.present? %><span>by <%= @post.source %></span><% end %>
       <p class="title"><%= @post.title %></p>
 
       <!-- <div class="info">
@@ -27,30 +27,7 @@
           <% final_pct =  (@post.was_price - @post.is_price) / @post.was_price * 100 %>
           <span class="pct">( <%= number_to_percentage(final_pct, precision: 0) %> OFF )</span>
         <% end %>
-      </div>
-
-      <!-- <div class="more-info clearfix">
-        <div class="common rate-review clearfix">
-          <span>
-            <em>평점</em>
-            <p>4.5 /5.0</p>
-          </span>
-          <span>
-            <em>리뷰</em>
-            <p>120개 +</p>
-          </span>
-        </div>
-        <div class="common service clearfix">
-          <span>
-            <em>로켓배송</em>
-            <p>YES</p>
-          </span>
-          <span>
-            <em>기타</em>
-            <p>기타칸입니다.</p>
-          </span>
-        </div>
-      </div> -->
+      </div>            
 
       <% if current_user && current_user.admin %>
         <div class="hashtag">
@@ -60,8 +37,17 @@
       <!-- <span><%= @post.category.name %></span> -->
 
       <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">BUY NOW ON COUPANG</a></div>
+      
+      <div class="sharing">
+        <div class="addthis_inline_share_toolbox_9x2f"></div>
+      </div>
+      
     </div>
     <div class="show-btn mobile"><a href="<%= @post.link %>">BUY NOW ON COUPANG</a></div> 
+
+
+
+
     <% if current_user && current_user.admin %>
       <div class="admin">
         <%= link_to 'Back', posts_path %> | 
