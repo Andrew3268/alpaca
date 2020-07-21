@@ -15,10 +15,6 @@
       <% if @post.source.present? %><span>by <%= @post.source %></span><% end %>
       <p class="title"><%= @post.title %></p>
 
-      <!-- <div class="info">
-        <p><span>평점: 4.5/ 5.0</span><em>리뷰: 120개 +</em></p>
-      </div> -->
-
       <div class="pricing">
         <span class="is"><%= number_to_currency(@post.is_price, locale: :kr) %>원</span>
         <% if @post.was_price.present? %>
@@ -29,11 +25,41 @@
         <% end %>
       </div>            
 
+      <div class="spec clearfix">
+        <div class="boxes common">
+          <div class="box">
+            <p>평  점</p>
+            <% if @post.p_spare_03.present? %>
+              <span><%= @post.p_spare_03 %>/5.0</span>
+            <% else %>
+              <span>-</span>
+            <% end %>
+          </div>
+          <div class="box">
+            <p>리  뷰</p>
+            <% if @post.p_spare_04.present? %>
+              <span><%= @post.p_spare_04 %>개 +</span>
+            <% else %>
+              <span>-</span>
+            <% end %>
+          </div>
+          <div class="box">
+            <p>로켓 배송</p>
+            <% if @post.p_spare_05.present? %>
+              <span><%= @post.p_spare_05 %></span>
+            <% else %>
+              <span>NO</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
       <% if current_user && current_user.admin %>
         <div class="hashtag">
           <p><%= render_with_hashtags(@post.p_spare_02.to_s) %></p>
         </div>
       <% end %>
+
       <!-- <span><%= @post.category.name %></span> -->
 
       <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">BUY NOW ON COUPANG<!-- <img src="<%=asset_path 'arrow-right.png' %>"> --></a></div>
@@ -87,4 +113,10 @@
   </div>
 </div>
 
+<script>
+  function add_to_cart()
+  {
+    alert('Locker에 잠시 보관했습니다.');
+  }
+</script>
 

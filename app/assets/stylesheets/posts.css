@@ -118,7 +118,12 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .inner .more-info .common span{float:left;width:47.5%;margin:1%;border:1px solid #ccc;text-align:center;}
 .show-container .inner .more-info .common span em{margin:5px 0;display:block;}
 .show-container .inner .more-info .common span p{margin:5px 0;}
-.show-container .show-btn{margin-top:50px;border:2px solid black;border-radius:100px;padding:10px 20px;font-size:14px;background:#fe4365;box-shadow:inset 7px 2px 0 white, inset -0.5px 0.5px 0 white, inset -5px -3px 0 #D53D35;color:#fff;position:relative;}
+.show-container .inner .spec{text-align:center;}
+.show-container .inner .spec .boxes{margin-top:15px;}
+.show-container .inner .spec .boxes .box{float:left;width:32%;margin:0.5%;padding:10px 0;box-shadow:0 0 20px 0 rgba(0,0,0,0.06);}
+.show-container .inner .spec .boxes .box p{margin:0 0 7px 0;font-size:20px;font-weight:600;}
+.show-container .inner .spec .boxes .box span{font-size:15px;}
+.show-container .show-btn{margin-top:35px;border:2px solid black;border-radius:100px;padding:10px 20px;font-size:14px;background:#fe4365;box-shadow:inset 7px 2px 0 white, inset -0.5px 0.5px 0 white, inset -5px -3px 0 #D53D35;color:#fff;position:relative;}
 .show-container .show-btn a{color:#fff;font-size:17px;display:block;}
 .show-container .mobile{display:none;}
 .show-container .admin{position:absolute;top:5px;right:10px;}
@@ -129,7 +134,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .relative-box p span{background:#fff;padding:0 15px;}
 .relative-items{}
 .relative-items .relative-image-box{float:left;width:22.7%;height:180px;margin:1%;border:1px solid #ccc;position:relative;border-radius:20px;}
-.relative-items .relative-image-box img{width:95%;height:95%;object-fit:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.relative-items .relative-image-box img{width:95%;height:95%;object-fit:contain;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border-radius:15px;}
 
 .notice-warp{text-align:left;margin-top:15px;}
 .notice-warp strong{border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -7px 0 #b4e7f8;}
