@@ -3,7 +3,7 @@
     <h1>SHOP.</h1>
   </div>
 
-  <div class="shop-wrap clearfix">
+  <!-- <div class="shop-wrap clearfix">
     <% Shop.where(display_in_navbar: true).each do |shop | %>
       <div class="shop_card">
         <div class="image-box">
@@ -14,6 +14,10 @@
         </div>
       </div>
     <% end %>
+  </div> -->
+
+  <div class="shop-wrap clearfix">
+    <%= render 'shops/categories' %>
   </div>
 
   

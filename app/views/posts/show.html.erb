@@ -36,7 +36,7 @@
       <% end %>
       <!-- <span><%= @post.category.name %></span> -->
 
-      <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">BUY NOW ON COUPANG</a></div>
+      <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">BUY NOW ON COUPANG<!-- <img src="<%=asset_path 'arrow-right.png' %>"> --></a></div>
       
       <!-- <div class="sharing">
         <div class="addthis_inline_share_toolbox_9x2f"></div>
@@ -44,8 +44,6 @@
       
     </div>
     <div class="show-btn mobile"><a href="<%= @post.link %>">BUY NOW ON COUPANG</a></div> 
-
-
 
 
     <% if current_user && current_user.admin %>
@@ -73,8 +71,19 @@
         <% end %>
       <% end %>
     </div>
-    <div class="notice_m"><span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span></div>
-    <div class="notice_pc"><span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span></div>
+
+    <div class="notice-warp">
+      <div class="notice_m">
+        <strong>Notice</strong>
+        <span> * 가격 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span>
+      </div>
+      <div class="notice_pc">
+        <strong>Notice</strong>
+        <span> * 가격 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -30,16 +30,23 @@
   </div>
   <div class="category-mobile">
     <ul class="clearfix">
+      <li><a class="btn-m" href="/">Everything</a></li>
+      <% Category.where(display_in_navbar: true).each do |cat | %>
+        <li><%= link_to cat.name, posts_path(category: cat.name), class: "btn-m" %></li>
+      <% end %>
+    </ul>
+  </div>
+  
+  <!-- <div class="category-mobile">
+    <ul class="clearfix">
       <li><a class="btn-m" href="/">ALL</a></li>
       <li><a class="btn-m" href="/posts?category=Tech">TECH</a></li>
       <li><a class="btn-m" href="/posts?category=Home">HOME</a></li>
       <li><a class="btn-m" href="/posts?category=Kitchen">KITCHEN</a></li>
       <li><a class="btn-m" href="/posts?category=Fashion">FASHION</a></li>
-      <!-- <li><a class="btn-m" href="/posts?category=Pet">PET</a></li> -->
       <li><a class="btn-m" href="/posts?category=Outdoor">OUTDOOR</a></li>
       <li><a class="btn-m" href="/posts?category=Other">OTHER</a></li>
-
     </ul>
-  </div>
+  </div> -->
 
 </div>

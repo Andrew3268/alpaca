@@ -4,7 +4,8 @@
 .shop_card{float:left;width:19.9%;display:inline-block;margin-bottom:-1px;border:1px solid #ccc;border-left:none;}
 .shop_card .image-box{height:200px;position:relative;}
 .shop_card .image-box img{width:85%;height:85%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;}
-.shop_card .inner a{font-size:17px;text-align:center;display:block;padding-bottom:15px;}
+/*.shop_card .inner a{font-size:17px;text-align:center;display:block;padding-bottom:15px;}*/
+.shop_card .inner p{text-align:center;margin-bottom:10px;}
 
 @media screen and (max-width:640px){
   .shop-title{margin:0 0 40px 0;}
