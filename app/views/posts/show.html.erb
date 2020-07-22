@@ -55,12 +55,10 @@
       </div>
 
       <% if current_user && current_user.admin %>
-        <div class="hashtag">
-          <p><%= render_with_hashtags(@post.p_spare_02.to_s) %></p>
-        </div>
+        <p>Category: <%= @post.category.name %></p>
+        <p>Shop Category: <%= @post.shop.name %></p>
+        <div class="hashtag"><p><%= render_with_hashtags(@post.p_spare_02.to_s) %></p></div>
       <% end %>
-
-      <!-- <span><%= @post.category.name %></span> -->
 
       <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">BUY NOW ON COUPANG<!-- <img src="<%=asset_path 'arrow-right.png' %>"> --></a></div>
       

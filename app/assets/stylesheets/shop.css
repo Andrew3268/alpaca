@@ -5,7 +5,7 @@
 
 .shop_card .each{font-family: 'Yeon Sung', cursive;height:200px;text-align:center;}
 .shop_card .each p{font-size:40px;line-height:200px;} 
-.shop_card .long p{font-size:35px;}
+.shop_card .ln p{font-size:35px;}
 
 /*.shop_card .image-box{height:200px;position:relative;}
 .shop_card .image-box img{width:85%;height:85%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;}*/
@@ -18,13 +18,16 @@
   /*.shop_card .image-box{height:130px;}*/
   .shop_card .each{height:100px;}
   .shop_card .each p{line-height:100px;font-size:20px;}
-  .shop_card .long p{font-size:16.5px;}
+  .shop_card .ln p{font-size:16.5px;}
   .shop_card .inner a{font-size:13px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
   .shop_card{width:24.8%;}
   /*.shop_card .image-box{height:130px;}*/
+  .shop_card .each{height:100px;}
+  .shop_card .each p{line-height:100px;font-size:20px;}
+  .shop_card .ln p{font-size:16.5px;}
   .shop_card .inner a{font-size:13px;}
 }
 
