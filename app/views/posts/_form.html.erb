@@ -15,16 +15,16 @@
         
         <div class="input-box">
           <%= f.file_field :post_image %>
-          <%= f.input :title %>
-          <%= f.input :link %>
-          <%= f.input :source %>
+          <%= f.input :title, label: '상품명'  %>
+          <%= f.input :link, label: '링크' %>
+          <%= f.input :source, label: '판매자' %>
           <!-- <%= f.input :video %> -->
           <!-- <%= f.input :image_toggle %> -->
           <!-- <%= f.input :description %> -->
-          <%= f.input :is_price %>
-          <%= f.input :was_price %>
-          <%= f.input :p_spare_03 %>
-          <%= f.input :p_spare_04 %>
+          <%= f.input :is_price, label: '현재가격'  %>
+          <%= f.input :was_price, label: '할인전 가격' %>
+          <%= f.input :p_spare_03, label: '평점' %>
+          <%= f.input :p_spare_04, label: '리뷰' %>
           <%= f.input :p_spare_02, label: 'HashTag' %>
           <!-- <%= f.input :pct %> -->
         </div>
@@ -41,27 +41,27 @@
     <em>필수 HashTag'S</em>
     <p>
       <span>좋아하는 색깔은?</span><br/>
-      #빨강 #파랑, #초록
+      #레드, #블랙, #화이트, #핑크, #퍼플, #블루, #그린, #옐로우, #브라운, #그레이, #메탈, #믹스...
     </p>
 
     <p>
       <span>얼마면되?</span><br/>
-      #1만원대, #2만원대
+      #1만원이하, #1만원대, #2만원대... 10만원이상
     </p>
 
     <p>
       <span>무슨 선물을 원해?</span><br/>
-      #생일선물, #집들이선물
+      #생일선물, #집들이선물, #신혼선물, ...
     </p>
 
     <p>
       <span>누구를 위한 선물이야?</span><br/>
-      #엄마, #아빠, #친구
+      #엄마, #아빠, #친구, #남자친구, #여자친구, ...
     </p>
 
     <p>
       <span>그 사람은 어떤 사람이야?</span><br/>
-      #이상한놈, #차분한놈
+      
     </p>
 
     <p>
