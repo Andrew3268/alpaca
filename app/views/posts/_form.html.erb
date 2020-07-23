@@ -5,6 +5,7 @@
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
       <%= f.select :p_spare_01, options_for_select([["No Background", ""], "YES"])%>
+      <%= f.select :p_spare_06, options_for_select([["Image Size 60%", ""], "YES"])%>
       <%= f.select :p_spare_05, options_for_select([["로켓배송", ""], "YES"])%>
 
       <div class="form-inputs">

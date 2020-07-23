@@ -22,13 +22,19 @@
   <% @posts.each do |post| %>
     <div class="card">
       <div class="image-box">
-        <% if post.p_spare_01.present? %>
-          <% post.p_spare_01 %>
-          <div class="no-background">
+        <% if post.p_spare_05.present? %>
+          <div class="img-60p">
             <%= link_to image_tag(post.post_image, alt:"", title:""), post if post.post_image.attached? %>
           </div>
         <% else %>
-          <%= link_to image_tag(post.post_image, alt:"", title:""), post if post.post_image.attached? %>
+          <% if post.p_spare_01.present? %>
+            <% post.p_spare_01 %>
+            <div class="no-background">
+              <%= link_to image_tag(post.post_image, alt:"", title:""), post if post.post_image.attached? %>
+            </div>
+          <% else %>
+            <%= link_to image_tag(post.post_image, alt:"", title:""), post if post.post_image.attached? %>
+          <% end %>
         <% end %>
       </div>
       <!-- <div class="source"><p>By <%= post.source %></p></div> -->
