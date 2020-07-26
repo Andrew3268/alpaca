@@ -6,7 +6,8 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
-    @posts = Post.all
+    # @posts = Post.all
+    @pagy, @posts = pagy(Post.all.order("created_at DESC"), items: 100)
   end
 
   # GET /categories/1

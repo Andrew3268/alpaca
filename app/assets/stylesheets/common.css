@@ -124,6 +124,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .admin-panner-category{margin-top:50px;}
 .admin-panner-category p{font-size:20px;}
 .admin-panner-category table{border-collapse:collapse;width:100%;}
+.admin-panner-category table.monitoring{font-size:10px;font-weight:500;}
 .admin-panner-category th, .admin-panner-category td{text-align:left;padding:8px;text-align:center;}
 .admin-panner-category tr:nth-child(even){background-color:#f2f2f2}
 .admin-panner-category th{background-color:#4CAF50;color:white;}

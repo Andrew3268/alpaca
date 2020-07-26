@@ -30,13 +30,14 @@
           <div class="box">
             <p>평  점</p>
             <% if @post.p_spare_03.present? %>
-              <span><%= @post.p_spare_03 %>/5.0</span>
+              <span><%= @post.p_spare_03 %> / 5.0</span>
+
             <% else %>
               <span>-</span>
             <% end %>
           </div>
           <div class="box">
-            <p>리  뷰</p>
+            <p>리뷰 수</p>
             <% if @post.p_spare_04.present? %>
               <span><%= @post.p_spare_04 %>개 +</span>
             <% else %>
@@ -52,6 +53,7 @@
             <% end %>
           </div>
         </div>
+        <!-- <p>별 5개: 매우좋음, 별 4~4.5개: 좋음, 별 3~3.5: 보통, 별 3개 미만: 나쁨</p> -->
       </div>
 
       <% if current_user && current_user.admin %>
@@ -85,7 +87,7 @@
 
 <div class="wrap">
   <div class="relative-box">
-    <p><span>사람들은 이런것도 좋아해요.</span></p>
+    <p><span>넌 분명히 이것도 좋아해!</span></p>
     <div class="relative-items clearfix">
       <% @relative.shuffle.take(8).each do |more| %>
         <% if more.shop_id == @post.shop_id %>

@@ -27,11 +27,13 @@
 
     <div class="admin-panner-category clearfix">
       <p>Analysis of Hashtag</p>
-      <table>
+      <table class="monitoring">
         <thead>
           <tr>
             <th class="title">Title</th>
             <th>HashTag</th>
+            <th>Category</th>
+            <th>Shop</th>
             <th>Edit</th>
           </tr>
         </thead>
@@ -41,6 +43,8 @@
             <tr>
               <td><%= post.title %></td>
               <td><%= render_with_hashtags(post.p_spare_02.to_s) %></td>
+              <td><%= post.category.name %></td>
+              <td><%= post.shop.name %></td>
               <td><%= link_to 'Edit', edit_post_path(post) %></td>
             </tr>
           <% end %>
@@ -48,6 +52,10 @@
       </table>
     </div>
 
+  </div>
+
+  <div class="card-wrap clearfix">
+    <%= raw pagy_nav(@pagy) %>
   </div>
 <% end %>
 
