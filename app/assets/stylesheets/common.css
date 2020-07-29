@@ -129,10 +129,14 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .admin-panner-category tr:nth-child(even){background-color:#f2f2f2}
 .admin-panner-category th{background-color:#4CAF50;color:white;}
 .admin-panner-category th.title{width:400px;}
+.admin-panner-category input{padding:5px 20px;margin-bottom:5px;}
 
 
 /* pagination */
 .pagy-nav{}
 .pagy-nav .page{margin:0 1%;}
 .pagy-nav .active{margin:0 1%;background:#FE4365;padding:5px 10px;color:#fff;font-weight:bold;}
+
+
+
 
