@@ -109,7 +109,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .inner .pricing{font-size:2rem;font-weight:500;line-height:1;margin-top:20px;}
 .show-container .inner .pricing .is{color:#57caef;}
 .show-container .inner .pricing .was{font-size:15px;color:#616161;text-decoration:line-through;margin-left:3px;}
-.show-container .inner .pricing .pct{font-size:15px;}
+.show-container .inner .pricing .pct, .show-container .inner .pricing .bycou{font-size:15px;} 
 .show-container .inner .sharing{margin-top:10px;}
 .show-container .inner .hashtag{margin-top:20px;}
 .show-container .inner .hashtag p{font-size:15px;font-weight:600;text-decoration:none;}

@@ -23,6 +23,9 @@
           <% final_pct =  (@post.was_price - @post.is_price) / @post.was_price * 100 %>
           <span class="pct">( <%= number_to_percentage(final_pct, precision: 0) %> OFF )</span>
         <% end %>
+        <% if current_user && current_user.admin %>
+          <span class="bycou">by 쿠팡</span>
+        <% end %>
       </div>            
 
       <div class="spec clearfix">
