@@ -1,0 +1,2 @@
+class Featured < ApplicationRecord
+end

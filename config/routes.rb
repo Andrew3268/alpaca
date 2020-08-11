@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :featureds
   resources :order_items
   get 'cart', to: 'cart#show'
   resources :blogs

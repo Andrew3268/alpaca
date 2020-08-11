@@ -39,6 +39,7 @@
             <li id="menu-item-1805" class="menu-item"><a href="/shops">Shop</a></li>
             <li id="menu-item-1805" class="menu-item"><a href="/cart">Locker</a></li>
             <% if current_user && current_user.admin %>
+            <li id="menu-item-1805" class="menu-item"><a href="/featureds">Featured</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/blogs">Blog</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/guides">Gift Guide</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/categories">Category</a></li>
@@ -85,4 +86,8 @@
   </div>
 </header>
 <!-- overlay -->
-<div class="site-overlay"></div>
+<div class="site-overlay">
+  <div class="m-image">
+    <img src="<%=asset_path 'candys_alpaca .png' %>">
+  </div>
+</div>
