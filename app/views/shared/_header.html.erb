@@ -9,11 +9,11 @@
           <a href="/" class="site-logo navbar-item nav_logo"><em>P</em>INKY ALPACA</a>
         </div>
 
-        <!-- <div class="header-search">
+        <div class="header-search">
          <%= form_for "",url: posts_path, role: "search", method: :get do %>
           <%= text_field_tag :search, @search_term, placeholder: "Search....." %>
          <% end %>
-        </div> -->
+        </div>
 
         <div class="box-right">
           <ul id="primary-menu" class="main-menu navbar-nav">
@@ -46,7 +46,7 @@
             <li id="menu-item-1805" class="menu-item"><a href="/shops">Shop</a></li>
             <li id="menu-item-1805" class="menu-item"><a href="/cart">Locker</a></li>
             <% if current_user && current_user.admin %>
-            <li id="menu-item-1805" class="menu-item"><a href="/featureds">Featured</a></li>
+              <li id="menu-item-1805" class="menu-item"><a href="/featureds">Featured</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/blogs">Blog</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/guides">Gift Guide</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/categories">Category</a></li>

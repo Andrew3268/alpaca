@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
 @import url(//fonts.googleapis.com/css?family=Vibur);
 @import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+/* 사이트이름 */
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 
 h1,h2,h3,h4,h5,h6,p,ul,li,address,form,fieldset,legend,input,button,dl,dt,dd,table,thead,tbody,tfoot,tr,th,td{margin:0;padding:0;font-family:inherit;}
 a img{border:0;}/* a태그로 감싼 이미지의 파란 테두리 삭제 (ie9-10) */
@@ -47,8 +49,8 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .overlay-active .site-overlay{opacity:1;visibility:visible;}
 .site-overlay .m-image{text-align:center;margin-top:10%;opacity:0.65;}
 .site-overlay .m-image img{width:250px;}
-.site-logo{display:block;font-size:20px;font-weight:900;line-height:1;/*color:#fe8fa3;*/}
-.site-logo em{background:#fe8fa3;color:#fff;padding:3px 7px;border-radius:7px;margin-right:2px;}
+.site-logo{display:block;font-size:20px;font-weight:900;line-height:1;/*color:#fe8fa3;*/font-family: 'Bowlby One SC', cursive;text-shadow:3px 3px 0 #333, 15px 15px 10px #555;text-align:center;letter-spacing:2px;-webkit-text-stroke-width:1px;-webkit-text-stroke-color:#f5eede;/*color: #47a1aa;*/color:#fe8fa3;text-shadow:#0d1218 1px 1px,#0d1218 2px 2px,#0d1218 3px 3px,#0d1218 4px 4px,#0d1218 5px 5px;width:100px;}
+.site-logo em{background:#fe8fa3;color:#fff;padding:3px 7px;border-radius:10px;margin-right:1px;}
 .overlay-active .site-logo{color:#fe8fa3;}
 .overlay-active .site-logo em{background:#fe8fa3;color:#fff;}
 .site-header{position:fixed;top:0;width:100%;margin:0;background-color:#fff;z-index:5000;box-sizing:border-box;}
@@ -56,7 +58,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .site-navbar{position:relative;display:flex;height:60px;margin:0 -20px;}
 .site-navbar .navbar-item{padding:0 20px;}
 .site-navbar .header-search{}
-.site-navbar .header-search input{width:500px;padding:10px;border-radius:20px;margin-top:12px;background:#f8f8f8;border:none;}
+.site-navbar .header-search input{width:350px;padding:10px;border-radius:20px;margin-top:12px;background:#f8f8f8;border:none;}
 
 
 
@@ -85,14 +87,20 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .overlay-active .responsive-nav{color: #3d3d3d;}
 
 @media screen and (max-width:640px){
+ .site-logo{width:auto;font-size:27px;}
  .site-overlay .m-image{margin-top:25%;} 
+ .site-navbar .header-search input{display:none;}
 }
 
+@media screen and (min-width:641px) and (max-width:1199px){
+  .site-logo{width:auto;font-size:24px;}
+
+}
 
 @media (max-width: 1240px) {
   .navbar-nav {display:none;}
   .responsive-nav{display:block;}
-  .navbar-nav >li.mobile-only{display:block;}
+  .navbar-nav >li.mobile-only{display:block;}  
   
 }
 #responsive-menu{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;}
@@ -147,7 +155,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 /* pagination */
 .pagy-nav{}
 .pagy-nav .page{margin:0 1%;}
-.pagy-nav .active{margin:0 1%;background:#FE4365;padding:5px 10px;color:#fff;font-weight:bold;}
+.pagy-nav .active{margin:0 1%;background:#fe8fa3;padding:5px 10px;color:#fff;font-weight:bold;}
 
 
 
