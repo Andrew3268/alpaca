@@ -49,7 +49,7 @@ a.btn:hover, a.btn:focus{box-shadow:0 0 0 2px #CFF09E, 0 0 0 4px #ff0464;-webkit
 a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duration:0;box-shadow:0 0 0 2px #CFF09E, 0 0 0 4px #3ac7bd;}*/
 
 
-a.btn {
+a.btn{
   font-family: 'Bowlby One SC', cursive;
   display: inline-block;
   background-color: #FFED66;
@@ -65,7 +65,7 @@ a.btn {
   transition: all 100ms linear;
   margin:0 5px;
 }
-a.btn:hover {
+a.btn:hover{
   -moz-transform: translateY(-4px);
   -o-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
@@ -107,7 +107,7 @@ a.btn:focus {
   .visual h2.ver-02{font-size:35px;}
   .visual span.span-02{font-size:25px;}
   .visual ul{display:block;margin:0 auto;overflow-x:scroll;white-space:nowrap;overflow-y:hidden;}
-  .visual ul li{float:none;display:inline-block;height:50px;}
+  .visual ul li{float:none;display:inline-block;height:75px;}
   .visual .category-pc{display:block;}
   .visual .category-mobile{display:none;}
   .visual input{display:block;width:90%;border:none;background:#f8f8f8;margin:0 auto;}
@@ -117,7 +117,8 @@ a.btn:focus {
   .where-hashtag p{font-size:40px;}
   .card-wrap{width:100%;margin:10px 0 0 0;}
   .card{float:none;width:100%;margin:0 0 20px 0;border:1px solid #ccc;}
-  a.btn{padding:5px 15px;}
+  a.btn{padding:18px 12px;font-size:15px;}
+  a.btn:hover{border:0;}
 
 }
 
