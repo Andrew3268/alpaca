@@ -15,12 +15,13 @@
 .visual form{margin-bottom:15px;}
 .visual input{display:none;padding:10px;width:50%;border-radius:10px;}
 
-.visual-card-wrap{}
+/* 카드박스 가로스크롤 메인  */
+/*.visual-card-wrap{}
 .visual-card-wrap ul{} 
 .visual-card-wrap ul li{width:280px;height:190px;text-align:center;margin:0 10px;position:relative;}
 .visual-card-wrap ul li a{color:#fff;font-weight:bold;font-size:20px;} 
 .visual-card-wrap ul li p{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;}
-.visual-card-wrap ul li a img{width:100%;height:100%;border-radius:20px;box-shadow:0 0 2rem -1rem rgba(0,0,0,0.5);}
+.visual-card-wrap ul li a img{width:100%;height:100%;border-radius:20px;box-shadow:0 0 2rem -1rem rgba(0,0,0,0.5);}*/
 
 .where{width:1000px;margin:0 auto;text-align:left;text-transform:uppercase;}
 .where p{font-size:35px;font-weight:500;}
@@ -49,7 +50,7 @@ a.btn:hover, a.btn:focus{box-shadow:0 0 0 2px #CFF09E, 0 0 0 4px #ff0464;-webkit
 a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duration:0;box-shadow:0 0 0 2px #CFF09E, 0 0 0 4px #3ac7bd;}*/
 
 
-a.btn{
+.category-pc a.btn{
   font-family: 'Bowlby One SC', cursive;
   display: inline-block;
   background-color: #FFED66;
@@ -65,18 +66,17 @@ a.btn{
   transition: all 100ms linear;
   margin:0 5px;
 }
-a.btn:hover{
+/*.category-pc a.btn:hover{
   -moz-transform: translateY(-4px);
   -o-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
   -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
-  box-shadow: 0 7px 0 #FF5E5B;
+  box-shadow: 0 7px 0 #FF5E5B;*/
 }
-a.btn:focus {
+.category-pc a.btn:focus {
   outline: 0;
 }
-
 
 /** $keyframes \ gelatine**/
 @keyframes gelatine {
@@ -117,9 +117,9 @@ a.btn:focus {
   .where-hashtag p{font-size:40px;}
   .card-wrap{width:100%;margin:10px 0 0 0;}
   .card{float:none;width:100%;margin:0 0 20px 0;border:1px solid #ccc;}
-  a.btn{padding:18px 12px;font-size:15px;}
-  a.btn:hover{border:0;}
-
+  .category-pc a.btn{padding:18px 12px;font-size:15px;}
+  .category-pc a.btn:hover{pointer-events:none;}
+  
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
@@ -136,7 +136,7 @@ a.btn:focus {
   .where{width:100%;margin:0;}
   .card-wrap{width:100%;margin:30px 0 0 0;}
   .card{float:left;width:47.7%;margin:1%;border:1px solid #ccc;}
-  a.btn{padding:5px 15px;}
+  .category-pc a.btn{padding:5px 15px;}
 }
 
 
