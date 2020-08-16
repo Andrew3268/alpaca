@@ -72,8 +72,8 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   -ms-transform: translateY(-4px);
   -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
-  box-shadow: 0 7px 0 #FF5E5B;*/
-}
+  box-shadow: 0 7px 0 #FF5E5B;
+}*/
 .category-pc a.btn:focus {
   outline: 0;
 }
