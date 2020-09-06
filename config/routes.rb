@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   # Blogging Controller Routes
   get 'blogging/first_blog'
+  get 'blogging/test_blog'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

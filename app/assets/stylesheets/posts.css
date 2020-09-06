@@ -156,9 +156,9 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .notice-warp strong{border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -7px 0 #b4e7f8;}
 .notice-warp span{display:block;}
 .notice_pc{width:800px;margin:0 auto;}
-.notice_pc span{font-size:10px;color:#333;}
+.notice_pc span{font-size:10px;color:#727272;}
 .notice_m{display:none;}
-.notice_m span{font-size:10px;color:#333;}
+.notice_m span{font-size:10px;color:#727272;}
 
 .go_back{width:30px;opacity:0.4;}
 
