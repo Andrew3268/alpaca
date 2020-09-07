@@ -5,6 +5,20 @@
 
   <div class="blog-wrapping">
     <div class="blog-box clearfix">
+      <% @featureds.each do |featured| %>
+        <a href="/blogging/<%= featured.furl %>">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="<%= featured.fimage %>">
+            </div>      
+            <div class="inner">
+              <p><%= featured.ftitle %></p>
+              <em><%= link_to 'Edit', edit_featured_path(featured) %></em>
+              <em><%= link_to 'Destroy', featured, method: :delete, data: { confirm: 'Are you sure?' } %></em>
+            </div>
+          </div>
+        </a>
+      <% end %>
 
       <a href="/blogging/first_blog">
         <div class="blog-card">
@@ -12,7 +26,7 @@
             <img src="https://www.wellbow.co.kr/wp-content/uploads/2018/11/kinto_white_17oz_01.png">
           </div>      
           <div class="inner">
-            <p>이거 없이<br> 여름 나려고?</p>
+            <p>이거 없이 여름 나려고?</p>
           </div>
         </div>
       </a>
