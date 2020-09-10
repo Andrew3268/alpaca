@@ -4,12 +4,13 @@ class FeaturedsController < ApplicationController
   # GET /featureds
   # GET /featureds.json
   def index
-    @featureds = Featured.all
+    @featureds = Featured.all.order("created_at DESC").limit(30)
   end
 
   # GET /featureds/1
   # GET /featureds/1.json
   def show
+    @featureds = Featured.all.order("created_at DESC").limit(6)
   end
 
   # GET /featureds/new
@@ -69,6 +70,11 @@ class FeaturedsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def featured_params
-      params.require(:featured).permit(:ftitle, :furl, :fimage)
+      params.require(:featured).permit(:ftitle, :furl, :fimage, :f_image_01, :f_image_02, :f_image_03, :f_image_04, :f_image_05,
+                                       :f_image_06, :f_subtitle_01, :f_subtitle_02, :f_subtitle_03, :f_subtitle_04, :f_subtitle_05,
+                                       :f_subtitle_06, :f_description_01, :f_description_02, :f_description_03, :f_description_04, :f_description_05,
+                                       :f_description_06, :f_link_01, :f_link_02, :f_link_03, :f_link_04, :f_link_05, :f_link_06)
     end
 end
+
+

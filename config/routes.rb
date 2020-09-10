@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :featureds
+  
   resources :order_items
   get 'cart', to: 'cart#show'
   resources :blogs
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/posts/shop', to:'posts#shop'
   get '/posts/hashtag/:name', to: 'posts#hashtags'
 
-
+  resources :featureds
   resources :guides
   resources :shops
   resources :categories

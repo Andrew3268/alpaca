@@ -6,13 +6,13 @@
   <div class="blog-wrapping">
     <div class="blog-box clearfix">
       <% @featureds.each do |featured| %>
-        <a href="/blogging/<%= featured.furl %>">
+        <a href="/featureds/<%= featured[:id] %>">
           <div class="blog-card">
             <div class="blog-image">
               <img src="<%= featured.fimage %>">
             </div>      
             <div class="inner">
-              <p><%= featured.ftitle %></p>
+              <p><%= link_to featured.ftitle, featured %></p>
               <em><%= link_to 'Edit', edit_featured_path(featured) %></em>
               <em><%= link_to 'Destroy', featured, method: :delete, data: { confirm: 'Are you sure?' } %></em>
             </div>
@@ -20,29 +20,7 @@
         </a>
       <% end %>
 
-      <a href="/blogging/first_blog">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://www.wellbow.co.kr/wp-content/uploads/2018/11/kinto_white_17oz_01.png">
-          </div>      
-          <div class="inner">
-            <p>이거 없이 여름 나려고?</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="/posts/hashtag/화이트">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://img4.tmon.kr/cdn3/deals/2019/11/13/2701747074/front_312b6_lzhhn.jpg">
-          </div>      
-          <div class="inner">
-            <p>미모<br> 급속충전</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#n">
+      <!-- <a href="#n">
         <div class="blog-card">
           <div class="blog-image">
             <img src="https://contents.sixshop.com/thumbnails/uploadedFiles/56465/product/image_1561984579493_750.jpg">
@@ -51,40 +29,7 @@
             <p>같은 핸드폰<br> 다른 느낌</p>
           </div>
         </div>
-      </a>
-
-      <a href="#n">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://www.wellbow.co.kr/wp-content/uploads/2018/11/kinto_white_17oz_01.png">
-          </div>      
-          <div class="inner">
-            <p>이거 없이<br> 여름 나려고?</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#n">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://img4.tmon.kr/cdn3/deals/2019/11/13/2701747074/front_312b6_lzhhn.jpg">
-          </div>      
-          <div class="inner">
-            <p>난 뒷사람과<br> 눈이 마주친다.</p>
-          </div>
-        </div>
-      </a>
-
-      <a href="#n">
-        <div class="blog-card">
-          <div class="blog-image">
-            <img src="https://contents.sixshop.com/thumbnails/uploadedFiles/56465/product/image_1561984579493_750.jpg">
-          </div>      
-          <div class="inner">
-            <p>같은 핸드폰<br> 다른 느낌</p>
-          </div>
-        </div>
-      </a>
+      </a> -->
 
     </div>
   </div>

@@ -1,15 +1,63 @@
 
-<%= simple_form_for(@featured) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= simple_form_for(@featured) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :ftitle %>
-    <%= f.input :furl %>
-    <%= f.input :fimage %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :ftitle %>
+      <%= f.input :furl %>
+      <%= f.input :fimage %>
+      <div class="featured-box">
+        <p>Featured - 01</p>
+        <%= f.input :f_image_01, label: '상품 이미지'  %>
+        <%= f.input :f_link_01, label: '상품 URL' %>
+        <%= f.input :f_subtitle_01, label: '상품명'  %>
+        <%= f.input :f_description_01, label: '상품 설명'  %>
+      </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+      <div class="featured-box">
+        <p>Featured - 02</p>
+        <%= f.input :f_image_02, label: '상품 이미지'  %>
+        <%= f.input :f_link_02, label: '상품 URL' %>
+        <%= f.input :f_subtitle_02, label: '상품명'  %>
+        <%= f.input :f_description_02, label: '상품 설명'  %>
+      </div>
+
+      <div class="featured-box">
+        <p>Featured - 03</p>
+        <%= f.input :f_image_03, label: '상품 이미지' %>
+        <%= f.input :f_link_03, label: '상품 URL' %>
+        <%= f.input :f_subtitle_03, label: '상품명'  %>
+        <%= f.input :f_description_03, label: '상품 설명'  %>
+      </div>
+
+      <div class="featured-box">
+        <p>Featured - 04</p>
+        <%= f.input :f_image_04, label: '상품 이미지' %>
+        <%= f.input :f_link_04, label: '상품 URL' %>
+        <%= f.input :f_subtitle_04, label: '상품명' %>
+        <%= f.input :f_description_04, label: '상품 설명' %>
+      </div>
+
+      <div class="featured-box">
+        <p>Featured - 05</p>
+        <%= f.input :f_image_05, label: '상품 이미지' %>
+        <%= f.input :f_link_05, label: '상품 URL' %>
+        <%= f.input :f_subtitle_05, label: '상품명' %>
+        <%= f.input :f_description_05, label: '상품 설명' %>
+      </div>
+
+      <div class="featured-box">
+        <p>Featured - 06</p>
+        <%= f.input :f_image_06, label: '상품 이미지' %>
+        <%= f.input :f_link_06, label: '상품 URL' %>
+        <%= f.input :f_subtitle_06, label: '상품명' %>
+        <%= f.input :f_description_06, label: '상품 설명' %>
+      </div>
+      
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>

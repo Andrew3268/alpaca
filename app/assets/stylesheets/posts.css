@@ -140,7 +140,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .inner .spec .boxes .box p{margin:0 0 7px 0;font-size:20px;font-weight:600;}
 .show-container .inner .spec .boxes .box span{font-size:15px;}
 .show-container .show-btn{margin-top:35px;border:2px solid black;border-radius:100px;padding:10px 20px;font-size:14px;background:#fe4365;box-shadow:inset 7px 2px 0 white, inset -0.5px 0.5px 0 white, inset -5px -3px 0 #D53D35;color:#fff;position:relative;}
-.show-container .show-btn a{color:#fff;font-size:17px;display:block;}
+.show-container .show-btn a{color:#fff;font-size:17px;display:block;text-align:center;font-weight:bold;letter-spacing:1.1px;}
 .show-container .mobile{display:none;}
 .show-container .admin{position:absolute;top:5px;right:10px;}
 
