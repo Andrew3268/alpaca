@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_09_174631) do
+ActiveRecord::Schema.define(version: 2020_09_10_152053) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,40 @@ ActiveRecord::Schema.define(version: 2020_08_09_174631) do
     t.string "fimage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "f_image_01"
+    t.string "f_image_02"
+    t.string "f_image_03"
+    t.string "f_image_04"
+    t.string "f_image_05"
+    t.string "f_image_06"
+    t.string "f_subtitle_01"
+    t.string "f_subtitle_02"
+    t.string "f_subtitle_03"
+    t.string "f_subtitle_04"
+    t.string "f_subtitle_05"
+    t.string "f_subtitle_06"
+    t.string "f_link_01"
+    t.string "f_link_02"
+    t.string "f_link_03"
+    t.string "f_link_04"
+    t.string "f_link_05"
+    t.string "f_link_06"
+    t.text "f_description_01"
+    t.text "f_description_02"
+    t.text "f_description_03"
+    t.text "f_description_04"
+    t.text "f_description_05"
+    t.text "f_description_06"
+    t.string "f_spare_01"
+    t.string "f_spare_02"
+    t.string "f_spare_03"
+    t.string "f_spare_04"
+    t.string "f_spare_05"
+    t.string "f_spare_06"
+    t.string "f_spare_07"
+    t.string "f_spare_08"
+    t.string "f_spare_09"
+    t.string "f_spare_10"
   end
 
   create_table "guides", force: :cascade do |t|
