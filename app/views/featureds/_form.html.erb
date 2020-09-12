@@ -4,9 +4,15 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :ftitle %>
-      <%= f.input :furl %>
-      <%= f.input :fimage %>
+      <div class="featured-box">
+        <%= f.input :ftitle, label: '메인타이틀 01' %>
+        <%= f.input :f_spare_01, label: '메인타이틀 02' %>
+        <%= f.input :fimage, label: '메인 이미지'  %>
+        <!-- <%= f.input :furl %> -->
+      </div>
+
+      <hr>
+
       <div class="featured-box">
         <p>Featured - 01</p>
         <%= f.input :f_image_01, label: '상품 이미지'  %>

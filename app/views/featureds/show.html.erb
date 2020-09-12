@@ -2,23 +2,22 @@
   <div class="blog_wrap">
     <div class="wrapper">
       <div class="header">
-        <h2><%= @featured.ftitle %></h2>
+        <h2><%= @featured.ftitle %><br/><%= @featured.f_spare_01 %></h2>
         <em><%= link_to 'Edit', edit_featured_path(@featured) %> |</em>
         <em><%= link_to 'Back', featureds_path %></em>
       </div>
 
-        <figure class="featured-image-1">
-            <a target="_blank" href="<%= @featured.f_link_01 %>"><img src="<%= @featured.f_image_01 %>" alt="<%= @featured.f_subtitle_01 %>"></a>
-        </figure>
-        <div class="number-1">1</div>
-        <article class="article article-1">
-          <h3><%= @featured.f_subtitle_01 %></h3>
-          <p><%= @featured.f_description_01 %></p>
-        </article>
+      <figure class="featured-image-1">
+        <a target="_blank" href="<%= @featured.f_link_01 %>"><img src="<%= @featured.f_image_01 %>" alt="<%= @featured.f_subtitle_01 %>"></a>
+      </figure>
+      <div class="number-1">1</div>
+      <article class="article article-1">
+        <h3><%= @featured.f_subtitle_01 %></h3>
+        <p><%= @featured.f_description_01 %></p>
+      </article>
       
-
       <figure class="featured-image-2">
-          <a target="_blank" href="<%= @featured.f_link_02 %>"><img src="<%= @featured.f_image_02 %>" alt="<%= @featured.f_subtitle_02 %>"></a>
+        <a target="_blank" href="<%= @featured.f_link_02 %>"><img src="<%= @featured.f_image_02 %>" alt="<%= @featured.f_subtitle_02 %>"></a>
       </figure>
       <div class="number-2">2</div>
       <article class="article article-2">
@@ -70,7 +69,7 @@
   </div><!--./blog_wrap-->
     
   
-  <div class="more-featured clearfix">
+  <!-- <div class="more-featured clearfix">
     <p>널 위해 더 준비 해봤어.</p>
 
     <% @featureds.each do |featured| %>
@@ -83,7 +82,7 @@
         </div>
       </div>
     <% end %>
-
+    
     <div class="box">
       <div class="image">
         <img src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg">        
@@ -92,43 +91,7 @@
         <p>이것은 테스트 타이틀입니다.</p>
       </div>
     </div>
-
-    <div class="box">
-      <div class="image">
-        <img src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg">        
-      </div>
-      <div class="inner">
-        <p>이것은 테스트 타이틀입니다.</p>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="image">
-        <img src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg">        
-      </div>
-      <div class="inner">
-        <p>이것은 테스트 타이틀입니다.</p>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="image">
-        <img src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg">        
-      </div>
-      <div class="inner">
-        <p>이것은 테스트 타이틀입니다.</p>
-      </div>
-    </div>
-
-    <div class="box">
-      <div class="image">
-        <img src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg">        
-      </div>
-      <div class="inner">
-        <p>이것은 테스트 타이틀입니다.</p>
-      </div>
-    </div>
-  </div>  
+  </div>   -->
 
 
   <div class="bottom-line clearfix">
