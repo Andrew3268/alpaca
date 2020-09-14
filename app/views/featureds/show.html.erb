@@ -14,6 +14,11 @@
       <article class="article article-1">
         <h3><%= @featured.f_subtitle_01 %></h3>
         <p><%= @featured.f_description_01 %></p>
+        <% if @featured.f_spare_01.present? %>
+          <a target="_blank" href="<%= @featured.f_link_01 %>" class="link-comm num-1">Get it from <%= @featured.f_spare_01 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_01 %>" class="link-comm num-1">Get it from 쿠팡</a> 
+        <% end %>
       </article>
       
       <figure class="featured-image-2">
@@ -23,15 +28,35 @@
       <article class="article article-2">
         <h3><%= @featured.f_subtitle_02 %></h3>
         <p><%= @featured.f_description_02 %></p>
+        <% if @featured.f_spare_02.present? %>
+          <a target="_blank" href="<%= @featured.f_link_02 %>" class="link-comm num-2">Get it from <%= @featured.f_spare_02 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_02 %>" class="link-comm num-2">Get it from 쿠팡</a> 
+        <% end %>
       </article>
 
       <figure class="featured-image-3 feat-img-3">
           <a target="_blank" href="<%= @featured.f_link_03 %>"><img src="<%= @featured.f_image_03 %>" alt="<%= @featured.f_subtitle_03 %>"></a>
       </figure>
       <div class="number-3">3</div>
-      <article class="article article-3">
+      <article class="article article-3 for-pc">
         <h3><%= @featured.f_subtitle_03 %></h3>
         <p><%= @featured.f_description_03 %></p>
+        <% if @featured.f_spare_03.present? %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from <%= @featured.f_spare_03 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+
+      <article class="article article-3 for-mobile">
+        <h3><%= @featured.f_subtitle_03 %></h3>
+        <p><%= @featured.f_description_03 %></p>
+        <% if @featured.f_spare_03.present? %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from <%= @featured.f_spare_03 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from 쿠팡</a> 
+        <% end %>
       </article>
 
       <figure class="featured-image-4">
@@ -41,6 +66,11 @@
       <article class="article article-4">
         <h3><%= @featured.f_subtitle_04 %></h3>
         <p><%= @featured.f_description_04 %></p>
+        <% if @featured.f_spare_04.present? %>
+          <a target="_blank" href="<%= @featured.f_link_04 %>" class="link-comm num-4">Get it from <%= @featured.f_spare_04 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_04 %>" class="link-comm num-4">Get it from 쿠팡</a> 
+        <% end %>
       </article>
     </div>
 
@@ -54,6 +84,11 @@
       <article class="article article-1">
         <h3><%= @featured.f_subtitle_05 %></h3>
         <p><%= @featured.f_description_05 %></p>
+        <% if @featured.f_spare_05.present? %>
+          <a target="_blank" href="<%= @featured.f_link_05 %>" class="link-comm num-5">Get it from <%= @featured.f_spare_05 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_05 %>" class="link-comm num-5">Get it from 쿠팡</a> 
+        <% end %>
       </article>
 
       <figure class="featured-image-2 feat-img-6">
@@ -63,6 +98,11 @@
       <article class="article article-2">
         <h3><%= @featured.f_subtitle_06 %></h3>
         <p><%= @featured.f_description_06 %></p>
+        <% if @featured.f_spare_06.present? %>
+          <a target="_blank" href="<%= @featured.f_link_06 %>" class="link-comm num-6">Get it from <%= @featured.f_spare_06 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_06 %>" class="link-comm num-6">Get it from 쿠팡</a> 
+        <% end %>
       </article>
     
     </div><!--./wrapper-->
@@ -93,9 +133,8 @@
     </div>
   </div>   -->
 
-
-  <div class="bottom-line clearfix">
-    <div class="wrap">
+  <div class="wrap">
+    <div class="featured-bottom-line clearfix">  
       <span>Notice</span>
       <em>* 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</em>
     </div>

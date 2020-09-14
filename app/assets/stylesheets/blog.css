@@ -68,6 +68,7 @@
 
 
 /* Ver.2 */
+.blog_wrap{font-family: 'Nanum Gothic', sans-serif;}
 .blog_wrap h2{margin-top:20px;text-transform:uppercase;letter-spacing:1.2px;word-break:keep-all;}
 .blog_wrap figure{margin:0;}
 .blog_wrap img{height:300px;width: 100%;object-fit:contain;margin-top:20px;box-shadow:0 0 5px rgba(0,0,0,0.15);border-radius:20px;}
@@ -78,10 +79,11 @@
 .blog_wrap .header:after{background:rgba(254, 144, 164, 0.2);content:"";display:block;height:15px;width:auto;}
 .blog_wrap .header em{font-size:13px;}
 .blog_wrap .article{text-align:left;}
-/*.blog_wrap .article p{text-align:left}*/
-.blog_wrap .article h3{font-size:20px;}
+.blog_wrap .article p{word-break:keep-all;}
+.blog_wrap .article h3{font-size:20px;line-height:1.3;margin-bottom:10px;}
 .article-1, .article-4{grid-column:2 / 3;}
 .article-6{grid-row:3 / 5;}
+
 .feat-img-5{grid-row:2 / 3}
 .feat-img-5 img{margin-top:-75px;}
 .featured-image-1{grid-row:2 / 3;}
@@ -93,6 +95,26 @@
 .number-5{color:rgba(15, 155, 255, 0.3);}
 .number-1, .number-4 {align-self:end;font-size:200px;line-height:300px;grid-column:1 / 2;}
 .featured-image-3 img{height:300px;margin-top:55px;}
+
+a.link-comm{display:inline-block;margin-top:10px;letter-spacing:2px;color:#3d3d3d;}
+a.num-1{box-shadow:inset 0 -8px 0 rgba(104,23,186,0.1);}
+a.num-2{box-shadow:inset 0 -8px 0 rgba(238,238,238,1);}
+a.num-3{box-shadow:inset 0 -8px 0 rgba(0, 0, 0, 0.4);}
+a.num-4{box-shadow:inset 0 -8px 0 rgba(218, 52, 127, 0.15);}
+a.num-5{box-shadow:inset 0 -8px 0 rgba(15, 155, 255, 0.2);}
+a.num-6{box-shadow:inset 0 -8px 0 rgba(238,238,238,1);}
+
+.featured-bottom-line{width:1000px;margin:0 auto;font-size:12px;border-top:1px solid #ccc;padding-top:10px;}
+.featured-bottom-line span{display:inline-block;box-shadow:inset 0 -8px 0 rgba(254,144,164,0.2);}
+.featured-bottom-line em{display:block;}
+
+article.for-pc{margin-top:-100px;}
+article.for-mobile{display:none;}
+
+@media screen and (max-width:640px){
+  article.for-pc{display:none;}
+  article.for-mobile{display:block;}
+}
 
 @media (min-width:640px){
   .wrapper{grid-template-columns:repeat(2, 1fr 2fr);margin:24px auto;}
@@ -108,7 +130,10 @@
   .article-3, .article-4{grid-row:6 / 7;}
   .article-4{grid-column:4 / 5;}
   .article-6{grid-row:5 / 5;}
-  .feat-img-6{grid-row:1 / 3;}  
+  .feat-img-6{grid-row:1 / 3;}
+  article.for-mobile{display:none;}
+  
+  
 }
 
 @media(min-width:641px) and (max-width:1199px){
