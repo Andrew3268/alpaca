@@ -114,6 +114,7 @@ article.for-mobile{display:none;}
 @media screen and (max-width:640px){
   article.for-pc{display:none;}
   article.for-mobile{display:block;}
+  .featured-bottom-line{width:100%;}
 }
 
 @media (min-width:640px){
@@ -138,6 +139,7 @@ article.for-mobile{display:none;}
 
 @media(min-width:641px) and (max-width:1199px){
  .wrapper {width:700px;}
+ .featured-bottom-line{width:100%;}
 }
 
 
