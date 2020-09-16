@@ -4,7 +4,8 @@
       <div class="header">
         <h2><%= @featured.ftitle %><!-- <br/><%= @featured.f_spare_01 %> --></h2>
         <em><%= link_to 'Edit', edit_featured_path(@featured) %> |</em>
-        <em><%= link_to 'Back', featureds_path %></em>
+        <em><%= link_to 'Back', featureds_path %> |</em>
+        <em><%= link_to 'Destroy', @featured, method: :delete, data: { confirm: 'Are you sure?' } %></em>
       </div>
 
       <figure class="featured-image-1">
