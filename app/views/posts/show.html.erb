@@ -24,7 +24,12 @@
           <span class="pct">( <%= number_to_percentage(final_pct, precision: 0) %> OFF )</span>
         <% end %>
         <% if current_user && current_user.admin %>
-          <span class="bycou">by 쿠팡</span>
+          <% if @post.p_spare_06.present? %>
+            <span class="bycou">by <%= @post.p_spare_06 %></span>
+          <% else %>
+            <span class="bycou">by 쿠팡</span>
+          <% end %>
+            
         <% end %>
       </div>            
 
@@ -47,14 +52,17 @@
               <span>-</span>
             <% end %>
           </div>
-          <div class="box">
-            <p>로켓 배송</p>
-            <% if @post.p_spare_05.present? %>
-              <span><%= @post.p_spare_05 %></span>
-            <% else %>
-              <span>NO</span>
-            <% end %>
-          </div>
+          <% if @post.p_spare_06.present? %>
+          <% else %>
+            <div class="box">
+              <p>로켓 배송</p>
+              <% if @post.p_spare_05.present? %>
+                <span><%= @post.p_spare_05 %></span>
+              <% else %>
+                <span>NO</span>
+              <% end %>
+            </div>
+          <% end %>
         </div>
         <!-- <p>별 5개: 매우좋음, 별 4~4.5개: 좋음, 별 3~3.5: 보통, 별 3개 미만: 나쁨</p> -->
       </div>
@@ -66,14 +74,22 @@
         <script async defer data-pin-hover="true" data-pin-lang="en" src="//assets.pinterest.com/js/pinit.js"></script>
       <% end %>
 
-      <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">쿠팡 최저가 확인하기</a></div>
+      <% if @post.p_spare_06.present? %>
+        <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>"><%= @post.p_spare_06 %> 최저가 확인하기</a></div>
+      <% else %>
+        <div class="show-btn pc-ver"><a target="_blank" href="<%= @post.link %>">쿠팡 최저가 확인하기</a></div>
+      <% end %>
       
       <!-- <div class="sharing">
         <div class="addthis_inline_share_toolbox_9x2f"></div>
       </div> -->
       
     </div>
-    <div class="show-btn mobile"><a href="<%= @post.link %>">쿠팡 최저가 확인하기</a></div> 
+    <% if @post.p_spare_06.present? %>
+      <div class="show-btn mobile"><a target="_blank" href="<%= @post.link %>"><%= @post.p_spare_06 %> 최저가 확인하기</a></div>
+    <% else %>
+      <div class="show-btn mobile"><a target="_blank" href="<%= @post.link %>">쿠팡 최저가 확인하기</a></div>
+    <% end %>
 
 
     <% if current_user && current_user.admin %>
