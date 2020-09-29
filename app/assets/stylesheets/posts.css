@@ -1,6 +1,9 @@
 /* Index Page */
 .visual{text-align:center;}
 .visual .main-title{margin-bottom:10px;font-family:"Vibur";}
+.visual .main-title .visual-banner{}
+.visual .main-title .visual-banner img{width:100%;}
+.visual .main-title .visual-banner-m{display:none;}
 .visual h2.ver-02{font-size:77px;letter-spacing:1px;color:#F25F5C;text-shadow:1px 1px 0 #70C1B3, 2px 2px 0 #b4e7f8, 3px 3px 0 #70C1B3, 4px 4px 0 #b4e7f8, 5px 5px 0 #70C1B3, 6px 6px 0 #b4e7f8, 7px 7px 0 #70C1B3, 8px 8px 0 #b4e7f8, 9px 9px 0 #70C1B3, 10px 10px 0 #b4e7f8, 11px 11px 0 #70C1B3, 12px 12px 0 #b4e7f8;}
 .visual span.span-02{font-size:37px;}
 .visual span.sub_title{font-size:2rem;border-bottom:0px solid #fec2cd;box-shadow:inset 0 -10px 0 #fec2cd;width:100%;}
@@ -77,6 +80,9 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 
 
 @media screen and (max-width:640px){
+  .visual .main-title .visual-banner{display:none;}
+  .visual .main-title .visual-banner-m{display:block;}
+  .visual .main-title .visual-banner-m img{width:100%;}
   .visual h2.ver-01{font-size:3rem;border-bottom:0px solid #fec2cd;box-shadow:inset 0 -135px 0 #fec2cd;width:100%;}
   .visual span.sub_title{font-size:20px;}
   .visual h2.ver-02{font-size:35px;}

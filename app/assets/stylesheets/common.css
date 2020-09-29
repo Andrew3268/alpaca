@@ -60,7 +60,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .site-navbar{position:relative;display:flex;height:60px;margin:0 -20px;}
 .site-navbar .navbar-item{padding:0 20px;}
 .site-navbar .header-search{}
-.site-navbar .header-search input{width:350px;padding:10px;border-radius:20px;margin-top:12px;background:#f8f8f8;border:none;}
+.site-navbar .header-search input{width:400px;padding:10px;border-radius:20px;margin-top:12px;background:#f8f8f8;border:none;margin-left:-50px;}
 
 
 
