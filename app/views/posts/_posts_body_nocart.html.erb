@@ -7,7 +7,7 @@
         <div><p><a href="/guides">Gift Guide</a> > <span><%= params[:guide] %></span></p></div>
       <% else %> 
         <% if params[:shop].present? %>
-          <div><p><a href="/shops">Shop</a> > <span><%= params[:shop] %></span></p></div>
+          <div><p><a href="/shops">Shop</a> > <span>#<%= params[:shop] %></span></p></div>
         <% end %>
       <% end %>
     <% end %>
