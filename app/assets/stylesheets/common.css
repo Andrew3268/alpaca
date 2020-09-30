@@ -5,6 +5,7 @@
 /* 사이트이름 */
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 
 
 h1,h2,h3,h4,h5,h6,p,ul,li,address,form,fieldset,legend,input,button,dl,dt,dd,table,thead,tbody,tfoot,tr,th,td{margin:0;padding:0;font-family:inherit;}
@@ -96,6 +97,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 
 @media screen and (min-width:641px) and (max-width:1199px){
   .site-logo{width:auto;font-size:24px;}
+  .site-navbar .header-search input{margin-left:-15px;}
 
 }
 
