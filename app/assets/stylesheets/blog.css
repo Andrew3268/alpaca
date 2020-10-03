@@ -1,5 +1,5 @@
 /* Blog Main Page */
-.blog-wrapping{width:1000px;margin:0 auto;}
+.blog-wrapping{width:1000px;margin:0 auto;font-family: 'Gugi', cursive;}
 .blog-box{}
 .blog-box a{display:block;}
 .blog-box .blog-card{float:left;width:31.33%;height:450px;margin:1%;background:rgba(242, 242, 242, 0.6);border-radius:10px;}
