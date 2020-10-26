@@ -1,0 +1,31 @@
+<div class="blog-wrapping">
+    <div class="blog-box clearfix">
+      <% @featureds.each do |featured| %>
+        <a href="/featureds/<%= featured[:id] %>">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="<%= featured.fimage %>">
+            </div>      
+            <div class="inner">
+              <p><%= link_to featured.ftitle, featured %></p>
+              <!-- <p><%= link_to featured.f_spare_01, featured %></p> -->
+              <!-- <em><%= link_to 'Edit', edit_featured_path(featured) %></em>
+              <em><%= link_to 'Destroy', featured, method: :delete, data: { confirm: 'Are you sure?' } %></em> -->
+            </div>
+          </div>
+        </a>
+      <% end %>
+
+      <!-- <a href="#n">
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://contents.sixshop.com/thumbnails/uploadedFiles/56465/product/image_1561984579493_750.jpg">
+          </div>      
+          <div class="inner">
+            <p>같은 핸드폰<br> 다른 느낌</p>
+          </div>
+        </div>
+      </a> -->
+
+    </div>
+</div>

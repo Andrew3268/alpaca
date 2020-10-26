@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
+
+  validates :link, presence: true
+  
   belongs_to :category
   belongs_to :shop
   # belongs_to :guide
