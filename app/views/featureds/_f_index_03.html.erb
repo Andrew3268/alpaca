@@ -1,46 +1,46 @@
 <div class="ft-wrap clearfix">
-  <a href="#n">
+  <a class="ft-sale-btn" href="#n">
     <div class="ft-left">
       <div class="image-box"><img src="<%=asset_path 'sales.png' %>"></div>
     </div>
   </a>
+  
+    <div class="card-section">
+      <% @featureds.each do |featured| %>
+        <a href="/featureds/<%= featured[:id] %>">
+          <div class="ft-card">
+            <div class="image-box">
+              <img src="<%= featured.fimage %>">
+            </div>
+            <div class="inner">
+              <h3><%= link_to featured.ftitle, featured %></h3>
+            </div>
+          </div>
+        </a>
+      <% end %>
 
-  <div class="card-section">
-    <% @featureds.each do |featured| %>
-      <a href="/featureds/<%= featured[:id] %>">
+      <a href="#n">
         <div class="ft-card">
           <div class="image-box">
-            <img src="<%= featured.fimage %>">
+            <img src="https://i.pinimg.com/originals/c3/a7/e5/c3a7e5e29443ecfce44b0931313e23ea.png">
           </div>
           <div class="inner">
-            <h3><%= link_to featured.ftitle, featured %></h3>
+            <h3>여기에는 제목을 넣을 꺼에요. 어떤 제목이 좋을까요?</h3>
           </div>
         </div>
       </a>
-    <% end %>
 
-    <a href="#n">
-      <div class="ft-card">
-        <div class="image-box">
-          <img src="https://i.pinimg.com/originals/c3/a7/e5/c3a7e5e29443ecfce44b0931313e23ea.png">
+      <a href="#n">
+        <div class="ft-card">
+          <div class="image-box">
+            <img src="https://i.pinimg.com/originals/c3/a7/e5/c3a7e5e29443ecfce44b0931313e23ea.png">
+          </div>
+          <div class="inner">
+            <h3>여기에는 제목을 넣을 꺼에요. 어떤 제목이 좋을까요?</h3>
+          </div>
         </div>
-        <div class="inner">
-          <h3>여기에는 제목을 넣을 꺼에요. 어떤 제목이 좋을까요?</h3>
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a href="#n">
-      <div class="ft-card">
-        <div class="image-box">
-          <img src="https://i.pinimg.com/originals/c3/a7/e5/c3a7e5e29443ecfce44b0931313e23ea.png">
-        </div>
-        <div class="inner">
-          <h3>여기에는 제목을 넣을 꺼에요. 어떤 제목이 좋을까요?</h3>
-        </div>
-      </div>
-    </a>
-
-  </div>
-
-</div>
+    </div><!--card-section-->
+  
+</div><!--ft-wrap-->
