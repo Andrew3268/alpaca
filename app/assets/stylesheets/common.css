@@ -52,7 +52,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .logo-m img{}
 .site-overlay{position:fixed;top:0;right:0;bottom:0;left:0;padding-bottom:40px;/*background:rgba(0, 0, 0, 0.9);*/background:#fff;width:100%;height:100%;transition:all 200ms linear;z-index:9000;opacity:0;visibility:hidden;}
 .overlay-active .site-overlay{opacity:1;visibility:visible;}
-.site-overlay .m-image{text-align:center;margin-top:10%;opacity:0.65;}
+.site-overlay .m-image{text-align:center;margin-top:10%;opacity:0.3;}
 .site-overlay .m-image img{width:250px;}
 .site-logo{display:block;font-size:20px;font-weight:900;line-height:1;/*color:#fe8fa3;*/font-family: 'Bowlby One SC', cursive;text-shadow:3px 3px 0 #333, 15px 15px 10px #555;text-align:center;letter-spacing:2px;-webkit-text-stroke-width:1px;-webkit-text-stroke-color:#f5eede;/*color: #47a1aa;*/color:#fe8fa3;text-shadow:#0d1218 1px 1px,#0d1218 2px 2px,#0d1218 3px 3px,#0d1218 4px 4px,#0d1218 5px 5px;width:100px;}
 .site-logo em{background:#fe8fa3;color:#fff;padding:3px 7px;border-radius:10px;margin-right:1px;}

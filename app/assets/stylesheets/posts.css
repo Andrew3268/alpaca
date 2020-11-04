@@ -35,7 +35,7 @@
 .card-wrap .cart-title span{font-size:30px;font-weight:600;}
 .card{float:left;width:30.7%;height:400px;margin:1%;border-radius:20px;position:relative;box-shadow:0 0 5px rgba(0,0,0,0.15);}
 .card .image-box{height:300px;position:relative;}
-.card .image-box img{width:75%;height:75%;position:absolute;top:40%;left:50%;transform:translate(-50%, -50%);object-fit:contain;border-radius:20px;}
+.card .image-box img{width:75%;height:75%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;border-radius:20px;}
 .card .image-box .no-background img{width:80%;height:80%;object-fit:contain;}
 .card .inner{text-align:center;width:80%;margin:0 auto;}
 .card .inner p{font-size:14px;word-break:keep-all;letter-spacing:1.1px;height:50px;}
@@ -96,8 +96,9 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .where p{font-size:20px;text-align:center;}
   .where-hashtag{margin-bottom:20px;}
   .where-hashtag p{font-size:40px;}
-  .card-wrap{width:100%;margin:10px 0 0 0;}
   .card{float:none;width:100%;margin:0 0 20px 0;/*border-bottom:1px solid #ccc;border-radius:0;box-shadow:0 0;*/}
+  .card-wrap{width:100%;margin:10px 0 0 0;}
+  .card .image-box img{width:95%;height:95%;}
   .category-pc a.btn{padding:18px 12px;font-size:15px;}
   .category-pc a.btn:hover{pointer-events:none;}
   
