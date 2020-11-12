@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scategory.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @scategory.description %>
+</p>
+
+<p>
+  <strong>Display in navbar:</strong>
+  <%= @scategory.display_in_navbar %>
+</p>
+
+<%= link_to 'Edit', edit_scategory_path(@scategory) %> |
+<%= link_to 'Back', scategories_path %>

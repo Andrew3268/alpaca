@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_10_152053) do
+ActiveRecord::Schema.define(version: 2020_11_12_071124) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -218,6 +218,23 @@ ActiveRecord::Schema.define(version: 2020_09_10_152053) do
     t.integer "tag_id"
     t.index ["post_id"], name: "index_posts_tags_on_post_id"
     t.index ["tag_id"], name: "index_posts_tags_on_tag_id"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "scategory_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scategory_id"], name: "index_sales_on_scategory_id"
+  end
+
+  create_table "scategories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "display_in_navbar", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "shops", force: :cascade do |t|

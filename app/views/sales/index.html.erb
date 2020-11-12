@@ -1,0 +1,180 @@
+<div class="wrap">
+
+
+  <div class="sales-categories clearfix">
+    <div class="ctg clearfix">
+      <ul>
+        <% Scategory.all.each do |sct| %>
+          <li><%= link_to sct.name, sales_path(scategory: sct.name) %></li>
+        <% end %>
+        <li><%= link_to 'New Sale', new_sale_path %></li>
+        <li><%= link_to 'New Category', new_scategory_path %></li>
+        
+      </ul>
+    </div>
+    <div class="hashtag clearfix">
+      <div class="panel-wrapper">
+        <a href="#show" class="show btn" id="show">더보기</a> 
+        <a href="#hide" class="hide btn" id="hide">감추기</a> 
+        <div class="panel">
+         
+         <ul id="myUL">
+           <li><a href="#">#믹서기</a></li>
+           <li><a href="#">#무선이어폰</a></li>
+           <li><a href="#">#에어프라이어</a></li>
+           <li><a href="#">#로션</a></li>
+           <li><a href="#">#후드티</a></li>
+           <li><a href="#">#노트북</a></li>
+           <li><a href="#">#게이밍 노트북</a></li>
+           <li><a href="#">#뉴에라</a></li>
+           <li><a href="#">#스타벅스커피</a></li>
+           <li><a href="#">#에스프레소 커피머신</a></li>
+           <li><a href="#">#캡슐 커피머신</a></li>
+           <li><a href="#">#테이블</a></li>
+
+         </ul>
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="찾고 싶은게 뭐야?" title="Type in a name"> 
+        </div><!-- end panel -->
+        <div class="fade"></div>
+      </div><!-- end panel-wrapper -->
+    </div>
+  </div>
+
+  <div class="card-wrap clearfix">
+      <% @sales.each do |sale| %>
+        <div class="card sales-card">
+          
+          <div class="image-box">
+            <div class="no-background">
+              <img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/184654558885986-1c31c87b-3e72-4705-955a-66cd17c9f177.jpg">
+            </div>
+          </div>
+
+          <div class="inner clearfix">   
+            <em class="sales-source">by Coupang</em>     
+            <p><%= sale.title %></p>
+            <div class="left clearfix">
+              <span class="list-price">12,900원</span>
+              <span class="current-price">6,900원</span>
+            </div>
+            <div class="right clearfix">
+              <a href="#n">Get Now</a>
+            </div>
+          </div>
+
+          <div class="sales-pct">
+            <p>50%<span>OFF</span></p>
+          </div>
+
+        </div>
+      <% end %>
+
+      <div class="card sales-card">
+        
+        <div class="image-box">
+          <div class="no-background">
+            <img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/300x300ex/image/retail/images/185471363227882-b78604bf-173c-472d-97df-7fc157ef2d78.jpg">
+          </div>
+        </div>
+
+        
+        <div class="inner">
+          <em class="sales-source">by Coupang</em>     
+          <p>록키스 비타풀 수분크림</p>
+          <div class="left">
+            <span class="list-price">24,900원</span>
+            <span class="current-price">12,900원</span>
+          </div>
+          <div class="right clearfix">
+            <a href="#n">Get Now</a>
+          </div>
+        </div>
+
+        <div class="sales-pct">
+          <p>50%<span>OFF</span></p>
+        </div>
+
+      </div>
+
+      <div class="card sales-card">
+        
+        <div class="image-box">
+          <div class="no-background">
+            <img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/300x300ex/image/retail/images/5712134426667-075c86f5-0e3d-4129-be18-068d52d02821.jpg">
+          </div>
+        </div>
+
+        
+        <div class="inner">
+          <em class="sales-source">by Coupang</em>     
+          <p>록키스 화이트닝 스페셜 스킨케어 4종 세트</p>
+          <div class="left">
+            <span class="list-price">68,600원</span>
+            <span class="current-price">34,900원</span>
+          </div>
+          <div class="right clearfix">
+            <a href="#n">Get Now</a>
+          </div>
+        </div>
+
+        <div class="sales-pct">
+          <p>50%<span>OFF</span></p>
+        </div>
+
+      </div>
+
+    </div><!--./card-wrap-->
+
+  </div>
+
+  <script type="text/javascript">
+    function myFunction() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+
+  </script>
+
+
+
+
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Scategory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.title %></td>
+        <td><%= sale.body %></td>
+        <td><%= sale.scategory.name %></td>
+        <td><%= link_to 'Show', sale %></td>
+        <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
+        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+</div> -->
