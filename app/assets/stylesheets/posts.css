@@ -31,15 +31,52 @@
 .where p a, .where p span, .where p em, .where-hashtag p span, .card-wrap .cart-title span{border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -8px 0 #b4e7f8;}
 .where-hashtag{font-family: 'Gugi', cursive;}
 .where-hashtag p{font-size:50px;font-weight:600;}
+
+/* category and hashtag on Sale Page */
+.sales-categories{}
+.sales-categories .ctg{background:#fe5c79;border-radius:10px;}
+.sales-categories .ctg ul{}
+.sales-categories .ctg ul li{float:left;margin:0 10px;padding:10px;}
+.sales-categories .ctg ul li a{color:#fff;}
+.sales-categories .hashtag{margin-bottom:30px;}
+.sales-categories .hashtag ul{}
+.sales-categories .hashtag ul li{font-size:12px;float:left;margin:0 10px 10px 0;border:1px solid #a284e0;padding:3px 5px;border-radius:15px;color:#a284e0;background:rgb(162,132,224,0.1);}
+.sales-categories .hashtag .panel-wrapper{position:relative;}
+.sales-categories .hashtag .btn{color:#a284e0;background:rgb(162,132,224,0.1);border-radius:1.5em;right:0%;padding:5px;text-decoration:none;width:20%;/*transform:translate(-50%,-50%);*/}
+.sales-categories .hashtag .show, .hide{position:absolute;bottom:-1em;z-index:100;text-align:center;}
+.sales-categories .hashtag .hide{display:none;}
+.sales-categories .hashtag .show:target{display:none;}
+.sales-categories .hashtag .show:target ~ .hide{display:block;}
+.sales-categories .hashtag .show:target ~ .panel{max-height:2000px;}
+.sales-categories .hashtag .show:target ~ .fade{margin-top:0;}
+.sales-categories .hashtag .panel{position:relative;margin:1em auto 0.5em auto;max-height:75px;overflow:hidden;-webkit-transition:max-height .5s ease;transition:max-height .5s ease;border:1px solid #a284e0;padding:10px;border-radius:15px;}
+.sales-categories .hashtag .panel input{padding:4px;border-radius:10px;border:1px solid #a284e0;background:rgb(162,132,224,0.1);}
+.sales-categories .hashtag .panel input::placeholder{color:#a284e0;font-weight:bold;padding-left:5px;}
+.sales-categories .hashtag .fade{height:20px;/*margin-top:-100px;*/position:relative;}
+
+
+.card{float:left;width:30.7%;height:400px;margin:1%;border-radius:20px;position:relative;box-shadow:0 0 5px rgba(0,0,0,0.15);}
 .card-wrap{width:1000px;margin:10px auto 0 auto;}
 .card-wrap .cart-title span{font-size:30px;font-weight:600;}
-.card{float:left;width:30.7%;height:400px;margin:1%;border-radius:20px;position:relative;box-shadow:0 0 5px rgba(0,0,0,0.15);}
 .card .image-box{height:300px;position:relative;}
 .card .image-box img{width:75%;height:75%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;border-radius:20px;}
 .card .image-box .no-background img{width:80%;height:80%;object-fit:contain;}
 .card .inner{text-align:center;width:80%;margin:0 auto;}
 .card .inner p{font-size:14px;word-break:keep-all;letter-spacing:1.1px;height:50px;}
 .card .inner p a{color:#b3b3b3;/*border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -7px 0 #b4e7f8;*/}
+
+/* Sale Page */
+.sales-card{height:435px;}
+.sales-card .inner{text-align:left;}
+.sales-card .inner em.sales-source{font-size:10px;color:#ccc;text-decoration:underline;}
+.sales-card .inner .left{float:left;width:50%;}
+.sales-card .inner .right{float:right;width:45%;margin-left:5%;}
+.sales-card .inner .right a{text-decoration:none;border:1px solid #ccc;text-align:center;display:table-cell;vertical-align:middle;padding:12px 24px;}
+.card .inner span.list-price{display:block;font-size:15px;color:#fe8fa3;text-decoration:line-through;}
+.card .inner span.current-price{font-size:20px;}
+.card .sales-pct{position:absolute;top:10px;left:10px;background:#fe8fa3;border-radius:50%;}
+.card .sales-pct p{color:#fff;width:45px;height:45px;display:table-cell;vertical-align:middle;text-align:center;padding:5px;}
+.card .sales-pct p span{display:block;}
 
 .card .inner .add form{position:absolute;bottom:-10px;left:50%;transform:translate(-50%, -50%);}
 .card .inner .add form input{font-size:30px;width:43px;height:40px;color:#FE4365;background:#fff;border-radius:50%;border:none;cursor:pointer;border:1px solid;padding-bottom:40px;}
@@ -101,6 +138,8 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .card .image-box img{width:95%;height:95%;}
   .category-pc a.btn{padding:18px 12px;font-size:15px;}
   .category-pc a.btn:hover{pointer-events:none;}
+
+  .sales-categories{width:100%;margin:0;}
   
 }
 
@@ -377,4 +416,19 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 @media screen and (min-width:641px) and (max-width:1199px){
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
