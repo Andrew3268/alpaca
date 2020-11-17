@@ -1,0 +1,142 @@
+<div class="wrap">
+
+  <div class="sales-categories clearfix">
+
+    <div class="ctg-common">
+      <ul class="ctg-ul">
+        <li><a href="/sales">Everything</a></li>
+        <% Scategory.all.each do |sct| %>
+          <li><%= link_to sct.name, sales_path(scategory: sct.name) %></li>
+        <% end %>
+        <li><%= link_to 'New Sale', new_sale_path %></li>
+        <li><%= link_to 'New Category', new_scategory_path %></li>
+      </ul>
+    </div>
+
+    <div class="visual">
+      <div class="category-mobile">
+        <ul>
+          <li><a href="/sales">Everything</a></li>
+          <% Scategory.all.each do |sct| %>
+            <li><%= link_to sct.name, sales_path(scategory: sct.name) %></li>
+          <% end %>
+          <li><%= link_to 'New Sale', new_sale_path %></li>
+          <li><%= link_to 'New Category', new_scategory_path %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hashtag clearfix">
+      <div class="panel-wrapper">
+        <a href="#show" class="show btn" id="show">더보기</a> 
+        <a href="#hide" class="hide btn" id="hide">감추기</a> 
+        <div class="panel">
+         
+         <ul id="myUL">
+           <%= render 'sales/list_of_hashtag' %>
+         </ul>
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="찾고 싶은게 뭐야?" title="Type in a name"> 
+        </div><!-- end panel -->
+        <div class="fade"></div>
+      </div><!-- end panel-wrapper -->
+    </div>
+
+  </div>
+
+  <div class="where">
+    <% if params[:scategory].present? %>
+      <div><p><em>Categories</em> > <span><%= params[:scategory] %></span></p></div>
+    <% end %>
+    <% if params[:shashtags].present? %>
+      <div><p><em>해시태그</em> > <span><%= params[:shashtags] %></span></p></div>
+    <% end %>
+  </div>
+
+  <div class="card-wrap clearfix">
+      <% @sales.each do |sale| %>
+        <div class="card sales-card">
+          
+          <div class="image-box">
+            <div class="no-background">
+              <%= link_to image_tag(sale.sale_image, alt:"", title:""), sale if sale.sale_image.attached? %>
+            </div>
+          </div>
+
+          <div class="inner clearfix">   
+            <% if sale.s_source.present? %>
+              <em class="sales-source">by <%= sale.s_source %> #<%= render_with_hashtags(sale.s_hashtag.to_s) %></em>     
+            <% else %>
+              <em class="sales-source">by Coupang <%= render_with_hashtags(sale.s_hashtag.to_s) %></em>     
+            <% end %>
+            <p><%= link_to sale.s_title, sale %></p>
+            <div class="left clearfix">
+              <span class="list-price"><%= number_to_currency(sale.s_was_price, locale: :kr) %>원</span>
+              <span class="current-price"><%= number_to_currency(sale.s_is_price, locale: :kr) %>원</span>
+            </div>
+            <div class="right clearfix">
+              <a class="outline" target="_blank" href="<%= sale.s_link %>">Get Now</a>
+            </div>
+          </div>
+
+          <% percentage = 0 %>
+          <% percentage =  (sale.s_was_price - sale.s_is_price) / sale.s_was_price * 100 %>
+          <div class="sales-pct">
+            <p><%= number_to_percentage(percentage, precision: 0) %><span>OFF</span></p>
+          </div>
+
+        </div>
+      <% end %>
+
+    </div><!--./card-wrap-->
+
+    <!-- <div class="card-wrap clearfix">
+        <div class="card sales-card">
+          
+          <div class="image-box">
+            <div class="no-background">
+             <img src="https://sm.ign.com/t/ign_kr/screenshot/default/sujeongdoem-ironmanvr-review-blogroll-1593638760998-h1ze1280_9rzv.1280.jpg">
+            </div>
+          </div>
+
+          <div class="inner clearfix">   
+            <em class="sales-source">by Coupang</em>     
+            <p>여기가 타이틀 입력하는 곳</p>
+            <div class="left clearfix">
+              <span class="list-price">1000 원</span>
+              <span class="current-price">2000 원</span>
+            </div>
+            <div class="right clearfix">
+              <a target="_blank" href="#n">Get Now</a>
+            </div>
+          </div>
+
+          <div class="sales-pct"><p>50<span>OFF</span></p></div>
+        </div>
+    </div> -->
+
+</div>
+
+<script type="text/javascript">
+  function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+
+
+
+

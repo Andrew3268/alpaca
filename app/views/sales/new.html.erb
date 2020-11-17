@@ -1,5 +1,13 @@
-<h1>New Sale</h1>
+<div class="wrap">
+  <div class="form-box">  
+    <% if current_user && current_user.admin %>
+      <h1>New Post</h1>
+      <div class="clearfix">
+        <%= render 'form', sale: @sale %>
+      </div>
+      <div class="new-form-back"><%= link_to 'Back', sales_path %></div>
+    <% end %>
+  </div>
+</div>
 
-<%= render 'form', sale: @sale %>
-
-<%= link_to 'Back', sales_path %>
+  

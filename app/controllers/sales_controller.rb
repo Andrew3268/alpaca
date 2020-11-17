@@ -1,5 +1,6 @@
 class SalesController < ApplicationController
   before_action :set_sale, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show, :hashtags]
 
   # GET /sales
   # GET /sales.json
@@ -16,11 +17,17 @@ class SalesController < ApplicationController
   # GET /sales/1
   # GET /sales/1.json
   def show
+    @relative = Sale.where(scategory_id: @sale.scategory_id)
   end
 
   # GET /sales/new
   def new
-    @sale = Sale.new
+    @sale = current_user.sales.build
+  end
+
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @sales = tag.sales
   end
 
   # GET /sales/1/edit
@@ -30,7 +37,7 @@ class SalesController < ApplicationController
   # POST /sales
   # POST /sales.json
   def create
-    @sale = Sale.new(sale_params)
+    @sale = current_user.sales.build(sale_params)
 
     respond_to do |format|
       if @sale.save
@@ -75,6 +82,12 @@ class SalesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sale_params
-      params.require(:sale).permit(:title, :body, :scategory_id)
+      params.require(:sale).permit(:s_title, :s_description, :scategory_id, :s_hashtag, :sale_image, :s_link, :s_source, :s_video,
+                                   :s_is_price, :s_was_price, :s_spare_01, :s_spare_02, :s_spare_03)
     end
 end
+
+
+
+
+ 

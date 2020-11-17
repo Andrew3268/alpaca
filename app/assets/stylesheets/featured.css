@@ -28,8 +28,19 @@
 
 
 
+
+
+
+
 /* f_index_03.html.erb */
 .ft-wrap{width:1000px;margin:30px auto 0 auto;}
+
+.ft-visual{margin:0 0 50px 0;}
+.ft-visual .ftv-left{float:left;width:55%;}
+.ft-visual .ftv-left img{width:100%;}
+.ft-visual .ftv-right{float:left;width:43%;margin:0 0 0 2%;}
+.ft-visual .ftv-right img{width:100%;height:159px;}
+
 .ft-wrap a.ft-sale-btn{display:block;}
 .ft-wrap .ft-left{float:left;width:64.66%;margin:1%;position:relative;background:#fff;height:666px;}
 .ft-wrap .ft-left .image-box{height:666px;}
@@ -46,6 +57,9 @@
   .ft-wrap .ft-left .image-box{height:400px;}
   .ft-wrap .ft-left .image-box img{object-fit:cover;}
   .ft-wrap .card-section{width:auto;margin:0 5%;}
+  .ft-visual .ftv-left, .ft-visual .ftv-right{float:none;width:100%;margin:0;}
+  
+
   
 
 }

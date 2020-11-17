@@ -1,10 +1,17 @@
 <div class="ft-wrap clearfix">
-  <a class="ft-sale-btn" href="#n">
-    <div class="ft-left">
-      <div class="image-box"><img src="<%=asset_path 'sales.png' %>"></div>
+
+  <div class="ft-visual clearfix">
+    <div class="ftv-left">
+      <a href="/posts?category=크리스마스"><img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"></a>
     </div>
-  </a>
-  
+
+    <div class="ftv-right">
+      <a href="#n"><img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"></a>
+      <a href="#n"><img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"></a>
+    </div>
+  </div>
+
+
     <div class="card-section">
       <% @featureds.each do |featured| %>
         <a href="/featureds/<%= featured[:id] %>">

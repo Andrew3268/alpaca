@@ -8,12 +8,14 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-  # root 'posts#index'
-  root 'sales#index'
-
+  root 'posts#index'
   get '/posts/guide', to:'posts#guide'
   get '/posts/shop', to:'posts#shop'
+
+  get '/featureds/season', to:'featureds#season'
+
   get '/posts/hashtag/:name', to: 'posts#hashtags'
+  get '/sales/shashtag/:name', to: 'sales#hashtags'
 
   resources :featureds
   resources :guides

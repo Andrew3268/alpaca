@@ -1,6 +1,38 @@
-<h1>Editing Sale</h1>
+<div class="wrap">
+  <% if current_user && current_user.admin %>
+    <h1>Editing Sale</h1>
+    <div class="form-left">
+      <%= simple_form_for(@sale) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= render 'form', sale: @sale %>
+        <%= f.select :s_spare_03, ([["로켓배송", ""], "YES"])%>
 
-<%= link_to 'Show', @sale %> |
-<%= link_to 'Back', sales_path %>
+        <div class="form-inputs">
+          <div class="select-box clearfix">
+            <%= f.association :scategory %>
+          </div>
+        
+          <div class="input-box">
+            <%= f.file_field :sale_image, label: "상품 이미지" %>
+            <%= f.input :s_title, label: "상품 이름" %>
+            <!-- <%= f.input :s_description, label: "상품 설명" %> -->
+            <%= f.input :s_link, label: "상품 링크" %>
+            <%= f.input :s_source, label: "판매사이트" %>
+            <!-- <%= f.input :s_video, label: "비디오" %> -->
+            <%= f.input :s_spare_01, label: "평점" %>
+            <%= f.input :s_spare_02, label: "리뷰 수"  %>
+            <%= f.input :s_is_price, label: "현재가격" %>
+            <%= f.input :s_was_price, label: "세일 전 가격" %>
+            <%= f.input :s_hashtag, label: "해시태그(상품 종류)" %>
+
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

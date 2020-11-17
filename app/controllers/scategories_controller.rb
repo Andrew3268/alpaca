@@ -1,5 +1,6 @@
 class ScategoriesController < ApplicationController
   before_action :set_scategory, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /scategories
   # GET /scategories.json
@@ -14,7 +15,7 @@ class ScategoriesController < ApplicationController
 
   # GET /scategories/new
   def new
-    @scategory = Scategory.new
+    @scategory = current_user.scategories.build
   end
 
   # GET /scategories/1/edit
@@ -24,7 +25,7 @@ class ScategoriesController < ApplicationController
   # POST /scategories
   # POST /scategories.json
   def create
-    @scategory = Scategory.new(scategory_params)
+    @scategory = current_user.scategories.build(scategory_params)
 
     respond_to do |format|
       if @scategory.save

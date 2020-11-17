@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :categories
   has_many :shops
   has_many :guides
+  has_many :sales
+  has_many :scategories
 end
