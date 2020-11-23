@@ -1,4 +1,17 @@
 <div class="wrap">
+  <div class="visual clearfix">
+    <div class="main-title">
+      <div class="visual-banner">
+        <img src="<%=asset_path 'banner-sale.png' %>">
+      </div>
+      <div class="visual-banner-m">
+        <img src="<%=asset_path 'banner-sale-m.png' %>">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
 
   <div class="sales-categories clearfix">
 
@@ -64,9 +77,9 @@
 
           <div class="inner clearfix">   
             <% if sale.s_source.present? %>
-              <em class="sales-source">by <%= sale.s_source %> #<%= render_with_hashtags(sale.s_hashtag.to_s) %></em>     
+              <em class="sales-source">by <%= sale.s_source %></em><em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em>     
             <% else %>
-              <em class="sales-source">by Coupang <%= render_with_hashtags(sale.s_hashtag.to_s) %></em>     
+              <em class="sales-source">by Coupang</em><em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em> 
             <% end %>
             <p><%= link_to sale.s_title, sale %></p>
             <div class="left clearfix">
@@ -81,7 +94,7 @@
           <% percentage = 0 %>
           <% percentage =  (sale.s_was_price - sale.s_is_price) / sale.s_was_price * 100 %>
           <div class="sales-pct">
-            <p><%= number_to_percentage(percentage, precision: 0) %><span>OFF</span></p>
+            <p><%= number_to_percentage(percentage, precision: 0) %><!-- <span>OFF</span> --></p>
           </div>
 
         </div>
@@ -115,28 +128,3 @@
     </div> -->
 
 </div>
-
-<script type="text/javascript">
-  function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-</script>
-
-
-
-
-

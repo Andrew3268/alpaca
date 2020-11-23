@@ -15,7 +15,14 @@
       </div>
     </div>
     <div class="inner">
-      <% if @sale.s_source.present? %><span>by <%= @sale.s_source %></span><% end %>
+      <div class="source-time">
+        <% if @sale.s_source.present? %>
+          <span>by <%= @sale.s_source %></span>
+        <% else %>
+          <span>by 쿠팡</span>
+        <% end %>
+         <span> / <%= time_ago_in_words(@sale.created_at) %> ago</span>
+      </div>
       <p class="title"><%= @sale.s_title %></p>
 
       <div class="pricing">
@@ -74,7 +81,7 @@
 
       <% if current_user && current_user.admin %>
         <h4>Only for admin</h4>
-        <p>카테고리: <%= @sale.scategory.name %>, 해시태그: <%= render_with_hashtags(@sale.s_hashtag.to_s) %></p>
+        <p>카테고리: <%= @sale.scategory.name %>  // 해시태그: <%= render_with_hashtags(@sale.s_hashtag.to_s) %></p>
         <script async defer data-pin-hover="true" data-pin-lang="en" src="//assets.pinterest.com/js/pinit.js"></script>
       <% end %>
 

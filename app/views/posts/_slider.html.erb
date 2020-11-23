@@ -1,0 +1,105 @@
+<div id="container" class="clearfix">      
+    <div id="next" alt="Next" title="Next">
+      <div class="arrow-right"></div>
+    </div>
+    <div id="prev" alt="Prev" title="Prev">       
+      <div class="arrow-left"></div>
+    </div>      
+    <div id="slider">
+      <div class="slide">
+        <div class="slide-copy">
+          <h2>Slide One</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+          <a href="#n">GET NOW</a>
+        </div>
+        <div class="img1"></div>
+      </div>
+      
+      <div class="slide">
+        <div class="slide-copy">
+          <h2>Slide Two</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+        </div>
+        <div class="img2"></div>
+      </div>
+      
+      <div class="slide">
+        <div class="slide-copy">
+          <h2>Slide Three</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+        </div>
+        <div class="img3"></div>
+      </div>
+      
+      <div class="slide">
+        <div class="slide-copy">
+          <h2>Slide Four</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+        </div>
+        <div class="img4"></div>
+      </div>
+      
+      <div class="slide">
+        <div class="slide-copy">
+          <h2>Slide Five</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae commodo sem. Integer eros nibh, molestie congue elementum quis, mattis nec tortor. Vivamus sed hendrerit sed vitae orci convallis.</p>
+        </div>
+        <div class="img5"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+  // options
+  var speed = 500; //transition speed - fade
+  var autoswitch = true; //auto slider options
+  var autoswitch_speed = 5000; //auto slider speed
+  
+  // add first initial active class
+  $(".slide").first().addClass("active");
+  
+  // hide all slides
+  $(".slide").hide;
+  
+  // show only active class slide
+  $(".active").show();
+  
+  // Next Event Handler
+  $('#next').on('click', nextSlide);// call function nextSlide
+  
+  // Prev Event Handler
+  $('#prev').on('click', prevSlide);// call function prevSlide
+  
+  // Auto Slider Handler
+  if(autoswitch == true){
+    setInterval(nextSlide,autoswitch_speed);// call function and value 4000
+  }
+  
+  // Switch to next slide
+  function nextSlide(){
+    $('.active').removeClass('active').addClass('oldActive');
+    if($('.oldActive').is(':last-child')){
+      $('.slide').first().addClass('active');
+    } else {
+      $('.oldActive').next().addClass('active');
+    }
+    $('.oldActive').removeClass('oldActive');
+    $('.slide').fadeOut(speed);
+    $('.active').fadeIn(speed);
+  }
+  
+  // Switch to prev slide
+  function prevSlide(){
+    $('.active').removeClass('active').addClass('oldActive');
+    if($('.oldActive').is(':first-child')){
+      $('.slide').last().addClass('active');
+    } else {
+      $('.oldActive').prev().addClass('active');
+    }
+    $('.oldActive').removeClass('oldActive');
+    $('.slide').fadeOut(speed);
+    $('.active').fadeIn(speed);
+  }
+});
+</script>

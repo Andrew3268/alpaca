@@ -7,11 +7,10 @@ class SalesController < ApplicationController
   def index
     if params.has_key?(:scategory)
       @scategory = Scategory.find_by_name(params[:scategory])
-      @sales = Sale.where(scategory: @scategory)
+      @sales = Sale.where(scategory: @scategory).order("created_at DESC")
     else
-      @sales = Sale.all
+      @sales = Sale.all.all.order("created_at DESC")
     end
-    
   end
 
   # GET /sales/1
