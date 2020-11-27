@@ -1,21 +1,27 @@
 class FeaturedsController < ApplicationController
   before_action :set_featured, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show, :hashtags]
 
   # GET /featureds
   # GET /featureds.json
   def index
-    @featureds = Featured.all.order("created_at DESC").limit(30)
+    @featureds = Featured.all.order("created_at DESC")
   end
 
   # GET /featureds/1
   # GET /featureds/1.json
   def show
-    @featureds = Featured.all.order("created_at DESC").limit(6)
+    @featureds = Featured.all.order("created_at DESC")
+  end
+
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @featureds = tag.featureds
   end
 
   # GET /featureds/new
   def new
-    @featured = Featured.new
+    @featured = current_user.featureds.build
   end
 
   # GET /featureds/1/edit
@@ -25,7 +31,7 @@ class FeaturedsController < ApplicationController
   # POST /featureds
   # POST /featureds.json
   def create
-    @featured = Featured.new(featured_params)
+    @featured = current_user.featureds.build(featured_params)
 
     respond_to do |format|
       if @featured.save
@@ -70,12 +76,9 @@ class FeaturedsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def featured_params
-      params.require(:featured).permit(:ftitle, :furl, :fimage, :f_image_01, :f_image_02, :f_image_03, :f_image_04, :f_image_05,
-                                       :f_image_06, :f_subtitle_01, :f_subtitle_02, :f_subtitle_03, :f_subtitle_04, :f_subtitle_05,
-                                       :f_subtitle_06, :f_description_01, :f_description_02, :f_description_03, :f_description_04, :f_description_05,
-                                       :f_description_06, :f_link_01, :f_link_02, :f_link_03, :f_link_04, :f_link_05, :f_link_06,
-                                       :f_spare_01, :f_spare_02, :f_spare_03, :f_spare_04, :f_spare_05, :f_spare_06)
+      params.require(:featured).permit(:ff_title, :ff_link, :ff_source, :ff_hashtag, :ff_description, :ff_is_price, :ff_was_price, :ff_pct)
     end
 end
+
 
 

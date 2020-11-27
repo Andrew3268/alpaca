@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get '/posts/hashtag/:name', to: 'posts#hashtags'
   get '/sales/shashtag/:name', to: 'sales#hashtags'
+  get '/featureds/fhashtag/:name', to: 'featureds#hashtags'
 
   resources :featureds
   resources :guides

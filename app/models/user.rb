@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :guides
   has_many :sales
   has_many :scategories
+  has_many :featureds
 end

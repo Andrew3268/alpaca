@@ -1,0 +1,21 @@
+<%= simple_form_for(@featured) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+
+    <div class="featured-box">
+      <%= f.input :ff_title, label: '상품 이름' %>
+      <%= f.input :ff_hashtag, label: '해시태그' %>
+      <%= f.input :ff_is_price, label: '현재 가격' %>
+      <%= f.input :ff_was_price, label: '할인전 가격' %>
+      <%= f.input :ff_pct, label: '할인율' %>
+
+    </div>
+    
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

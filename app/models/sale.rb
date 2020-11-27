@@ -1,7 +1,7 @@
 class Sale < ApplicationRecord
   belongs_to :scategory
-  has_and_belongs_to_many :tags
   belongs_to :user
+  has_and_belongs_to_many :tags
   has_one_attached :sale_image
 
   after_create do

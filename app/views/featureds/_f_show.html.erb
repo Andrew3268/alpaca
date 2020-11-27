@@ -1,0 +1,149 @@
+  <div class="blog_wrap">
+    <div class="wrapper">
+      <div class="header">
+        <span>Featured 6ix</span>
+        <h2><%= @featured.ftitle %><!-- <br/><%= @featured.f_spare_01 %> --></h2>
+        <em><%= link_to 'Edit', edit_featured_path(@featured) %> |</em>
+        <em><%= link_to 'Back', featureds_path %> |</em>
+        <em><%= link_to 'Destroy', @featured, method: :delete, data: { confirm: 'Are you sure?' } %></em>
+      </div>
+
+      <figure class="featured-image-1">
+        <a target="_blank" href="<%= @featured.f_link_01 %>"><img src="<%= @featured.f_image_01 %>" alt="<%= @featured.f_subtitle_01 %>"></a>
+      </figure>
+      <div class="number-1">1</div>
+      <article class="article article-1">
+        <h3><%= @featured.f_subtitle_01 %></h3>
+        <p><%= @featured.f_description_01 %></p>
+        <% if @featured.f_spare_01.present? %>
+          <a target="_blank" href="<%= @featured.f_link_01 %>" class="link-comm num-1">Get it from <%= @featured.f_spare_01 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_01 %>" class="link-comm num-1">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+      
+      <figure class="featured-image-2">
+        <a target="_blank" href="<%= @featured.f_link_02 %>"><img src="<%= @featured.f_image_02 %>" alt="<%= @featured.f_subtitle_02 %>"></a>
+      </figure>
+      <div class="number-2">2</div>
+      <article class="article article-2">
+        <h3><%= @featured.f_subtitle_02 %></h3>
+        <p><%= @featured.f_description_02 %></p>
+        <% if @featured.f_spare_02.present? %>
+          <a target="_blank" href="<%= @featured.f_link_02 %>" class="link-comm num-2">Get it from <%= @featured.f_spare_02 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_02 %>" class="link-comm num-2">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+
+      <figure class="featured-image-3 feat-img-3">
+          <a target="_blank" href="<%= @featured.f_link_03 %>"><img src="<%= @featured.f_image_03 %>" alt="<%= @featured.f_subtitle_03 %>"></a>
+      </figure>
+      <div class="number-3">3</div>
+      <article class="article article-3 for-pc">
+        <h3><%= @featured.f_subtitle_03 %></h3>
+        <p><%= @featured.f_description_03 %></p>
+        <% if @featured.f_spare_03.present? %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from <%= @featured.f_spare_03 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+
+      <article class="article article-3 for-mobile">
+        <h3><%= @featured.f_subtitle_03 %></h3>
+        <p><%= @featured.f_description_03 %></p>
+        <% if @featured.f_spare_03.present? %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from <%= @featured.f_spare_03 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_03 %>" class="link-comm num-3">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+
+      <figure class="featured-image-4">
+          <a target="_blank" href="<%= @featured.f_link_04 %>"><img src="<%= @featured.f_image_04 %>" alt="<%= @featured.f_subtitle_04 %>"></a>
+      </figure>
+      <div class="number-4">4</div>
+      <article class="article article-4">
+        <h3><%= @featured.f_subtitle_04 %></h3>
+        <p><%= @featured.f_description_04 %></p>
+        <% if @featured.f_spare_04.present? %>
+          <a target="_blank" href="<%= @featured.f_link_04 %>" class="link-comm num-4">Get it from <%= @featured.f_spare_04 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_04 %>" class="link-comm num-4">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+    </div>
+
+    <div class="wrapper">
+      <p class="none-p">-</p>
+
+      <figure class="featured-image-5 feat-img-5">
+          <a target="_blank" href="<%= @featured.f_link_05 %>"><img src="<%= @featured.f_image_05 %>" alt="<%= @featured.f_subtitle_05 %>"></a>
+      </figure>
+      <div class="number-1 number-5">5</div>
+      <article class="article article-1">
+        <h3><%= @featured.f_subtitle_05 %></h3>
+        <p><%= @featured.f_description_05 %></p>
+        <% if @featured.f_spare_05.present? %>
+          <a target="_blank" href="<%= @featured.f_link_05 %>" class="link-comm num-5">Get it from <%= @featured.f_spare_05 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_05 %>" class="link-comm num-5">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+
+      <figure class="featured-image-2 feat-img-6">
+          <a target="_blank" href="<%= @featured.f_link_06 %>"><img src="<%= @featured.f_image_06 %>" alt="<%= @featured.f_subtitle_06 %>"></a>
+      </figure>
+      <div class="number-2 number-6">6</div>
+      <article class="article article-2">
+        <h3><%= @featured.f_subtitle_06 %></h3>
+        <p><%= @featured.f_description_06 %></p>
+        <% if @featured.f_spare_06.present? %>
+          <a target="_blank" href="<%= @featured.f_link_06 %>" class="link-comm num-6">Get it from <%= @featured.f_spare_06 %></a>
+        <% else %>
+          <a target="_blank" href="<%= @featured.f_link_06 %>" class="link-comm num-6">Get it from 쿠팡</a> 
+        <% end %>
+      </article>
+    
+    </div><!--./wrapper-->
+  </div><!--./blog_wrap-->
+    
+  
+  <!-- <div class="more-featured clearfix">
+    <p>널 위해 더 준비 해봤어.</p>
+
+    <% @featureds.each do |featured| %>
+      <div class="box">
+        <div class="image">
+          <%= link_to image_tag(featured.fimage, alt: featured.ftitle, title: featured.ftitle), featured %>        
+        </div>
+        <div class="inner">
+          <p><%= link_to featured.ftitle, featured %></p>
+        </div>
+      </div>
+    <% end %>
+    
+    <div class="box">
+      <div class="image">
+        <img src="https://i.pinimg.com/originals/60/00/35/600035c0e351085fced5e3473da3a147.jpg">        
+      </div>
+      <div class="inner">
+        <p>이것은 테스트 타이틀입니다.</p>
+      </div>
+    </div>
+  </div>   -->
+
+  <div class="wrap">
+    <div class="featured-bottom-line clearfix">  
+      <span>Notice</span>
+      <em>* 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</em>
+    </div>
+  </div>
+
+
+
+      
+
+
+
