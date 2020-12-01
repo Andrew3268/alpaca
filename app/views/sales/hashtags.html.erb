@@ -1,8 +1,8 @@
 <div class="wrap">
 
-  <div class="hashtag_title">
+  <div class="where-hashtag">
     <% if params[:name].present? %>
-      <p>#<%= params[:name] %></p>
+      <p><span>#<%= params[:name] %></span></p>
     <% end %>
   </div>
 
@@ -18,9 +18,9 @@
 
           <div class="inner clearfix">   
             <% if sale.s_source.present? %>
-              <em class="sales-source">by <%= sale.s_source %></em><em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em>     
+              <em class="sales-source">by <%= sale.s_source %></em><!-- <em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em> -->     
             <% else %>
-              <em class="sales-source">by Coupang</em><em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em> 
+              <em class="sales-source">by Coupang</em><!-- <em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em> --> 
             <% end %>
             <p><%= link_to sale.s_title, sale %></p>
             <div class="left clearfix">
