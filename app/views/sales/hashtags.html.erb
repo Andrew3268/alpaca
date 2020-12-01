@@ -38,7 +38,13 @@
 
 
     <div class="back-btn">
-      <a href="/halfprices">BACK</a>
+      <!-- <a href="/halfprices">BACK</a> -->
+      <button onclick="goBack()"><img class="hf_back" src="<%=asset_path 'back.png' %>" alt="뒤로가기" /></button>
+      <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
     </div>
 
     <!-- <div class="card-wrap clearfix">

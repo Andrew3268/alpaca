@@ -1,5 +1,11 @@
 <div class="wrap">
-  <!-- <a href="/"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="뒤로가기" /></a> -->
+  <button onclick="goBack()"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="뒤로가기" /></button>
+  <!-- <a href="/sales" onclick="goBack()"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="뒤로가기" /></a> -->
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
   <div class="show-container clearfix">
     <div class="show-image-box">
       <% if @post.p_spare_01.present? %>
