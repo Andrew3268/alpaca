@@ -1,23 +1,17 @@
 <header>
 
-  <%= render 'posts/slider' %>
+  <!-- <%= render 'posts/slider' %> -->
 
   <div class="visual clearfix">
 
     <div class="main-title">
       
-      <!-- <div class="visual-banner">
+      <div class="visual-banner">
         <img src="<%=asset_path 'banner-gift.png' %>">
       </div>
       <div class="visual-banner-m">
         <img src="<%=asset_path 'banner-gift-m.png' %>">
-      </div> -->
-
-      <!-- <div class="sub_banner">
-        <div class="sb_card"><a href="#n"><img src="<%=asset_path 'sb_first.png' %>"></a></div>
-        <div class="sb_card"><a href="/sales"><img src="<%=asset_path 'sb_mid.png' %>"></a></div>
-        <div class="sb_card"><a href="#n"><img src="<%=asset_path 'sb_last.png' %>"></a></div>
-      </div> -->
+      </div>
 
       <% if current_user && current_user.admin %>
         <div class="admin clearfix">
