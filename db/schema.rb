@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_23_091646) do
+ActiveRecord::Schema.define(version: 2020_11_27_130619) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -187,6 +187,27 @@ ActiveRecord::Schema.define(version: 2020_11_23_091646) do
   end
 
   create_table "guides", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.text "description"
+    t.boolean "display_in_navbar", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "halfprices", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "hf_title"
+    t.string "hf_link"
+    t.string "hf_image"
+    t.text "hf_body"
+    t.integer "hfcategory_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hfcategory_id"], name: "index_halfprices_on_hfcategory_id"
+  end
+
+  create_table "hfcategories", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
     t.text "description"

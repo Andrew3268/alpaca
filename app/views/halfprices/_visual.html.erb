@@ -1,0 +1,67 @@
+<div class="wrap">
+  <div class="visual clearfix">
+    <div class="main-title">
+      <div class="visual-banner">
+        <img src="<%=asset_path 'banner-sale.png' %>">
+      </div>
+      <div class="visual-banner-m">
+        <img src="<%=asset_path 'banner-sale-m.png' %>">
+      </div>
+    </div>
+  </div>
+  <% if current_user && current_user.admin %>
+    <div class="admin clearfix">
+      <%= link_to 'New Halfprice', new_halfprice_path %> | 
+      <%= link_to 'New Category', new_hfcategory_path %>
+    </div>
+  <% end %>
+</div>
+
+<div class="wrap">
+  <div class="sales-categories clearfix">
+
+    <div class="ctg-common">
+      <ul class="ctg-ul">
+        <li><a href="/halfprices">Everything</a></li>
+        <% Hfcategory.all.each do |hfcat| %>
+          <li><%= link_to hfcat.name, halfprices_path(hfcategory: hfcat.name) %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="visual">
+      <div class="category-mobile">
+        <ul>
+          <li><a href="/halfprices">Everything</a></li>
+          <% Hfcategory.all.each do |hfcat| %>
+            <li><%= link_to hfcat.name, halfprices_path(hfcategory: hfcat.name) %></li>
+          <% end %>
+          <li><%= link_to 'New Halfprice', new_halfprice_path %></li>
+          <li><%= link_to 'New Category', new_hfcategory_path %></li>
+        </ul>
+      </div>
+    </div>
+<!-- 
+    <div class="hashtag clearfix">
+      <div class="panel-wrapper">
+        <a href="#show" class="show btn" id="show">더보기</a> 
+        <a href="#hide" class="hide btn" id="hide">감추기</a> 
+        <div class="panel">
+         
+         <ul id="myUL">
+           <%= render 'sales/list_of_hashtag' %>
+         </ul>
+         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="찾고 싶은게 뭐야?" title="Type in a name"> 
+        </div>
+        <div class="fade"></div>
+      </div>
+    </div> -->
+
+  </div>
+
+  <div class="sale-where where">
+    <% if params[:hfcategory].present? %>
+      <div><p><em>Categories</em> > <span><%= params[:hfcategory] %></span></p></div>
+    <% end %>
+  </div>
+</div>

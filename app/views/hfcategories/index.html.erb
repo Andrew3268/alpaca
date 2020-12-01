@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hfcategories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Display in navbar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hfcategories.each do |hfcategory| %>
+      <tr>
+        <td><%= hfcategory.name %></td>
+        <td><%= hfcategory.description %></td>
+        <td><%= hfcategory.display_in_navbar %></td>
+        <td><%= link_to 'Show', hfcategory %></td>
+        <td><%= link_to 'Edit', edit_hfcategory_path(hfcategory) %></td>
+        <td><%= link_to 'Destroy', hfcategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hfcategory', new_hfcategory_path %>

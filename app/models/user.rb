@@ -11,4 +11,6 @@ class User < ApplicationRecord
   has_many :sales
   has_many :scategories
   has_many :featureds
+  has_many :halfprices
+  has_many :hfcategories
 end

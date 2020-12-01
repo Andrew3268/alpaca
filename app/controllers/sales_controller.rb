@@ -7,9 +7,9 @@ class SalesController < ApplicationController
   def index
     if params.has_key?(:scategory)
       @scategory = Scategory.find_by_name(params[:scategory])
-      @sales = Sale.where(scategory: @scategory).order("created_at DESC")
+      @pagy, @sales = pagy(Sale.where(scategory: @scategory).order("created_at DESC"), items: 100)
     else
-      @sales = Sale.all.all.order("created_at DESC")
+      @pagy, @sales = pagy(Sale.all.order("created_at DESC"), items: 100)
     end
   end
 
@@ -82,7 +82,7 @@ class SalesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def sale_params
       params.require(:sale).permit(:s_title, :s_description, :scategory_id, :s_hashtag, :sale_image, :s_link, :s_source, :s_video,
-                                   :s_is_price, :s_was_price, :s_spare_01, :s_spare_02, :s_spare_03)
+                                   :s_is_price, :s_was_price, :s_spare_01, :s_spare_02, :s_spare_03, :s_spare_04, :s_spare_05, :s_spare_06)
     end
 end
 

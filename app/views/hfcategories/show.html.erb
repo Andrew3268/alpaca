@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hfcategory.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hfcategory.description %>
+</p>
+
+<p>
+  <strong>Display in navbar:</strong>
+  <%= @hfcategory.display_in_navbar %>
+</p>
+
+<%= link_to 'Edit', edit_hfcategory_path(@hfcategory) %> |
+<%= link_to 'Back', hfcategories_path %>

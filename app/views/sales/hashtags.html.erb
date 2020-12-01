@@ -1,1 +1,69 @@
-<%= render "sales/body" %>
+<div class="wrap">
+  <div class="sale-card-wrap card-wrap clearfix">
+      <% @sales.each do |sale| %>
+        <div class="card sales-card">
+          
+          <div class="image-box">
+            <div class="no-background">
+              <%= link_to image_tag(sale.sale_image, alt:"", title:""), sale if sale.sale_image.attached? %>
+            </div>
+          </div>
+
+          <div class="inner clearfix">   
+            <% if sale.s_source.present? %>
+              <em class="sales-source">by <%= sale.s_source %></em><em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em>     
+            <% else %>
+              <em class="sales-source">by Coupang</em><em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em> 
+            <% end %>
+            <p><%= link_to sale.s_title, sale %></p>
+            <div class="left clearfix">
+              <span class="list-price"><%= number_to_currency(sale.s_was_price, locale: :kr) %>원</span>
+              <span class="current-price"><%= number_to_currency(sale.s_is_price, locale: :kr) %>원</span>
+            </div>
+            <div class="right clearfix">
+              <a class="outline" target="_blank" href="<%= sale.s_link %>">Get Now</a>
+            </div>
+          </div>
+
+          <% percentage = 0 %>
+          <% percentage =  (sale.s_was_price - sale.s_is_price) / sale.s_was_price * 100 %>
+          <div class="sales-pct">
+            <p><%= number_to_percentage(percentage, precision: 0) %><!-- <span>OFF</span> --></p>
+          </div>
+
+        </div>
+      <% end %>
+
+    </div><!--./card-wrap-->
+
+
+    <div class="back-btn">
+      <a href="/halfprices">BACK</a>
+    </div>
+
+    <!-- <div class="card-wrap clearfix">
+        <div class="card sales-card">
+          
+          <div class="image-box">
+            <div class="no-background">
+             <img src="https://sm.ign.com/t/ign_kr/screenshot/default/sujeongdoem-ironmanvr-review-blogroll-1593638760998-h1ze1280_9rzv.1280.jpg">
+            </div>
+          </div>
+
+          <div class="inner clearfix">   
+            <em class="sales-source">by Coupang</em>     
+            <p>여기가 타이틀 입력하는 곳</p>
+            <div class="left clearfix">
+              <span class="list-price">1000 원</span>
+              <span class="current-price">2000 원</span>
+            </div>
+            <div class="right clearfix">
+              <a target="_blank" href="#n">Get Now</a>
+            </div>
+          </div>
+
+          <div class="sales-pct"><p>50<span>OFF</span></p></div>
+        </div>
+    </div> -->
+
+</div>

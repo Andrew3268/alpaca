@@ -1,32 +1,41 @@
 Rails.application.routes.draw do
   
+  resources :hfcategories
+  resources :halfprices
+  devise_for :users
   resources :scategories
-  resources :sales
   resources :order_items
   get 'cart', to: 'cart#show'
   resources :blogs
 
-
-  devise_for :users
+  resources :posts
   root 'posts#index'
   get '/posts/guide', to:'posts#guide'
   get '/posts/shop', to:'posts#shop'
-
-  get '/featureds/season', to:'featureds#season'
-
-  get '/posts/hashtag/:name', to: 'posts#hashtags'
-  get '/sales/shashtag/:name', to: 'sales#hashtags'
-  get '/featureds/fhashtag/:name', to: 'featureds#hashtags'
+  
+  resources :sales
+  
 
   resources :featureds
+  get '/featureds/season', to:'featureds#season'
+
+  #For HashTag
+  get '/posts/hashtag/:name', to: 'posts#hashtags'
+  get '/sales/shashtag/:name', to: 'sales#hashtags'
+  get '/featureds/f_hashtags/:name', to: 'featureds#hashtags'
+
+  
   resources :guides
   resources :shops
   resources :categories
-  resources :posts
+
+  
 
   # Blogging Controller Routes
   get 'blogging/first_blog'
   get 'blogging/test_blog'
+  get 'halfprice/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
