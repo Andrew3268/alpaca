@@ -81,7 +81,7 @@
 
       <% if current_user && current_user.admin %>
         <h4>Only for admin</h4>
-        <p>카테고리: <%= @sale.scategory.name %>  // 해시태그: <%= render_with_hashtags(@sale.s_hashtag.to_s) %></p>
+        <p>카테고리: <%= @sale.scategory.name %>  // 해시태그: <%= render_with_shashtags(@sale.s_hashtag.to_s) %></p>
         <script async defer data-pin-hover="true" data-pin-lang="en" src="//assets.pinterest.com/js/pinit.js"></script>
       <% end %>
 

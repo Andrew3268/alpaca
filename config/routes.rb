@@ -10,19 +10,20 @@ Rails.application.routes.draw do
 
   resources :posts
   root 'posts#index'
+  get '/posts/hashtag/:name', to: 'posts#hashtags'
   get '/posts/guide', to:'posts#guide'
   get '/posts/shop', to:'posts#shop'
   
   resources :sales
-  
+  get '/sales/shashtag/:name', to: 'sales#hashtags'
 
   resources :featureds
   get '/featureds/season', to:'featureds#season'
-
-  #For HashTag
-  get '/posts/hashtag/:name', to: 'posts#hashtags'
-  get '/sales/shashtag/:name', to: 'sales#hashtags'
-  get '/featureds/f_hashtags/:name', to: 'featureds#hashtags'
+  get '/featureds/fhashtag/:name', to: 'featureds#hashtags'
+  
+  
+  
+  
 
   
   resources :guides

@@ -1,4 +1,11 @@
 <div class="wrap">
+
+  <div class="hashtag_title">
+    <% if params[:name].present? %>
+      <p>#<%= params[:name] %></p>
+    <% end %>
+  </div>
+
   <div class="sale-card-wrap card-wrap clearfix">
       <% @sales.each do |sale| %>
         <div class="card sales-card">
@@ -41,35 +48,10 @@
       <!-- <a href="/halfprices">BACK</a> -->
       <button onclick="goBack()"><img class="hf_back" src="<%=asset_path 'back.png' %>" alt="뒤로가기" /></button>
       <script>
-      function goBack() {
-        window.history.back();
-      }
-    </script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
     </div>
-
-    <!-- <div class="card-wrap clearfix">
-        <div class="card sales-card">
-          
-          <div class="image-box">
-            <div class="no-background">
-             <img src="https://sm.ign.com/t/ign_kr/screenshot/default/sujeongdoem-ironmanvr-review-blogroll-1593638760998-h1ze1280_9rzv.1280.jpg">
-            </div>
-          </div>
-
-          <div class="inner clearfix">   
-            <em class="sales-source">by Coupang</em>     
-            <p>여기가 타이틀 입력하는 곳</p>
-            <div class="left clearfix">
-              <span class="list-price">1000 원</span>
-              <span class="current-price">2000 원</span>
-            </div>
-            <div class="right clearfix">
-              <a target="_blank" href="#n">Get Now</a>
-            </div>
-          </div>
-
-          <div class="sales-pct"><p>50<span>OFF</span></p></div>
-        </div>
-    </div> -->
 
 </div>
