@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :shop]
   before_action :authenticate_user!, except: [:index, :show, :shop, :hashtags]
   # skip_authorization_check only: :hashtags
 
