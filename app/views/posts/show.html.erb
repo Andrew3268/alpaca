@@ -10,7 +10,7 @@
     <div class="show-image-box">
       <% if @post.p_spare_01.present? %>
         <% @post.p_spare_01 %>
-        <div class="no-background">
+        <div class="yes-background">
           <%= link_to image_tag(@post.post_image, alt:"", title:""), @post if @post.post_image.attached? %>
         </div>
       <% else %>
