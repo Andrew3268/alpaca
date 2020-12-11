@@ -1,5 +1,5 @@
 class Sale < ApplicationRecord
-  belongs_to :scategory
+  # belongs_to :scategory
   belongs_to :user
   has_and_belongs_to_many :tags
   has_one_attached :sale_image

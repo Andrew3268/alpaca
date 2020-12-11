@@ -2,6 +2,9 @@
 .back-btn button{outline:none;}
 .back-btn .hf_back{width:50px;height:50px;opacity:0.75;}
 
+span.new_sale_btn{background:#08f;padding:3px;}
+span.new_sale_btn a{color:#fff;}
+
 @media screen and (max-width:640px){
   .back-btn{display:block;}
 }

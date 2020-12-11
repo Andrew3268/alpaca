@@ -11,7 +11,8 @@
   <div class="show-container clearfix">
     <div class="show-image-box">
       <div class="no-background">
-        <%= link_to image_tag(@sale.sale_image, alt:"", title:""), @sale if @sale.sale_image.attached? %>
+        <!-- <%= link_to image_tag(@sale.sale_image, alt:"", title:""), @sale if @sale.sale_image.attached? %> -->
+        <img src="<%= @sale.s_spare_07 %>">
       </div>
     </div>
     <div class="inner">
@@ -23,7 +24,7 @@
         <% end %>
          <span> / <%= time_ago_in_words(@sale.created_at) %> ago</span>
       </div>
-      <p class="title"><%= @sale.s_title %></p>
+      <p class="title title_sale"><%= @sale.s_title %></p>
 
       <div class="pricing">
         <span class="is"><%= number_to_currency(@sale.s_is_price, locale: :kr) %>원</span>
@@ -50,7 +51,7 @@
           <div class="box">
             <p>평  점</p>
             <% if @sale.s_spare_01.present? %>
-              <span><%= @sale.s_spare_01 %> / 5.0</span>
+              <span><%= @sale.s_spare_01 %> / 5</span>
 
             <% else %>
               <span>-</span>
@@ -81,7 +82,7 @@
 
       <% if current_user && current_user.admin %>
         <h4>Only for admin</h4>
-        <p>카테고리: <%= @sale.scategory.name %>  // 해시태그: <%= render_with_shashtags(@sale.s_hashtag.to_s) %></p>
+        <p>해시태그: <%= render_with_shashtags(@sale.s_hashtag.to_s) %></p>
         <script async defer data-pin-hover="true" data-pin-lang="en" src="//assets.pinterest.com/js/pinit.js"></script>
       <% end %>
 
@@ -118,7 +119,7 @@
 
 <div class="wrap">
   <div class="relative-box">
-    <p><span>널 위해 더 준비 해봤어.</span></p>
+    <!-- <p><span>널 위해 더 준비 해봤어.</span></p>
     <div class="relative-items clearfix">
       <% @relative.shuffle.take(8).each do |more| %>
         <% if more.scategory_id == @sale.scategory_id %>
@@ -127,19 +128,17 @@
           </div>
         <% end %>
       <% end %>
-    </div>
+    </div> -->
 
     <div class="notice-warp">
       <div class="notice_m">
         <strong>Notice</strong>
-        <span> * 가격 정보는 업데이트 이후 변경 될 수있습니다.</span>
-        <span> * 평점과 리뷰 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 가격 및 평점,리뷰 정보는 포스팅 이후 변경 될 수있습니다.</span>
         <span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span>
       </div>
       <div class="notice_pc">
         <strong>Notice</strong>
-        <span> * 가격 정보는 업데이트 이후 변경 될 수있습니다.</span>
-        <span> * 평점과 리뷰 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 가격 및 평점,리뷰 정보는 포스팅 이후 변경 될 수있습니다.</span>
         <span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span>
       </div>
     </div>

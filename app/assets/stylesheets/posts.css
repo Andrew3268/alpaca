@@ -192,13 +192,14 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 /* Show Page */
 .show-container{width:800px;margin:0 auto;padding:20px;position:relative;border-radius:20px;}
 .show-container .show-image-box{float:left;width:40%;height:300px;position:relative;}
-.show-container .show-image-box img{width:100%;height:100%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;}
+.show-container .show-image-box img{width:80%;height:80%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;}
 .show-container .show-image-box .yes-background img{width:100%;height:100%;object-fit:cover;}
 .show-container .inner{float:left;width:50%;margin-left:5%;padding:2.5%;}
 .show-container .inner .source-time{}
 .show-container .inner .source-time span{color:#ccc;}
 .show-container .inner p.title{font-size:25px;/*font-weight:700;*/margin-bottom:15px;word-break:keep-all;text-decoration:underline;letter-spacing:0.08em;width:70%;}
-.show-container .inner .pricing{font-size:2rem;font-weight:500;line-height:1;margin-top:20px;}
+.show-container .inner p.title_sale{font-size:17px;}
+.show-container .inner .pricing{font-size:2rem;font-weight:500;line-height:1.2;margin-top:20px;}
 .show-container .inner .pricing .is{color:#57caef;font-weight:bold;}
 .show-container .inner .pricing .was{font-size:15px;color:#616161;text-decoration:line-through;margin-left:3px;}
 .show-container .inner .pricing .pct, .show-container .inner .pricing .bycou{font-size:15px;} 
@@ -246,6 +247,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .show-container .show-image-box .no-background img{width:80%;height:80%;}
   .show-container .inner{float:none;width:100%;margin:25px auto 0 auto;text-align:center;padding:0;}
   .show-container .inner p.title{font-size:1.5rem;width:100%;}
+  .show-container .inner p.title_sale{font-size:15px;}
   .show-container .inner .more-info .common span{width:47%;}
   .show-container .show-btn{margin-top:30px;}
   .show-container .mobile{display:block;width:87%;margin:30px auto 0 auto;}

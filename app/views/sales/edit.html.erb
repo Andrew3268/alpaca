@@ -10,16 +10,14 @@
 
         <div class="form-inputs">
           <div class="select-box clearfix">
-            <%= f.association :scategory %>
+            <!-- < f.association scategory > -->
           </div>
         
           <div class="input-box">
             <%= f.file_field :sale_image, label: "상품 이미지" %>
             <%= f.input :s_title, label: "상품 이름" %>
-            <!-- <%= f.input :s_description, label: "상품 설명" %> -->
+            <%= f.input :s_spare_07, label: "상품 이미지" %>
             <%= f.input :s_link, label: "상품 링크" %>
-            <%= f.input :s_source, label: "판매사이트" %>
-            <!-- <%= f.input :s_video, label: "비디오" %> -->
             <%= f.input :s_spare_01, label: "평점" %>
             <%= f.input :s_spare_02, label: "리뷰 수"  %>
             <%= f.input :s_is_price, label: "현재가격" %>
