@@ -4,6 +4,12 @@ class Sale < ApplicationRecord
   has_and_belongs_to_many :tags
   has_one_attached :sale_image
 
+
+  validates :s_is_price, presence: true
+  validates :s_was_price, presence: true
+  validates :s_hashtag, presence: true
+  
+
   after_create do
       sale = Sale.find_by(id: self.id)
       shashtags = self.s_hashtag.scan(/[#＃][a-z|A-Z|가-힣|0-9|\w]+/)

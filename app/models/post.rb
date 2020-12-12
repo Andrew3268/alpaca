@@ -1,6 +1,9 @@
 class Post < ApplicationRecord
 
   validates :link, presence: true
+  validates :is_price, presence: true
+  validates :was_price, presence: true
+  validates :p_spare_02, presence: true
   
   belongs_to :category
   belongs_to :shop
