@@ -37,13 +37,13 @@
       
       <div class="inner">
         <p><%= link_to post.title, post %></p>
-        <div class="add">
+        <!-- <div class="add">
           <%= form_with model: @order_item do |f| %>
             <%= f.hidden_field :post_id, value: post.id %>
             <%= f.submit "+", onclick: 'add_to_cart()'  %>
-            <!-- <%= f.submit "♥", onclick: 'add_to_cart()'  %> -->
+            <%= f.submit "♥", onclick: 'add_to_cart()'  %>
           <% end %> 
-        </div>
+        </div> -->
       </div>
 
     </div>

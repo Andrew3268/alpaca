@@ -33,6 +33,9 @@ class SalesController < ApplicationController
   def edit
   end
 
+  def more
+  end
+
   # POST /sales
   # POST /sales.json
   def create

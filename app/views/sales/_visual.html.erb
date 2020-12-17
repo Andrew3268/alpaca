@@ -82,18 +82,16 @@
     </div> -->
 
     <div class="hashtag clearfix">
-      <div class="panel-wrapper">
-        <a href="#show" class="show btn" id="show">더보기</a> 
-        <a href="#hide" class="hide btn" id="hide">감추기</a> 
         <div class="panel">
-         
-         <ul id="myUL">
-           <%= render 'sales/list_of_hashtag' %>
-         </ul>
-         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="찾고 싶은게 뭐야?" title="Type in a name"> 
+          <ul id="myUL">
+            <div class="hashtag_li">
+              <%= render 'sales/list_of_hashtag' %>
+            </div>
+            <div class="hashtag_li_right">
+              <li><a href="#n">+ 더보기</li>
+            </div>
+          </ul>
         </div><!-- end panel -->
-        <div class="fade"></div>
-      </div><!-- end panel-wrapper -->
     </div>
 
   </div>
