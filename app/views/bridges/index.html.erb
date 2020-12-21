@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bridges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Bcategory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bridges.each do |bridge| %>
+      <tr>
+        <td><%= bridge.title %></td>
+        <td><%= bridge.body %></td>
+        <td><%= bridge.bcategory %></td>
+        <td><%= link_to 'Show', bridge %></td>
+        <td><%= link_to 'Edit', edit_bridge_path(bridge) %></td>
+        <td><%= link_to 'Destroy', bridge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bridge', new_bridge_path %>

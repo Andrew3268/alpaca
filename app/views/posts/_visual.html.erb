@@ -13,18 +13,21 @@
         <img src="<%=asset_path 'banner-gift-m.png' %>">
       </div>
 
-      <% if current_user && current_user.admin %>
-        <div class="admin clearfix">
-          <%= link_to 'New Post', new_post_path %> | 
-          <%= link_to "New Category", new_category_path %> | 
-          <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
-        </div>
-      <% end %>
+      <div class="mobile_none">
+        <% if current_user && current_user.admin %>
+          <div class="admin clearfix">
+            <%= link_to 'New Post', new_post_path %> | 
+            <%= link_to "New Category", new_category_path %> | 
+            <%= link_to 'Sing Out', destroy_user_session_path, method: :delete %>
+          </div>
+        <% end %>
+      </div>
     </div><!--./main-title-->
 
-    <%= form_for "",url: posts_path, role: "search", method: :get do %>
-      <%= text_field_tag :search, @search_term, placeholder: "Search....." %>
-    <% end %>
+
+    <!-- <%= form_for "",url: posts_path, role: "search", method: :get do %> -->
+      <!-- <%= text_field_tag :search, @search_term, placeholder: "Search....." %> -->
+    <!-- <% end %> -->
 
     <div class="ctg-common category-pc">
       <ul class="ctg-ul">
@@ -32,39 +35,39 @@
         <% Category.where(display_in_navbar: true).each do |cat | %>
           <li><%= link_to cat.name, posts_path(category: cat.name), class: "btn" %></li>
         <% end %>
+        <li><a href="/bridge/more_sale">+ 더보기</a></li>
       </ul>
     </div>
 
     <div class="category-mobile">
-      <ul class="clearfix">
+      <ul class="left clearfix">
         <li><a class="btn-m" href="/">Everything</a></li>
         <% Category.where(display_in_navbar: true).each do |cat | %>
           <li><%= link_to cat.name, posts_path(category: cat.name), class: "btn-m" %></li>
         <% end %>
       </ul>
+      <ul class="right">
+        <li><a href="/bridge/more_sale">+ 더보기</a></li>
+      </ul>
     </div>
-
-    <div class="sales-categories clearfix">
-      <div class="hashtag clearfix">
-          <div class="panel">
-            <ul id="myUL">
-              <div class="hashtag_li">
-                <%= render 'sales/list_of_hashtag' %>
-              </div>
-              <div class="hashtag_li_right">
-                <li><a href="#n">+ 더보기</a></li>
-              </div>
-            </ul>
-          </div><!-- end panel -->
-      </div>
-    </div>
-
-    
-    
     
   </div><!--./visual-->
+
+  <!-- <div class="sales-categories clearfix">
+    <div class="hashtag clearfix">
+      <div class="panel">
+        <ul>
+          <div class="hashtag_li">
+            <%= render 'sales/list_of_hashtag' %>
+          </div>
+          <div class="hashtag_li_right">
+            <li class="mobile"><a href="bridge/more_gift">+</a></li>
+            <li class="pc"><a href="bridge/more_gift">+ 더보기</a></li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div> -->
   
 </header>
-
-
 

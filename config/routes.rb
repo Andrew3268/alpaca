@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :bridges
   resources :hfcategories
   resources :halfprices
   devise_for :users
@@ -20,6 +21,9 @@ Rails.application.routes.draw do
   resources :featureds
   get '/featureds/season', to:'featureds#season'
   get '/featureds/fhashtag/:name', to: 'featureds#hashtags'
+
+  get 'bridge/more_sale'
+  get 'bridge/more_gift'
   
   
   

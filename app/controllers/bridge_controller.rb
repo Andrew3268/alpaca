@@ -1,0 +1,2 @@
+class BridgeController < ApplicationController
+end

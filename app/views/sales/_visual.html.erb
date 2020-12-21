@@ -1,5 +1,6 @@
 <div class="wrap">
-  <div class="visual clearfix">
+  
+  <!-- <div class="visual clearfix">
     <div class="main-title">
       <div class="visual-banner">
         <img src="<%=asset_path 'banner-sale.png' %>">
@@ -8,14 +9,19 @@
         <img src="<%=asset_path 'banner-sale-m.png' %>">
       </div>
     </div>
-  </div>
+  </div> -->
+  
+  <p>사랑해 보다 세일해~</p><br>
 
-  <% if current_user && current_user.admin %>
-    <div class="admin clearfix">
-      <span class="new_sale_btn"><%= link_to 'New Sale', new_sale_path %></span>   
-      <span> | <%= link_to 'New Category', new_scategory_path %></span>
-    </div>
-  <% end %>
+
+  <div class="mobile_none">
+    <% if current_user && current_user.admin %>
+      <div class="admin clearfix">
+        <span class="new_sale_btn"><%= link_to 'New Sale', new_sale_path %></span>   
+        <span> | <%= link_to 'New Category', new_scategory_path %></span>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <div class="wrap">
@@ -37,24 +43,28 @@
         <li><a href="/sales/shashtag/유아용품">유아용품</a></li>
         <li><a href="/sales/shashtag/반려동물">반려동물</a></li>
         <li><a href="/sales/shashtag/헬스">헬스&건강</a></li>
+        <li><a href="/bridge/more_sale">+ 더보기</a></li>
       </ul>
     </div>
 
     <div class="visual">
-      <div class="category-mobile">
-        <ul>
-          <li><a href="/sales">Everything</a></li>
-          <li><a href="/sales/shashtag/일레트로닉">일레트로닉</a></li>
-          <li><a href="/sales/shashtag/패션">패션</a></li>
-          <li><a href="/sales/shashtag/뷰티">뷰티</a></li>
-          <li><a href="/sales/shashtag/푸드">식품</a></li>
-          <li><a href="/sales/shashtag/키친">키친</a></li>
-          <li><a href="/sales/shashtag/리빙">리빙</a></li>
-          <li><a href="/sales/shashtag/인테리어">인테리어</a></li>
-          <li><a href="/sales/shashtag/스포츠">스포츠</a></li>
-          <li><a href="/sales/shashtag/토이">토이</a></li>
-          <li><a href="/sales/shashtag/반려동물">반려동물</a></li>
-          <li><a href="/sales/shashtag/헬스">헬스&건강</a></li>
+      <div class="category-mobile clearfix">
+        <ul class="left">
+          <li><a href="/sales">Everything,</a></li>
+          <li><a href="/sales/shashtag/일레트로닉">일레트로닉,</a></li>
+          <li><a href="/sales/shashtag/패션">패션,</a></li>
+          <li><a href="/sales/shashtag/뷰티">뷰티,</a></li>
+          <li><a href="/sales/shashtag/푸드">식품,</a></li>
+          <li><a href="/sales/shashtag/키친">키친,</a></li>
+          <li><a href="/sales/shashtag/리빙">리빙,</a></li>
+          <li><a href="/sales/shashtag/인테리어">인테리어,</a></li>
+          <li><a href="/sales/shashtag/스포츠">스포츠,</a></li>
+          <li><a href="/sales/shashtag/토이">토이,</a></li>
+          <li><a href="/sales/shashtag/반려동물">반려동물,</a></li>
+          <li><a href="/sales/shashtag/헬스">헬스&건강,</a></li>
+        </ul>
+        <ul class="right">
+          <li><a href="/bridge/more_sale">+ 더보기</a></li>
         </ul>
       </div>
     </div>
@@ -82,16 +92,17 @@
     </div> -->
 
     <div class="hashtag clearfix">
-        <div class="panel">
-          <ul id="myUL">
-            <div class="hashtag_li">
-              <%= render 'sales/list_of_hashtag' %>
-            </div>
-            <div class="hashtag_li_right">
-              <li><a href="#n">+ 더보기</li>
-            </div>
-          </ul>
-        </div><!-- end panel -->
+      <div class="panel">
+        <ul>
+          <div class="hashtag_li">
+            <%= render 'sales/list_of_hashtag' %>
+          </div>
+          <div class="hashtag_li_right">
+            <li class="mobile"><a href="bridge/more_gift">+</a></li>
+              <li class="pc"><a href="bridge/more_gift">+ 더보기</a></li>
+          </div>
+        </ul>
+      </div>
     </div>
 
   </div>
