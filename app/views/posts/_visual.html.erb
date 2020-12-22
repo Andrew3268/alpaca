@@ -37,7 +37,7 @@
           <% Category.where(display_in_navbar: true).each do |cat | %>
             <li><%= link_to cat.name, posts_path(category: cat.name), class: "btn" %></li>
           <% end %>
-          <li><a href="/bridge/more_gift">+ 더보기</a></li>
+          <!-- <li><a href="/bridge/more_gift">+ 더보기</a></li> -->
         </ul>
       </div>
 
@@ -49,7 +49,7 @@
           <% end %>
         </ul>
         <ul class="right">
-          <li><a href="/bridge/more_gift">+ 더보기</a></li>
+          <!-- <li><a href="/bridge/more_gift">+ 더보기</a></li> -->
         </ul>
       </div>
     </div>
