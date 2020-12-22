@@ -1,0 +1,48 @@
+<div class="wrap">
+  <div class="connection_wrap">
+    <%= link_to 'New Connection', new_connection_path %>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
+    <table id="myTable">
+      <thead>
+        <tr class="header">
+          <th style="width:60%;">상품명</th>
+          <th style="width:20%;">이미지</th>
+          <th style="width:20%;">관리</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @connections.each do |connection| %>
+          <tr>
+            <td><%= link_to connection.con_title, connection %></td>
+            <td><%= link_to image_tag(connection.con_image), connection %></td>
+            <td><%= link_to 'Edit', edit_connection_path(connection) %> | 
+            <%= link_to 'Destroy', connection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+</script>

@@ -1,0 +1,35 @@
+<!-- <meta http-equiv="refresh" content="4; url=<%= @connection.con_link %>"> -->
+
+<div class="con-show-container">
+  <div class="spiner">
+    <div class="spiner_inner">
+      <p>쿠팡으로 가는 중</p>
+      <div class="text">
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </div>
+    </div>
+  </div>
+  <div class="img-card-box">
+    <div class="image-box">
+      <img src="<%= @connection.con_image %>">
+    </div>
+  </div>
+  <div class="inner">
+    <p><%= @connection.con_title %></p>
+  </div>
+
+  <div class="option">
+    <a href="/posts">쿠팡 예쁜 선물보기</a>
+    <a href="/sales">쿠팡 세일 모아보기</a>
+  </div>
+
+  <% if current_user && current_user.admin %>
+    <div class="admin">
+      <%= link_to 'Edit', edit_connection_path(@connection) %> |
+      <%= link_to 'Back', connections_path %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<div class="wrap">
+  <div class="form-box">  
+    <% if current_user && current_user.admin %>
+      <h1>New Connection</h1>
+      <div class="clearfix">
+        <%= render 'form', connection: @connection %>
+      </div>
+      <div class="new-form-back"><%= link_to 'Back', connections_path %></div>
+    <% end %>
+  </div>
+</div>
+
+  

@@ -1,18 +1,18 @@
 <div class="wrap">
   
-  <!-- <div class="visual clearfix">
+  <div class="visual clearfix">
     <div class="main-title">
-      <div class="visual-banner">
+      <!-- <div class="visual-banner">
         <img src="<%=asset_path 'banner-sale.png' %>">
       </div>
       <div class="visual-banner-m">
         <img src="<%=asset_path 'banner-sale-m.png' %>">
-      </div>
+      </div> -->
+      <h2>사랑해 보다 <span>세일해</span></h2>
     </div>
-  </div> -->
+    
+  </div>
   
-  <p>사랑해 보다 세일해~</p><br>
-
 
   <div class="mobile_none">
     <% if current_user && current_user.admin %>
@@ -26,7 +26,6 @@
 
 <div class="wrap">
   <div class="sales-categories clearfix">
-
 
     <div class="ctg-common">
       <ul class="ctg-ul">
@@ -91,7 +90,7 @@
       </div>
     </div> -->
 
-    <div class="hashtag clearfix">
+    <!-- <div class="hashtag clearfix">
       <div class="panel">
         <ul>
           <div class="hashtag_li">
@@ -103,8 +102,12 @@
           </div>
         </ul>
       </div>
-    </div>
+    </div> -->
 
+  </div>
+
+  <div class="hot_hashtag clearfix">
+    <%= render 'sales/list_of_hashtag' %>
   </div>
 
   <div class="sale-where where">

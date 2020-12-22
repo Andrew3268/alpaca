@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_27_130619) do
+ActiveRecord::Schema.define(version: 2020_12_21_084650) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -52,6 +52,73 @@ ActiveRecord::Schema.define(version: 2020_11_27_130619) do
     t.boolean "display_in_navbar", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "connections", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "con_title"
+    t.string "con_image"
+    t.string "con_link"
+    t.string "con_friendly_id"
+    t.string "con_spare_01"
+    t.string "con_spare_02"
+    t.string "con_spare_03"
+    t.string "con_spare_04"
+    t.string "con_spare_05"
+    t.string "con_spare_06"
+    t.string "con_spare_07"
+    t.string "con_spare_08"
+    t.string "con_spare_09"
+    t.string "con_spare_10"
+    t.string "con_spare_11"
+    t.string "con_spare_12"
+    t.string "con_spare_13"
+    t.string "con_spare_14"
+    t.string "con_spare_15"
+    t.string "con_spare_16"
+    t.string "con_spare_17"
+    t.string "con_spare_18"
+    t.string "con_spare_19"
+    t.string "con_spare_20"
+    t.text "con_spare_31"
+    t.text "con_spare_32"
+    t.text "con_spare_33"
+    t.text "con_spare_34"
+    t.text "con_spare_35"
+    t.float "con_spare_41"
+    t.float "con_spare_42"
+    t.float "con_spare_43"
+    t.float "con_spare_44"
+    t.float "con_spare_45"
+    t.float "con_spare_46"
+    t.float "con_spare_47"
+    t.float "con_spare_48"
+    t.float "con_spare_49"
+    t.float "con_spare_50"
+    t.integer "con_spare_56"
+    t.integer "con_spare_57"
+    t.integer "con_spare_58"
+    t.integer "con_spare_59"
+    t.integer "con_spare_60"
+    t.decimal "con_spare_61"
+    t.decimal "con_spare_62"
+    t.decimal "con_spare_63"
+    t.decimal "con_spare_64"
+    t.decimal "con_spare_65"
+    t.datetime "con_spare_66"
+    t.datetime "con_spare_67"
+    t.datetime "con_spare_68"
+    t.datetime "con_spare_69"
+    t.datetime "con_spare_70"
+    t.date "con_spare_71"
+    t.date "con_spare_72"
+    t.date "con_spare_73"
+    t.date "con_spare_74"
+    t.date "con_spare_75"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_connections_on_slug", unique: true
   end
 
   create_table "featureds", force: :cascade do |t|
@@ -184,6 +251,17 @@ ActiveRecord::Schema.define(version: 2020_11_27_130619) do
     t.integer "tag_id"
     t.index ["featured_id"], name: "index_featureds_tags_on_featured_id"
     t.index ["tag_id"], name: "index_featureds_tags_on_tag_id"
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
   create_table "guides", force: :cascade do |t|

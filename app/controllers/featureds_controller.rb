@@ -76,7 +76,8 @@ class FeaturedsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def featured_params
-      params.require(:featured).permit(:ff_title, :ff_link, :ff_source, :ff_hashtag, :ff_description, :ff_is_price, :ff_was_price, :ff_pct)
+      params.require(:featured).permit(:fimage, :ff_title, :ff_link, :ff_source, :ff_hashtag, :ff_description, :ff_is_price, :ff_was_price, :ff_pct, 
+                                       :ff_spare_01, :ff_spare_02, :ff_spare_03, :ff_spare_04, :ff_spare_05, :ff_spare_06)
     end
 end
 

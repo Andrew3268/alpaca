@@ -46,7 +46,9 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 .container{margin:0 auto;padding:0 40px;/*max-width:90vw;*/max-width:1200px;}
 .arrow{display:block;width:24px;height:24px;transform:rotate(-90deg);}
 .box-left, .box-center, .box-right{display:flex;flex-wrap:wrap;align-items:center;/*margin-top:-20px;*/}
-/*.box-left{margin-top:-15px;}*/
+.box-left{margin:5px 0 0 -35px;}
+.box-left a.logo_text{margin:1px 0 0 -45px;}
+.box-left a.logo_text img{width:230px;}
 .box-right{margin-left:auto;}
 .logo-m{display:none;line-height:90px;margin:0 auto;}
 .logo-m img{}
@@ -98,6 +100,8 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
  .site-navbar .header-search input{display:none;}
  .box-right{margin:0;}
  .logo-m{display:block;}
+ .box-left{margin-left:5px;}
+ .box-left a.logo_text{margin-left:10px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
@@ -135,6 +139,7 @@ body{margin:0;padding:0;font-size:15px;color:#3d3d3d;line-height:1.5;font-weight
 
 @media screen and (max-width:640px){
   .container{padding:0 20px;}
+  .nav_logo{display:none;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .container{padding-right:40px;}

@@ -1,6 +1,8 @@
 /* Index Page */
-.visual{text-align:center;}
+.visual{}
 .visual .main-title{margin-bottom:10px;}
+.visual .main-title h2{font-size:35px;font-family: 'Gugi', cursive;}
+.visual .main-title h2 span{border-bottom:0px solid #ffdd33;box-shadow:inset 0 -8px 0 #ffdd33;}
 .visual .main-title .visual-banner{}
 .visual .main-title .visual-banner img{width:100%;}
 .visual .main-title .visual-banner-m{display:none;}
@@ -82,8 +84,8 @@
 .card .image-box img{width:75%;height:75%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;border-radius:20px;}
 .card .image-box .no-background img{width:80%;height:80%;object-fit:contain;}
 .card .inner{text-align:center;width:80%;margin:0 auto;}
-.card .inner p{font-size:14px;word-break:keep-all;letter-spacing:1.1px;height:50px;}
-.card .inner p a{color:#b3b3b3;/*border-bottom:0px solid #b4e7f8;box-shadow:inset 0 -7px 0 #b4e7f8;*/}
+.card .inner p{font-size:14px;word-break:keep-all;letter-spacing:1.1px;height:50px;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+.card .inner p a{color:#b3b3b3;display:block;}
 
 /* Sale Page */
 .sales-card{width:23%;height:435px;}
@@ -91,8 +93,8 @@
 .sales-card .inner em{font-size:12px;}
 .sales-card .inner em.sales-source{color:#ccc;text-decoration:underline;margin-right:2px;}
 .sales-card .inner em.hash_em a{color:#a284e0;border:1px solid #a284e0;border-radius:10px;padding:3px 6px;background:rgba(162,132,224,0.1);}
-.sales-card .inner .left{float:left;width:50%;}
-.sales-card .inner .right{float:right;width:45%;margin-left:5%;margin-top:7px;}
+.sales-card .inner .left{float:left;width:50%;margin-top:10px;}
+.sales-card .inner .right{float:right;width:45%;margin-left:5%;margin-top:17px;}
 .sales-card .inner .right a{text-decoration:none;border:2px solid #000;text-align:center;display:table-cell;vertical-align:middle;padding:7px 24px;display:block;border-radius:15px;background: #fe4365;box-shadow: inset 7px 2px 0 white, inset -0.5px 0.5px 0 white, inset -5px -3px 0 #D53D35;color:#fff;font-size:13px;}
 /*.sales-card .inner .right a.outline{color:#fff;text-shadow:1px 0 0 #a3a3a3,0 1px 0 #a3a3a3,-1px 0 0 #a3a3a3,0 -1px 0 #a3a3a3,1px 1px 0 #a3a3a3,-1px 1px 0 #a3a3a3,-1px -1px 0 #a3a3a3,1px -1px 0 #a3a3a3;}*/
 .card .inner span.list-price{display:block;font-size:15px;color:#fe8fa3;text-decoration:line-through;margin-bottom:-3px;}
@@ -148,6 +150,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .visual .main-title .visual-banner{display:none;}
   .visual .main-title .visual-banner-m{display:block;}
   .visual .main-title .visual-banner-m img{width:100%;}
+  .visual .main-title h2{font-size:25px;}
   .visual span.sub_title{font-size:20px;}
   .visual h2.ver-02{font-size:35px;}
   .visual span.span-02{font-size:25px;}
@@ -170,7 +173,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .category-pc a.btn:hover{pointer-events:none;}
   .ctg-common{display:none;}
 
-  .sales-categories{width:100%;margin:0;height:50px;}
+  .sales-categories{width:100%;margin:0;border-bottom:1px solid #ccc;}
 
   .sales-categories .hashtag .panel{display:none;max-height:53px;position:relative;padding:5px;margin:0;}
   /*.sales-categories .hashtag{margin-bottom:10px;}
@@ -215,7 +218,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .inner{float:left;width:50%;margin-left:5%;padding:2.5%;}
 .show-container .inner .source-time{}
 .show-container .inner .source-time span{color:#ccc;}
-.show-container .inner p.title{font-size:25px;/*font-weight:700;*/margin-bottom:15px;word-break:keep-all;text-decoration:underline;letter-spacing:0.08em;width:70%;}
+.show-container .inner p.title{font-size:25px;margin-bottom:15px;word-break:keep-all;letter-spacing:0.08em;width:90%;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
 .show-container .inner p.title_sale{font-size:17px;}
 .show-container .inner .pricing{font-size:2rem;font-weight:500;line-height:1.2;margin-top:20px;}
 .show-container .inner .pricing .is{color:#57caef;font-weight:bold;}

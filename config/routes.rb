@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :bridges
+  resources :connections
   resources :hfcategories
   resources :halfprices
   devise_for :users

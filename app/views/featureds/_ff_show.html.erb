@@ -1,9 +1,97 @@
 <div class="wrap">
-  <div class="blog_wrap">
-    <h2><%= @featured.ff_title %></h2>
-    <p>#<%= render_with_fhashtags(@featured.ff_hashtag.to_s) %></p>
-    <%= link_to 'Back', featureds_path %> | 
-    <%= link_to 'Edit', edit_featured_path(@featured) %> |
-    <%= link_to 'Destroy', @featured, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+  <a href="/featureds><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="뒤로가기" /></a>
+
+  <div class="show-container clearfix">
+    <div class="show-image-box">
+       <img src="<%= @featured.ff_spare_03 %>">
+    </div>
+    <div class="inner">
+      <p class="title"><%= @featured.ff_title %></p>
+
+      <div class="pricing">
+        <span class="is"><%= number_to_currency(@featured.ff_is_price, locale: :kr) %>원</span>
+        <% if @featured.ff_was_price.present? %>
+          <span class="was"><%= number_to_currency(@featured.ff_was_price, locale: :kr) %>원</span>
+          <% final_pct = 0 %>
+          <% final_pct =  (@featured.ff_was_price - @featured.ff_is_price) / @featured.ff_was_price * 100 %>
+          <span class="pct">( <%= number_to_percentage(final_pct, precision: 0) %> OFF )</span>
+        <% end %>
+      </div>            
+
+      <div class="spec clearfix">
+        <div class="boxes common">
+          <div class="box">
+            <p>평  점</p>
+            <% if @featured.ff_spare_04.present? %>
+              <span><%= @featured.ff_spare_04 %> / 5.0</span>
+            <% else %>
+              <span>-</span>
+            <% end %>
+          </div>
+          <div class="box">
+            <p>리뷰 수</p>
+            <% if @featured.ff_spare_05.present? %>
+              <span><%= @featured.ff_spare_05 %>개 +</span>
+            <% else %>
+              <span>-</span>
+            <% end %>
+          </div>
+          <% if @featured.ff_spare_06.present? %>
+          <% else %>
+            <div class="box">
+              <p>로켓 배송</p>
+              <% if @featured.ff_spare_06.present? %>
+                <span><%= @featured.ff_spare_06 %></span>
+              <% else %>
+                <span>NO</span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <!-- <p>별 5개: 매우좋음, 별 4~4.5개: 좋음, 별 3~3.5: 보통, 별 3개 미만: 나쁨</p> -->
+      </div>
+
+      <% if current_user && current_user.admin %>
+        <div class="hashtag"><p><%= render_with_fhashtags(@featured.ff_hashtag.to_s) %></p></div>
+      <% end %>
+
+      <div class="show-btn pc-ver"><a target="_blank" href="<%= @featured.ff_link %>">쿠팡에서 확인하기</a></div>
+      
+
+    </div>
+
+    <div class="show-btn mobile"><a target="_blank" href="<%= @featured.ff_link %>">쿠팡에서 확인하기</a></div>
+
+    <% if current_user && current_user.admin %>
+      <div class="admin">
+        <%= link_to 'Back', featureds_path %> | 
+        <%= link_to 'Edit', edit_featured_path(@featured) %> |
+        <%= link_to 'Destroy', @featured, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
+
+
+<div class="wrap">
+  <div class="relative-box">
+    <div class="notice-warp">
+      <div class="notice_m">
+        <strong>Notice</strong>
+        <span> * 가격 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 평점과 리뷰 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span>
+      </div>
+      <div class="notice_pc">
+        <strong>Notice</strong>
+        <span> * 가격 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 평점과 리뷰 정보는 업데이트 이후 변경 될 수있습니다.</span>
+        <span> * 쿠팡 파트너스와 함께하며 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.</span>
+      </div>
+    </div>
   </div>
 </div>
+
