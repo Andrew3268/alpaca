@@ -74,8 +74,8 @@
 .sales-categories .hashtag .fade{height:20px;/*margin-top:-100px;*/position:relative;}
 
 
-.card{float:left;width:30.7%;height:400px;margin:1%;border-radius:20px;position:relative;box-shadow:0 0 5px rgba(0,0,0,0.15);}
-.card-wrap{width:1000px;margin:10px auto 0 auto;}
+.card{float:left;/*width:30.7%;*/width:23%;height:400px;margin:1%;border-radius:20px;position:relative;box-shadow:0 0 5px rgba(0,0,0,0.15);}
+/*.card-wrap{width:1000px;margin:10px auto 0 auto;}*/
 .card-wrap .cart-title span{font-size:30px;font-weight:600;}
   
 .sale-card-wrap{width:1200px;}  
@@ -167,6 +167,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .where-hashtag{margin-bottom:20px;}
   .where-hashtag p{font-size:40px;}
   .card{float:none;width:100%;margin:0 0 20px 0;}
+  .card .inner{margin-top:20px;}
   .card-wrap{width:100%;margin:10px 0 0 0;}
   .card .image-box img{width:95%;height:95%;}
   .category-pc a.btn{padding:18px 12px;font-size:15px;}
@@ -176,6 +177,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .sales-categories{width:100%;margin:0;border-bottom:1px solid #ccc;}
 
   .sales-categories .hashtag .panel{display:none;max-height:53px;position:relative;padding:5px;margin:0;}
+  
   /*.sales-categories .hashtag{margin-bottom:10px;}
   .sales-categories .hashtag ul li{margin:0 5px 5px 0;}
   .sales-categories .hashtag ul .hashtag_li{width:90%;}
