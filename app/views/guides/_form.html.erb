@@ -3,11 +3,14 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <div class="input-box">
-      <%= f.file_field :guide_image %>
-      <%= f.input :name %>
-      <!-- <%= f.input :description %> -->
-      <%= f.input :display_in_navbar %>
+    <div class="input-box">      
+      <%= f.input :gui_spare_01, label: "이미지" %>
+      <%= f.input :gui_title, label: "주제" %>
+      <%= f.input :gui_spare_02, label: "부 주제" %>
+      <%= f.input :gui_link, label: "해시태그 링크" %>
+      
+      <!-- <%= f.input :gui_spare_03 %> -->
+      <!-- <%= f.input :display_in_navbar %> -->
     </div>
   </div>
 

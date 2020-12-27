@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_21_084650) do
+ActiveRecord::Schema.define(version: 2020_12_27_160633) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -271,6 +271,74 @@ ActiveRecord::Schema.define(version: 2020_12_21_084650) do
     t.boolean "display_in_navbar", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "gui_title"
+    t.string "gui_link"
+    t.string "gui_source"
+    t.string "gui_hashtag"
+    t.text "gui_description"
+    t.float "gui_is_price"
+    t.float "gui_was_price"
+    t.float "gui_pct"
+    t.string "gui_spare_01"
+    t.string "gui_spare_02"
+    t.string "gui_spare_03"
+    t.string "gui_spare_04"
+    t.string "gui_spare_05"
+    t.string "gui_spare_06"
+    t.string "gui_spare_07"
+    t.string "gui_spare_08"
+    t.string "gui_spare_09"
+    t.string "gui_spare_10"
+    t.string "gui_spare_11"
+    t.string "gui_spare_12"
+    t.string "gui_spare_13"
+    t.string "gui_spare_14"
+    t.string "gui_spare_15"
+    t.text "gui_spare_31"
+    t.text "gui_spare_32"
+    t.text "gui_spare_33"
+    t.text "gui_spare_34"
+    t.text "gui_spare_35"
+    t.text "gui_spare_36"
+    t.text "gui_spare_37"
+    t.text "gui_spare_38"
+    t.text "gui_spare_39"
+    t.text "gui_spare_40"
+    t.float "gui_spare_41"
+    t.float "gui_spare_42"
+    t.float "gui_spare_43"
+    t.float "gui_spare_44"
+    t.float "gui_spare_45"
+    t.float "gui_spare_46"
+    t.float "gui_spare_47"
+    t.float "gui_spare_48"
+    t.float "gui_spare_49"
+    t.float "gui_spare_50"
+    t.float "gui_spare_51"
+    t.float "gui_spare_52"
+    t.float "gui_spare_53"
+    t.float "gui_spare_54"
+    t.float "gui_spare_55"
+    t.integer "gui_spare_56"
+    t.integer "gui_spare_57"
+    t.integer "gui_spare_58"
+    t.integer "gui_spare_59"
+    t.integer "gui_spare_60"
+    t.decimal "gui_spare_61"
+    t.decimal "gui_spare_62"
+    t.decimal "gui_spare_63"
+    t.decimal "gui_spare_64"
+    t.decimal "gui_spare_65"
+    t.datetime "gui_spare_66"
+    t.datetime "gui_spare_67"
+    t.datetime "gui_spare_68"
+    t.datetime "gui_spare_69"
+    t.datetime "gui_spare_70"
+    t.date "gui_spare_71"
+    t.date "gui_spare_72"
+    t.date "gui_spare_73"
+    t.date "gui_spare_74"
+    t.date "gui_spare_75"
   end
 
   create_table "halfprices", force: :cascade do |t|

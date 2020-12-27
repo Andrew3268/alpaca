@@ -1,4 +1,13 @@
 <div id="columns">
+
+  <% @guides.each do |gui| %>
+    <figure>
+      <a class="fiqure_a" href="/featureds/fhashtag/<%= gui.gui_link %>">
+        <img src="<%= gui.gui_spare_01 %>">
+        <figcaption><%= gui.gui_title %></figcaption>
+      </a>
+    </figure>
+  <% end %>
    
   <figure>
     <a class="fiqure_a" href="/featureds/fhashtag/세번째">
