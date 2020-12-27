@@ -1,82 +1,104 @@
 <div class="wrap">
-  <div class="visual clearfix">
+  <div class="visual more_visual clearfix">
     <div class="main-title">
       <h2><span>예쁜 선물</span>이 필요할 때</h2>
     </div>
+    <input type="text" id="mgInput" onkeyup="mgFunction()" placeholder="검색..." title="선물 더 검색하기">
   </div>
   <div class="shop_category">
-    <a class="cartoon" href="/posts/hashtag/1만원대">#1만원대</a>
-    <a class="cartoon" href="/posts/hashtag/2만원대">#2만원대</a>
-    <a class="cartoon" href="/posts/hashtag/3만원대">#3만원대</a>
-    <a class="cartoon" href="/posts/hashtag/4만원대">#4만원대</a>
-    <a class="cartoon" href="/posts/hashtag/5만원대">#5만원대</a>
-    <a class="cartoon" href="/posts/hashtag/6만원대">#6만원대</a>
-    <a class="cartoon" href="/posts/hashtag/7만원대">#7만원대</a>
-    <a class="cartoon" href="/posts/hashtag/8만원대">#8만원대</a>
-    <a class="cartoon" href="/posts/hashtag/9만원대">#9만원대</a>
-    <a class="cartoon" href="/posts/hashtag/10만원이상">#10만원이상</a>
+    <ul id="mgUL">
+      <li><a class="cartoon" href="/posts/hashtag/1만원대">#1만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/2만원대">#2만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/3만원대">#3만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/4만원대">#4만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/5만원대">#5만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/6만원대">#6만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/7만원대">#7만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/8만원대">#8만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/9만원대">#9만원대</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/10만원이상">#10만원이상</a></li>
 
-    <a class="cartoon" href="/posts/hashtag/가습기">#가습기</a>
-    <a class="cartoon" href="/posts/hashtag/스피커">#스피커</a>
-    <a class="cartoon" href="/posts/hashtag/카메라">#카메라</a>
-    <a class="cartoon" href="/posts/hashtag/텀블러">#텀블러</a>
-    <a class="cartoon" href="/posts/hashtag/반려동물">#반려동물</a>
-    <a class="cartoon" href="/posts/hashtag/욕실">#욕실</a>
-    <a class="cartoon" href="/posts/hashtag/전기포트">#전기포트</a>
-    <a class="cartoon" href="/posts/hashtag/뷰티">#뷰티</a>
-    <a class="cartoon" href="/posts/hashtag/여행">#여행</a>
-    <a class="cartoon" href="/posts/hashtag/캠핑">#캠핑</a>
-    <a class="cartoon" href="/posts/hashtag/키보드">#키보드</a>
-    <a class="cartoon" href="/posts/hashtag/마우스">#마우스</a>
-    <a class="cartoon" href="/posts/hashtag/무드등">#무드등</a>
-    <a class="cartoon" href="/posts/hashtag/샌드위치메이커">#샌드위치메이커</a>
-    <a class="cartoon" href="/posts/hashtag/에어프라이어">#에어프라이어</a>
-    <a class="cartoon" href="/posts/hashtag/커피메이커">#커피메이커</a>
-    <a class="cartoon" href="/posts/hashtag/책꽂이">#책꽂이</a>
-    <a class="cartoon" href="/posts/hashtag/스팀다리미">#스팀다리미</a>
-    <a class="cartoon" href="/posts/hashtag/카카오프렌즈">#카카오프렌즈</a>
-    <a class="cartoon" href="/posts/hashtag/백팩">#백팩</a>
-    <a class="cartoon" href="/posts/hashtag/시계">#시계</a>
-    <a class="cartoon" href="/posts/hashtag/선풍기">#선풍기</a>
-    <a class="cartoon" href="/posts/hashtag/홈데코">#홈데코</a>
-    <a class="cartoon" href="/posts/hashtag/레트로">#레트로</a>
-    <a class="cartoon" href="/posts/hashtag/주방용품">#주방용품</a>
-    <a class="cartoon" href="/posts/hashtag/주방가전">#주방가전</a>
-    <a class="cartoon" href="/posts/hashtag/멀티쿠커">#멀티쿠커</a>
-    <a class="cartoon" href="/posts/hashtag/헤드셋">#헤드셋</a>
-    <a class="cartoon" href="/posts/hashtag/무선이어폰">#무선이어폰</a>
-    <a class="cartoon" href="/posts/hashtag/머그">#머그 & 컵</a>
-    <a class="cartoon" href="/posts/hashtag/자동차액세서리">#자동차액세서리</a>
-    <a class="cartoon" href="/posts/hashtag/그릇">#그릇</a>
-    <a class="cartoon" href="/posts/hashtag/토스터기">#토스터기</a>
+      <li><a class="cartoon" href="/posts/hashtag/가습기">#가습기</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/스피커">#스피커</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/카메라">#카메라</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/텀블러">#텀블러</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/반려동물">#반려동물</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/욕실">#욕실</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/전기포트">#전기포트</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/뷰티">#뷰티</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/여행">#여행</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/캠핑">#캠핑</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/키보드">#키보드</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/마우스">#마우스</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/무드등">#무드등</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/샌드위치메이커">#샌드위치메이커</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/에어프라이어">#에어프라이어</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/커피메이커">#커피메이커</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/책꽂이">#책꽂이</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/스팀다리미">#스팀다리미</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/카카오프렌즈">#카카오프렌즈</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/백팩">#백팩</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/시계">#시계</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/선풍기">#선풍기</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/홈데코">#홈데코</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/레트로">#레트로</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/주방용품">#주방용품</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/주방가전">#주방가전</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/멀티쿠커">#멀티쿠커</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/헤드셋">#헤드셋</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/무선이어폰">#무선이어폰</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/머그">#머그 & 컵</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/자동차액세서리">#자동차액세서리</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/그릇">#그릇</a></li>
+      <li><a class="cartoon" href="/posts/hashtag/토스터기">#토스터기</a></li>
+    </ul>
 
 
-   <!--  <a class="cartoon" href="/posts/hashtag/가방">#가방</a>
-    <a class="cartoon" href="/posts/hashtag/해드셋/이어폰">#해드셋 & 이어폰</a>
-    <a class="cartoon" href="/posts/hashtag/스피커">#스피커</a>
+   <!--  <a class="cartoon" href="/posts/hashtag/가방">#가방</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/해드셋/이어폰">#해드셋 & 이어폰</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/스피커">#스피커</a></li>
     
-    <a class="cartoon" href="/posts/hashtag/스마트폰/테블릿">#스마트폰 & 테블릿</a>
-    <a class="cartoon" href="/posts/hashtag/아날로그 시계">#아날로그 시계</a>
-    <a class="cartoon" href="/posts/hashtag/디지털 시계">#디지털 시계</a>
-    <a class="cartoon" href="/posts/hashtag/조명/램프">#조명 & 램프</a>
-    <a class="cartoon" href="/posts/hashtag/수납/정리">#수납 & 정리</a>
-    <a class="cartoon" href="/posts/hashtag/리빙/홈데코">#리빙 & 홈데코</a>
+    <li><a class="cartoon" href="/posts/hashtag/스마트폰/테블릿">#스마트폰 & 테블릿</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/아날로그 시계">#아날로그 시계</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/디지털 시계">#디지털 시계</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/조명/램프">#조명 & 램프</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/수납/정리">#수납 & 정리</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/리빙/홈데코">#리빙 & 홈데코</a></li>
     
-    <a class="cartoon" href="/posts/hashtag/머그/컵">#머그 & 컵</a>
-    <a class="cartoon" href="/posts/hashtag/그릇">#그릇</a>
-    <a class="cartoon" href="/posts/hashtag/냄비/팬">#냄비 & 팬</a>
-    <a class="cartoon" href="/posts/hashtag/커피/메이커">#커피 & 메이커</a>
+    <li><a class="cartoon" href="/posts/hashtag/머그/컵">#머그 & 컵</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/그릇">#그릇</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/냄비/팬">#냄비 & 팬</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/커피/메이커">#커피 & 메이커</a></li>
     
-    <a class="cartoon" href="/posts/hashtag/토스터기">#토스터기</a>
-    <a class="cartoon" href="/posts/hashtag/오븐/에어프라이어">#오븐/에어프라이어</a>
-    <a class="cartoon" href="/posts/hashtag/쿠커/메이커">#쿠커 & 메이커</a>
-    <a class="cartoon" href="/posts/hashtag/그릴/렌지">#그릴 & 렌지</a>
-    <a class="cartoon" href="/posts/hashtag/주방가전">#주방가전</a>
-    <a class="cartoon" href="/posts/hashtag/주방용품">#주방용품</a>
-    <a class="cartoon" href="/posts/hashtag/자동차 액세서리">#자동차 액세서리</a>
+    <li><a class="cartoon" href="/posts/hashtag/토스터기">#토스터기</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/오븐/에어프라이어">#오븐/에어프라이어</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/쿠커/메이커">#쿠커 & 메이커</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/그릴/렌지">#그릴 & 렌지</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/주방가전">#주방가전</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/주방용품">#주방용품</a></li>
+    <li><a class="cartoon" href="/posts/hashtag/자동차 액세서리">#자동차 액세서리</a></li>
     
     
     
-    <a class="cartoon" href="/posts/hashtag/재밌는 아이디어">#재밌는 아이디어</a> -->
+    <li><a class="cartoon" href="/posts/hashtag/재밌는 아이디어">#재밌는 아이디어</a> -->
     </div>
 </div>
+
+<script>
+function mgFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("mgInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("mgUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>

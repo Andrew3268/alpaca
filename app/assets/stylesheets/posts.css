@@ -161,7 +161,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
   .visual .category-mobile{display:block;}
   .visual .category-mobile ul.left{float:left;width:80%;}
   .visual .category-mobile ul.right{float:left;width:20%;}
-  .visual input{display:block;width:90%;border:none;background:#f8f8f8;margin:0 auto;}
+  .visual input{display:block;width:94%;border:none;background:#f8f8f8;margin:0 auto;}
   .where{width:100%;margin:0;}
   .where p{font-size:20px;text-align:center;}
   .where-hashtag{margin-bottom:20px;}

@@ -3,6 +3,7 @@
 /*.shop-wrap{border-left:1px solid #ccc;}*/
 
 /* for more gift & sale page */
+.more_visual input{display:block;margin-left:15px;margin-bottom:40px;background:#f8f8f8;border:none;}
 .shop_card{float:left;width:19.9%;display:inline-block;margin-bottom:-1px;border:1px solid #ccc;border-left:none;}
 .shop_card .each{height:150px;text-align:center;}
 .shop_card .each p{font-size:20px;line-height:150px;} 
@@ -10,14 +11,17 @@
 .shop_card .inner p{text-align:center;margin-bottom:10px;}
 
 
-.shop_category{font-family: 'Gugi', cursive;margin-top:-50px;}
-.cartoon{margin-left:15px;display:inline-block;position:relative;margin-top:4rem;padding:20px 30px;font-size:1.5rem;line-height:2.5rem;color:#008b8b;text-decoration:none;border-radius:30% 20% 30% 30px;border:1px solid #008b8b;}
+.shop_category{font-family: 'Gugi', cursive;margin-top:-20px;margin-bottom:100px;}
+.shop_category ul{}
+.shop_category ul li{float:left;}
+.cartoon{margin-left:15px;display:inline-block;position:relative;margin-bottom:1.7rem;padding:20px 30px;font-size:1rem;line-height:1.5rem;color:#008b8b;text-decoration:none;border-radius:30% 20% 30% 30px;border:1px solid #008b8b;}
 .cartoon:before, .cartoon:after{content:'';position:absolute;background:transparent;}
 .cartoon:before{left:0;bottom:-0.5rem;width:13px;height:22px;border-top:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent;border-left:4px solid #008b8b;-webkit-border-radius:60%;-moz-border-radius:60%;border-radius:60%;-webkit-transform:rotate(-50grad);-moz-transform:rotate(-50grad);-ms-transform:rotate(-50grad);-o-transform:rotate(-50grad);transform:rotate(-50grad);}
 .cartoon:after{right:-0.2em;top:-0.2rem;width:10px;height:18px;border-top:1px solid transparent;border-right:3px solid #008b8b;border-bottom:1px solid transparent;border-left:1px solid transparent;-webkit-border-radius:60%;-moz-border-radius:60%;border-radius:60%;-webkit-transform:rotate(-55grad);-moz-transform:rotate(-55grad);-ms-transform:rotate(-55grad);-o-transform:rotate(-55grad);transform:rotate(-55grad);}
 
 
 @media screen and (max-width:640px){
+  .more_visual input{margin-left:0;}
   .shop_category{margin-top:-20px;}
   .shop-title{margin:0 0 40px 0;}
   .shop-title h1{font-size:40px;letter-spacing:1px;padding:0;}
@@ -27,7 +31,7 @@
   .shop_card .ln p{font-size:16.5px;}
   .shop_card .inner a{font-size:13px;}*/
 
-  .cartoon{margin-left:15px;margin-top:1.3rem;padding:0px 6px;font-size:12px;}
+  .cartoon{margin-left:15px;margin-top:0rem;padding:0px 6px;font-size:12px;line-height:3.5em}
   .cartoon:before{bottom:-0.2rem;}
   .cartoon:after{right:-0.3em;top:-0.3rem;}
 }
@@ -43,4 +47,3 @@
   .cartoon:before{bottom:-0.2rem;}
   .cartoon:after{right:-0.3em;top:-0.3rem;}
 }
-
