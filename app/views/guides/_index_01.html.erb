@@ -1,13 +1,13 @@
 <div id="columns">
 
- <!--  <% @guides.each do |gui| %>
+  <% @guides.each do |guide| %>
     <figure>
-      <a class="fiqure_a" href="/featureds/fhashtag/<%= gui.gui_link %>">
-        <img src="<%= gui.gui_spare_01 %>">
-        <figcaption><%= gui.gui_title %></figcaption>
+      <a class="fiqure_a" href="/featureds/fhashtag/<%= guide.gui_link %>">
+        <img src="<%= guide.gui_spare_01 %>">
+        <figcaption><%= guide.gui_title %></figcaption>
       </a>
     </figure>
-  <% end %> -->
+  <% end %>
    
   <figure>
     <a class="fiqure_a" href="/featureds/fhashtag/세번째">
@@ -15,6 +15,8 @@
       <figcaption>주방 정리하기 좋은 것들</figcaption>
     </a>
   </figure>
+
+
   <!-- 
   <figure>
   <img src="https://images.unsplash.com/photo-1583359312696-cbc5d73e5f8d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cGFkZGluZyUyMGpha2V0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60">
