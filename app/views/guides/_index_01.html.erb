@@ -6,6 +6,7 @@
         <img src="<%= guide.gui_spare_01 %>">
         <figcaption>
           <%= guide.gui_title %>
+          <%= link_to 'Edit', edit_guide_path(guide) %>
           <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %>
         </figcaption>
       </a>
