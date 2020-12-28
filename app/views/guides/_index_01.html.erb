@@ -4,7 +4,13 @@
     <figure>
       <a class="fiqure_a" href="/featureds/fhashtag/<%= guide.gui_link %>">
         <img src="<%= guide.gui_spare_01 %>">
-        <figcaption><%= guide.gui_title %></figcaption>
+        <figcaption>
+          <%= guide.gui_title %>
+          <!-- <ul class="admin">
+            <li><%= link_to 'Edit', edit_guide_path(guide) %> |</li>
+            <li><%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          </ul> -->
+        </figcaption>
       </a>
     </figure>
   <% end %>
