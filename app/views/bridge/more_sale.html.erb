@@ -1,42 +1,66 @@
 <div class="wrap">
-  <div class="visual clearfix">
+  <div class="visual more_visual clearfix">
     <div class="main-title">
       <h2>사랑해 보다 <span>세일해</span></h2>
     </div>
+    <input type="text" id="saleInput" onkeyup="saleFunction()" placeholder="세일 검색..." title="선물 더 검색하기">
   </div>
   
-  <div class="shop_category">
-    <a class="cartoon" href="/sales/shashtag/히새태그">#해시태그</a>
-    <a class="cartoon" href="/sales/shashtag/가방">#가방</a>
-    <a class="cartoon" href="/sales/shashtag/해드셋/이어폰">#해드셋 & 이어폰</a>
-    <a class="cartoon" href="/sales/shashtag/스피커">#스피커</a>
-    <a class="cartoon" href="/sales/shashtag/키보드/마우스">#키보드 & 마우스</a>
-    <a class="cartoon" href="/sales/shashtag/카메라">#카메라</a>
-    <a class="cartoon" href="/sales/shashtag/스마트폰/테블릿">#스마트폰 & 테블릿</a>
-    <a class="cartoon" href="/sales/shashtag/아날로그 시계">#아날로그 시계</a>
-    <a class="cartoon" href="/sales/shashtag/디지털 시계">#디지털 시계</a>
-    <a class="cartoon" href="/sales/shashtag/조명/램프">#조명 & 램프</a>
-    <a class="cartoon" href="/sales/shashtag/수납/정리">#수납 & 정리</a>
-    <a class="cartoon" href="/sales/shashtag/리빙/홈데코">#리빙 & 홈데코</a>
-    <a class="cartoon" href="/sales/shashtag/욕실">#욕실</a>
-    <a class="cartoon" href="/sales/shashtag/반려동물">#반려동물</a>  
-    <a class="cartoon" href="/sales/shashtag/텀블러">#텀블러</a>
-    <a class="cartoon" href="/sales/shashtag/머그/컵">#머그 & 컵</a>
-    <a class="cartoon" href="/sales/shashtag/그릇">#그릇</a>
-    <a class="cartoon" href="/sales/shashtag/냄비/팬">#냄비 & 팬</a>
-    <a class="cartoon" href="/sales/shashtag/커피/메이커">#커피 & 메이커</a>
-    <a class="cartoon" href="/sales/shashtag/전기포트">#전기포트</a>
-    <a class="cartoon" href="/sales/shashtag/토스터기">#토스터기</a>
-    <a class="cartoon" href="/sales/shashtag/오븐/에어프라이어">#오븐/에어프라이어</a>
-    <a class="cartoon" href="/sales/shashtag/쿠커/메이커">#쿠커 & 메이커</a>
-    <a class="cartoon" href="/sales/shashtag/그릴/렌지">#그릴 & 렌지</a>
-    <a class="cartoon" href="/sales/shashtag/주방가전">#주방가전</a>
-    <a class="cartoon" href="/sales/shashtag/주방용품">#주방용품</a>
-    <a class="cartoon" href="/sales/shashtag/자동차 액세서리">#자동차 액세서리</a>
-    <a class="cartoon" href="/sales/shashtag/뷰티">#뷰티</a>
-    <a class="cartoon" href="/sales/shashtag/여행">#여행</a>
-    <a class="cartoon" href="/sales/shashtag/캠핑">#캠핑</a>
-    <a class="cartoon" href="/sales/shashtag/재밌는 아이디어">#재밌는 아이디어</a>
+  <div class="shop_category clearfix">
+    <ul id="saleUL">
+      <li><a class="cartoon" href="/sales/shashtag/히새태그">#해시태그</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/히새태그">#해시태그</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/가방">#가방</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/해드셋/이어폰">#해드셋 & 이어폰</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/스피커">#스피커</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/키보드/마우스">#키보드 & 마우스</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/카메라">#카메라</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/스마트폰/테블릿">#스마트폰 & 테블릿</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/아날로그 시계">#아날로그 시계</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/디지털 시계">#디지털 시계</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/조명/램프">#조명 & 램프</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/수납/정리">#수납 & 정리</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/리빙/홈데코">#리빙 & 홈데코</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/욕실">#욕실</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/반려동물">#반려동물</a>  </li>
+      <li><a class="cartoon" href="/sales/shashtag/텀블러">#텀블러</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/머그/컵">#머그 & 컵</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/그릇">#그릇</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/냄비/팬">#냄비 & 팬</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/커피/메이커">#커피 & 메이커</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/전기포트">#전기포트</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/토스터기">#토스터기</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/오븐/에어프라이어">#오븐/에어프라이어</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/쿠커/메이커">#쿠커 & 메이커</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/그릴/렌지">#그릴 & 렌지</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/주방가전">#주방가전</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/주방용품">#주방용품</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/자동차 액세서리">#자동차 액세서리</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/뷰티">#뷰티</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/여행">#여행</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/캠핑">#캠핑</a></li>
+      <li><a class="cartoon" href="/sales/shashtag/재밌는 아이디어">#재밌는 아이디어</a></li>
+    </ul>
   </div>
 
 </div>
+
+
+<script>
+function saleFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("saleInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("saleUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
