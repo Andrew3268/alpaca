@@ -1,5 +1,5 @@
 <div class="wrap">
-  <div class="connection_wrap">
+  <!-- <div class="connection_wrap">
     <%= link_to 'New Connection', new_connection_path %>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a name">
     <table id="myTable">
@@ -25,24 +25,37 @@
 
   </div>
 </div>
+ -->
 
-<script>
-  function myFunction() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }       
-    }
-  }
-</script>
+<div id="columns">
+
+  <% @connections.each do |connection| %>
+    <figure>
+      <a class="fiqure_a" href="/guides/guihashtag/<%= connection.con_link %>">
+        <img src="<%= connection.con_image %>">
+        <figcaption>
+          <%= connection.con_title %>
+          <%= link_to 'Edit', edit_connection_path(connection) %> | 
+          <%= link_to 'Destroy', connection, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </figcaption>
+      </a>
+
+    </figure>
+  <% end %>
+  
+
+  <figure>
+    <a class="fiqure_a" href="/featureds/fhashtag/세번째">
+      <img src="https://images.unsplash.com/photo-1580310173421-8784cc72069f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFkZGluZyUyMGpha2V0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60">
+      <figcaption>주방 정리하기 좋은 것들</figcaption>
+    </a>
+  </figure>
+
+
+  <!-- 
+  <figure>
+  <img src="https://images.unsplash.com/photo-1583359312696-cbc5d73e5f8d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cGFkZGluZyUyMGpha2V0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60">
+  <figcaption>Belle, based on 1770’s French court fashion</figcaption>
+  </figure>
+   -->
+</div>

@@ -29,7 +29,7 @@ class ConnectionsController < ApplicationController
 
     respond_to do |format|
       if @connection.save
-        format.html { redirect_to @connection, notice: 'Connection was successfully created.' }
+        format.html { redirect_to '/connections', notice: 'Connection was successfully created.' }
         format.json { render :show, status: :created, location: @connection }
       else
         format.html { render :new }

@@ -25,12 +25,10 @@ Rails.application.routes.draw do
   get 'bridge/more_sale'
   get 'bridge/more_gift'
   
-  
-  
-  
 
-  
   resources :guides
+  get '/guides/guihashtag/:name', to: 'guides#hashtags'
+  
   resources :shops
   resources :categories
 

@@ -1,60 +1,27 @@
-<div id="columns">
-
+<div class="card-wrap clearfix">
   <% @guides.each do |guide| %>
-    <figure>
-      <a class="fiqure_a" href="/featureds/fhashtag/<%= guide.gui_link %>">
-        <img src="<%= guide.gui_spare_01 %>">
-        <figcaption>
-          <%= guide.gui_title %>
+    <div class="card">
+      
+      <div class="image-box">
+        <div class="no-background">
+          <%= link_to image_tag(guide.gui_spare_01, alt:"", title:""), guide %>
+        </div>
+      </div>
+      
+      <div class="inner">
+        <p><%= link_to guide.gui_title, guide %></p>
+        <% if current_user && current_user.admin %>
+          <p><%= render_with_guihashtags(guide.gui_link.to_s) %></p>
           <%= link_to 'Edit', edit_guide_path(guide) %>
           <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </figcaption>
-      </a>
-    </figure>
+        <% end %>
+      </div>
+
+    </div>
   <% end %>
-  
-   
-  <figure>
-    <a class="fiqure_a" href="/featureds/fhashtag/세번째">
-      <img src="https://images.unsplash.com/photo-1580310173421-8784cc72069f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFkZGluZyUyMGpha2V0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60">
-      <figcaption>주방 정리하기 좋은 것들</figcaption>
-    </a>
-  </figure>
-
-
-  <!-- 
-  <figure>
-  <img src="https://images.unsplash.com/photo-1583359312696-cbc5d73e5f8d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cGFkZGluZyUyMGpha2V0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60">
-  <figcaption>Belle, based on 1770’s French court fashion</figcaption>
-  </figure>
-  
-  <figure>
-  <img src="https://images.unsplash.com/photo-1605699298076-59d9b5c6485d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cGFkZGluZyUyMGpha2V0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60">
-  <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
-  </figure>
-  
-   <figure>
-   <img src="https://images.unsplash.com/photo-1493225001062-066006222cff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cGFkZGluZyUyMGpha2V0fGVufDB8fDB8&auto=format&fit=crop&w=500&q=60">
-  <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
-  </figure>
-  
-   <figure>
-   <img src="https://images.unsplash.com/photo-1520619956003-6f09020f427a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHBhZGRpbmclMjBqYWtldHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60">
-  <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
-  </figure>
-  
-  <figure>
-  <img src="https://images.unsplash.com/photo-1522105441306-39af8d689a70?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhZGRpbmclMjBqYWtldHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60">
-  <figcaption>Snow White, based on 16th century German fashion</figcaption>
-  </figure> 
-  
-   <figure>
-  <img src="https://images.unsplash.com/photo-1579196868331-383b34b974b2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fHBhZGRpbmclMjBqYWtldHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60">
-  <figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
-  </figure>
-  
-    <figure>
-  <img src="https://images.unsplash.com/photo-1605699285760-2de9d6673005?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBhZGRpbmclMjBqYWtldHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60">
-    <figcaption>Tiana wearing the <i>robe de style</i> of the 1920’s</figcaption>
-  </figure>  -->
 </div>
+
+
+
+
+

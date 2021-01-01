@@ -1,0 +1,30 @@
+<div class="wrap">
+  <div class="where-hashtag">
+    <% if params[:name].present? %>
+      <p><span>#<%= params[:name] %></span></p>
+    <% end %>
+  </div>
+
+   <div class="card-wrap clearfix">
+
+    <% @guides.each do |guide| %>
+      <div class="card">
+        
+        <div class="image-box">
+          <div class="no-background">
+            <%= link_to image_tag(guide.gui_spare_01, alt:"", title:""), guide %>
+          </div>
+        </div>
+        
+        <div class="inner">
+          <p><%= link_to guide.gui_title, guide %></p>
+          <%= link_to 'Edit', edit_guide_path(guide) %>
+          <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+
+
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_27_160633) do
+ActiveRecord::Schema.define(version: 2021_01_01_134730) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -339,6 +339,13 @@ ActiveRecord::Schema.define(version: 2020_12_27_160633) do
     t.date "gui_spare_73"
     t.date "gui_spare_74"
     t.date "gui_spare_75"
+  end
+
+  create_table "guides_tags", id: false, force: :cascade do |t|
+    t.integer "guide_id"
+    t.integer "tag_id"
+    t.index ["guide_id"], name: "index_guides_tags_on_guide_id"
+    t.index ["tag_id"], name: "index_guides_tags_on_tag_id"
   end
 
   create_table "halfprices", force: :cascade do |t|

@@ -13,6 +13,11 @@ class GuidesController < ApplicationController
   def show
   end
 
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @guides = tag.guides
+  end
+
   # GET /guides/new
   def new
     @guide = current_user.guides.build
@@ -70,8 +75,10 @@ class GuidesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def guide_params
-      params.require(:guide).permit(:gui_title, :gui_link, :gui_spare_01, :gui_spare_02, :gui_spare_03)
+      params.require(:guide).permit(:gui_title, :gui_link, :gui_spare_01, :gui_spare_02, :gui_spare_03, :gui_spare_04, :gui_spare_05, :gui_source, :gui_is_price, :gui_was_price,
+                    :gui_pct, :gui_source )
     end
 end
 
 
+    

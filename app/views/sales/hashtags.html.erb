@@ -19,7 +19,7 @@
 
           <div class="inner clearfix">   
             <% if sale.s_source.present? %>
-              <em class="sales-source">by <%= sale.s_source %></em><!-- <em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em> -->     
+              <em class="sales-source">by <%= sale.s_source %></em><!-- <em class="hash_em"><%= render_with_shashtags(sale.s_hashtag.to_s) %></em> -->     
             <% else %>
               <em class="sales-source">by Coupang</em><!-- <em class="hash_em"><%= render_with_hashtags(sale.s_hashtag.to_s) %></em> --> 
             <% end %>
