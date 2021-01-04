@@ -43,7 +43,7 @@
         <% end %>
         <% saving = 0 %>
         <% saving =  @sale.s_was_price - @sale.s_is_price %>
-        <strong><%= number_to_currency(saving, locale: :kr) %>원 싸게 살 수 있어요.</strong>
+        <strong><span><%= number_to_currency(saving, locale: :kr) %>원</span> 절약 할 수 있어요.</strong>
       </div>            
 
       <div class="spec clearfix">
@@ -69,12 +69,13 @@
           <% else %>
             <div class="box">
               <p>로켓 배송</p>
-              <% if @sale.s_spare_03.present? %>
-                <span><%= @sale.s_spare_03 %></span>
+              <% if @sale.s_spare_08.present? %>
+                <span>YES</span>
               <% else %>
                 <span>NO</span>
               <% end %>
             </div>
+
           <% end %>
         </div>
         <!-- <p>별 5개: 매우좋음, 별 4~4.5개: 좋음, 별 3~3.5: 보통, 별 3개 미만: 나쁨</p> -->

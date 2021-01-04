@@ -86,7 +86,7 @@ class SalesController < ApplicationController
     def sale_params
       params.require(:sale).permit(:s_title, :s_description, :scategory_id, :s_hashtag, :sale_image, :s_link, :s_source, :s_video,
                                    :s_is_price, :s_was_price, :s_spare_01, :s_spare_02, :s_spare_03, :s_spare_04, :s_spare_05, :s_spare_06,
-                                   :s_spare_07)
+                                   :s_spare_07, :s_spare_08)
     end
 end
 

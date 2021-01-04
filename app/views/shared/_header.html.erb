@@ -39,7 +39,7 @@
 
             
             <li id="menu-item-1774" class="menu-item menu-item-has-children mobile-only">
-              <a href="#" aria-haspopup="true" aria-expanded="false">Categories</a>
+              <!-- <a href="#" aria-haspopup="true" aria-expanded="false">Categories</a> -->
               <ul class="sub-menu">
                <li><a href="/">Everything</a></li>
                <% Category.where(display_in_navbar: true).each do |cat| %>
@@ -48,11 +48,9 @@
               </ul>
             </li>
             <% if current_user && current_user.admin %>
-            <li id="menu-item-1805" class="menu-item"><a href="/">Gift</a></li>
-              <li id="menu-item-1805" class="menu-item"><a href="/sales">Sale</a></li>
-              <li id="menu-item-1805" class="menu-item"><a href="/halfprices">Half Price</a></li>
+              <li id="menu-item-1805" class="menu-item"><a href="/">선물이 필요할 때</a></li>
+              <li id="menu-item-1805" class="menu-item"><a href="/sales">사랑해 보다 세일해</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/connections">Featured</a></li>
-              <li id="menu-item-1805" class="menu-item"><a href="/guides">Guides</a></li>
             <% end %>
             
             <% if current_user && current_user.admin %>
@@ -60,6 +58,8 @@
               <li id="menu-item-1805" class="menu-item"><a href="/cart">Locker</a></li> -->
               <!-- <li id="menu-item-1805" class="menu-item"><a href="/blogs">Blog</a></li> -->
               <!-- <li id="menu-item-1805" class="menu-item"><a href="/guides">Gift Guide</a></li> -->
+              <li id="menu-item-1805" class="menu-item"><a href="/guides">Guides</a></li>
+              <li id="menu-item-1805" class="menu-item"><a href="/halfprices">Half Price</a></li>
               <li id="menu-item-1805" class="menu-item"><a href="/categories">Category</a></li>
             <% end %>
             <!-- <li id="menu-item-1805" class="menu-item"><a href="/guides">Gift Guide</a></li> -->

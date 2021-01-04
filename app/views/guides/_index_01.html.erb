@@ -1,27 +1,36 @@
-<div class="card-wrap clearfix">
-  <% @guides.each do |guide| %>
-    <div class="card">
-      
-      <div class="image-box">
-        <div class="no-background">
-          <%= link_to image_tag(guide.gui_spare_01, alt:"", title:""), guide %>
-        </div>
+<% if current_user && current_user.admin %>
+  <div class="visual clearfix">
+    <div class="main-title">
+      <!-- <div class="visual-banner">
+        <img src="<%=asset_path 'banner-sale.png' %>">
       </div>
-      
-      <div class="inner">
-        <p><%= link_to guide.gui_title, guide %></p>
-        <% if current_user && current_user.admin %>
-          <p><%= render_with_guihashtags(guide.gui_link.to_s) %></p>
-          <%= link_to 'Edit', edit_guide_path(guide) %>
-          <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-      </div>
-
+      <div class="visual-banner-m">
+        <img src="<%=asset_path 'banner-sale-m.png' %>">
+      </div> -->
+      <h2>Featured 상품</h2>
     </div>
-  <% end %>
-</div>
+  </div>
 
+  <div class="card-wrap clearfix">
+    <% @guides.each do |guide| %>
+      <div class="card">
+        
+        <div class="image-box">
+          <div class="no-background">
+            <%= link_to image_tag(guide.gui_spare_01, alt:"", title:""), guide %>
+          </div>
+        </div>
+        
+        <div class="inner">
+          <p><%= link_to guide.gui_title, guide %></p>
+          <% if current_user && current_user.admin %>
+            <p><%= render_with_guihashtags(guide.gui_link.to_s) %></p>
+            <%= link_to 'Edit', edit_guide_path(guide) %>
+            <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
 
-
-
-
+      </div>
+    <% end %>
+  </div>
+<% end %>

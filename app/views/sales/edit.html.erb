@@ -14,16 +14,18 @@
           </div>
         
           <div class="input-box">
-            <%= f.file_field :sale_image, label: "상품 이미지" %>
+            <!-- <%= f.file_field :sale_image, label: "상품 이미지" %> -->
             <%= f.input :s_title, label: "상품 이름" %>
             <%= f.input :s_spare_07, label: "상품 이미지" %>
             <%= f.input :s_link, label: "상품 링크" %>
             <%= f.input :s_spare_01, label: "평점" %>
             <%= f.input :s_spare_02, label: "리뷰 수"  %>
-            <%= f.input :s_is_price, label: "현재가격" %>
+            <!-- <%= f.input :s_spare_03, label: "로켓배송"  %> -->
+            <%= f.input :s_is_price, label: "현재가격" %>          
             <%= f.input :s_was_price, label: "세일 전 가격" %>
+            <psna>일레트로닉, 패션, 키친, 리빙, 인테리어, 생필품, 스포츠, 유아_키즈, 반려동물, 헬스&건강</psna>
             <%= f.input :s_hashtag, label: "해시태그(상품 종류)" %>
-
+            <%= f.input :s_spare_08, label: "로켓배송" %>
           </div>
         </div>
 
