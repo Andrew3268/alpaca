@@ -14,7 +14,16 @@
         <!-- <%= link_to image_tag(@sale.sale_image, alt:"", title:""), @sale if @sale.sale_image.attached? %> -->
         <img src="<%= @sale.s_spare_07 %>">
       </div>
+
+      <% if current_user && current_user.admin %>
+        <div class="admin-sns">
+          <%= render "sales/sns" %>
+        </div>
+      <% end %>
+
     </div>
+
+
     <div class="inner">
       <div class="source-time">
         <% if @sale.s_source.present? %>
@@ -145,4 +154,3 @@
     </div>
   </div>
 </div>
-

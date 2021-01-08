@@ -250,6 +250,7 @@ a.btn:active{background:#4ECDC4;-webkit-transition-duration:0;transition-duratio
 .show-container .show-btn a{color:#fff;font-size:17px;display:block;text-align:center;font-weight:bold;letter-spacing:1.1px;}
 .show-container .mobile{display:none;}
 .show-container .admin{position:absolute;top:5px;right:10px;}
+.show-container .admin-sns{margin-top:350px;border:1px solid #ccc;padding:5px;}
 
 .relative-box{width:800px;margin:50px auto;}
 .relative-box p{text-align:center;margin-bottom:20px;font-size:17px;font-weight:500;  position: relative;z-index: 1;}
